@@ -12,26 +12,26 @@ export default function About() {
         <div className="relative w-full max-w-md mx-auto">
           <Image
             src="https://placehold.co/600x600.png"
-            alt="Jeremie Ekoue"
+            alt="Jeremie Ekoue holding a 'HIRE ME' sign"
             width={600}
             height={600}
             className="rounded-lg shadow-xl"
-            data-ai-hint="developer portrait"
+            data-ai-hint="man mugshot"
           />
            <div className="absolute -bottom-4 -right-4 w-full h-full border-4 border-accent rounded-lg -z-10" />
         </div>
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">A Little Bit About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">WANTED: For Challenging Projects</h2>
           <div className="text-muted-foreground space-y-4 text-lg">
             <p>
-              I am a versatile developer and UI designer with a passion for creating beautiful, functional, and user-centered digital experiences. With a strong foundation in both front-end and back-end technologies, I enjoy bringing ideas to life from concept to deployment.
+              Armed with a keyboard and a dangerous amount of creativity, I'm a developer and UI designer on the lookout for my next big mission. I specialize in building beautiful, functional, and user-centered digital experiences.
             </p>
             <p>
-              My journey in tech began with a curiosity for how things work, which evolved into a career where I continuously learn and adapt to new challenges. I thrive in collaborative environments and am always eager to contribute to innovative projects.
+              My record shows a history of capturing complex ideas and turning them into seamless applications. I thrive in collaborative environments and am ready to be brought in for questioning on any innovative project.
             </p>
           </div>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-             <Link href="/jeremie-ekoue-cv.pdf" target="_blank">Download CV</Link>
+             <Link href="/jeremie-ekoue-cv.pdf" target="_blank">View the Evidence (CV)</Link>
           </Button>
         </div>
       </div>
