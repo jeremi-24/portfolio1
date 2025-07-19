@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers } from "lucide-react";
 
 import Header from "@/components/landing/header";
@@ -80,26 +81,13 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-background relative overflow-hidden transition-colors duration-500">
       
       {currentTheme === 'liquid-glass' && (
-        <div className="absolute inset-0 z-0 overflow-hidden">
-            <motion.div 
-              className="absolute bg-primary/30 rounded-full"
-              style={{ width: 400, height: 400, top: '10%', left: '20%'}}
-              animate={{
-                x: [0, 50, 0],
-                y: [0, -50, 0],
-              }}
-              transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            />
-             <motion.div 
-              className="absolute bg-accent/30 rounded-full"
-              style={{ width: 300, height: 300, bottom: '5%', right: '15%'}}
-              animate={{
-                x: [0, -50, 0],
-                y: [0, 30, 0],
-              }}
-              transition={{ duration: 25, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            />
-        </div>
+        <Image
+          src="/macos-wallpaper.jpg"
+          alt="macOS wallpaper background"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 z-0"
+        />
       )}
 
       <Header />
