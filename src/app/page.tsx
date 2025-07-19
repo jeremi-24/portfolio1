@@ -10,7 +10,6 @@ import Stack from "@/components/landing/stack";
 import Projects from "@/components/landing/projects";
 import About from "@/components/landing/about";
 import Contact from "@/components/landing/contact";
-import Footer from "@/components/landing/footer";
 import PersonalizedGreeting from "@/components/landing/personalized-greeting";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -24,7 +23,7 @@ const sections = [
   { id: "contact", component: Contact, icon: MessageSquare },
 ];
 
-export default function Home() {
+export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goToNext = () => {
@@ -60,7 +59,7 @@ export default function Home() {
           <ArrowLeft />
         </Button>
         {sections.map((section, index) => (
-            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className="rounded-full">
+            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
                 <section.icon className={cn("h-5 w-5", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
@@ -68,8 +67,6 @@ export default function Home() {
           <ArrowRight />
         </Button>
       </div>
-
-      <Footer />
       <PersonalizedGreeting />
     </div>
   );
