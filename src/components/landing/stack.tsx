@@ -1,38 +1,62 @@
 
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { Progress } from "@/components/ui/progress";
 import { JavaScriptIcon, JavaIcon, NextjsIcon, SpringbootIcon, TypescriptIcon, FigmaIcon } from "@/components/icons";
 
 const technologies = [
-  { name: "JavaScript", icon: JavaScriptIcon },
-  { name: "TypeScript", icon: TypescriptIcon },
-  { name: "Next.js", icon: NextjsIcon },
-  { name: "Java", icon: JavaIcon },
-  { name: "Spring Boot", icon: SpringbootIcon },
-  { name: "UI Design (Figma)", icon: FigmaIcon },
+  { name: "JavaScript", icon: JavaScriptIcon, level: 90 },
+  { name: "TypeScript", icon: TypescriptIcon, level: 85 },
+  { name: "Next.js", icon: NextjsIcon, level: 95 },
+  { name: "Java", icon: JavaIcon, level: 80 },
+  { name: "Spring Boot", icon: SpringbootIcon, level: 75 },
+  { name: "UI Design (Figma)", icon: FigmaIcon, level: 90 },
 ];
 
 export default function Stack() {
+    const [progress, setProgress] = useState<{ [key: string]: number }>({});
+
+    useEffect(() => {
+        const newProgress: { [key: string]: number } = {};
+        technologies.forEach(tech => {
+            newProgress[tech.name] = 0;
+        });
+
+        const timers = technologies.map(tech => {
+            return setTimeout(() => {
+                setProgress(prev => ({...prev, [tech.name]: tech.level}))
+            }, 200)
+        })
+
+        return () => {
+            timers.forEach(clearTimeout)
+        }
+
+    }, []);
+
+
   return (
     <section id="stack" className="container h-full flex items-center justify-center px-4 md:px-6">
-      <div className="w-full">
+      <div className="w-full max-w-4xl">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">My Tech Stack</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">My Arsenal</h2>
           <p className="max-w-2xl text-muted-foreground">
-            I specialize in a modern tech stack, enabling me to build robust, scalable, and user-friendly web applications.
+            I wield a versatile set of tools and technologies to build robust, scalable, and user-friendly web applications.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mt-12">
           {technologies.map((tech) => (
-            <Card key={tech.name} className="flex flex-col items-center justify-center p-6 text-center bg-card hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
-              <CardContent className="p-0">
-                <tech.icon className="h-16 w-16 text-primary" />
-              </CardContent>
-              <CardHeader className="p-0 mt-4">
-                <CardTitle className="text-lg font-medium">{tech.name}</CardTitle>
-              </CardHeader>
-            </Card>
+            <div key={tech.name} className="flex flex-col gap-2">
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                        <tech.icon className="h-6 w-6 text-primary" />
+                        <h3 className="text-lg font-medium">{tech.name}</h3>
+                    </div>
+                    <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
+                </div>
+                <Progress value={progress[tech.name] || 0} className="h-2" />
+            </div>
           ))}
         </div>
       </div>
