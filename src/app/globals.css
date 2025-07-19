@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, [data-theme="default"] {
     --background: 210 17% 98%;
     --foreground: 224 71% 4%;
     --card: 0 0% 100%;
@@ -57,6 +57,51 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  [data-theme="neon"] {
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+    --card: 240 10% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 291 98% 70%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 185 100% 50%;
+    --accent-foreground: 240 10% 4%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 10% 12%;
+    --input: 240 10% 12%;
+    --ring: 185 100% 50%;
+  }
+
+  [data-theme="liquid-glass"] {
+    --background: 200 100% 97%;
+    --foreground: 224 71% 20%;
+    --card: 0 0% 100% / 0.5;
+    --card-foreground: 224 71% 20%;
+    --popover: 0 0% 100% / 0.5;
+    --popover-foreground: 224 71% 20%;
+    --primary: 220 80% 55%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 90% / 0.5;
+    --secondary-foreground: 224 71% 20%;
+    --muted: 210 40% 90% / 0.5;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 300 80% 60%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4% / 0.6;
+    --input: 214.3 31.8% 91.4% / 0.6;
+    --ring: 220 80% 55%;
+  }
+
 }
 
 @layer base {

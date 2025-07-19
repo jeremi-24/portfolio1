@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers } from "lucide-react";
 
 import Header from "@/components/landing/header";
@@ -14,6 +14,7 @@ import PersonalizedGreeting from "@/components/landing/personalized-greeting";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const sections = [
   { id: "hero", component: Hero, icon: HomeIcon },
@@ -21,6 +22,12 @@ const sections = [
   { id: "projects", component: Projects, icon: Briefcase },
   { id: "about", component: About, icon: User },
   { id: "contact", component: Contact, icon: MessageSquare },
+];
+
+const themes = [
+    { name: 'neon', color: '#ff00ff' },
+    { name: 'liquid-glass', color: '#87CEEB' },
+    { name: 'random', color: '#4b5563' }
 ];
 
 export default function HomePage() {
@@ -36,8 +43,38 @@ export default function HomePage() {
   
   const ActiveComponent = sections[activeIndex].component;
 
+  const generateRandomTheme = () => {
+    const randomHue = Math.floor(Math.random() * 360);
+    const root = document.documentElement;
+    root.style.setProperty('--background', `${randomHue} 10% 10%`);
+    root.style.setProperty('--foreground', `${randomHue} 10% 95%`);
+    root.style.setProperty('--primary', `${(randomHue + 150) % 360} 80% 60%`);
+    root.style.setProperty('--accent', `${(randomHue + 210) % 360} 80% 65%`);
+    root.style.setProperty('--card', `${randomHue} 10% 15%`);
+    root.style.setProperty('--secondary', `${randomHue} 10% 20%`);
+    root.style.setProperty('--border', `${randomHue} 10% 25%`);
+    root.style.setProperty('--input', `${randomHue} 10% 25%`);
+    root.setAttribute('data-theme', 'random');
+  };
+
+  const applyTheme = (themeName: string) => {
+    const root = document.documentElement;
+    // Clear inline styles when switching to a predefined theme
+    root.style.cssText = '';
+
+    if (themeName === 'random') {
+      generateRandomTheme();
+    } else {
+      root.setAttribute('data-theme', themeName);
+    }
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', 'default');
+  }, [])
+
   return (
-    <div className="flex flex-col min-h-screen bg-background relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-background relative overflow-hidden transition-colors duration-500">
       <Header />
       <main className="flex-1 flex flex-col">
         <AnimatePresence mode="wait">
@@ -67,6 +104,22 @@ export default function HomePage() {
           <ArrowRight />
         </Button>
       </div>
+
+      <div className="fixed left-5 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+          <TooltipProvider>
+            {themes.map(theme => (
+                 <Tooltip key={theme.name}>
+                     <TooltipTrigger asChild>
+                        <button onClick={() => applyTheme(theme.name)} className="w-4 h-4 rounded-full border-2 border-foreground/50 transition-transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-ring" style={{ backgroundColor: theme.color }}></button>
+                     </TooltipTrigger>
+                     <TooltipContent side="right">
+                         <p className="capitalize">{theme.name}</p>
+                     </TooltipContent>
+                 </Tooltip>
+            ))}
+          </TooltipProvider>
+      </div>
+
       <PersonalizedGreeting />
     </div>
   );
