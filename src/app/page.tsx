@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, Home, Briefcase, User, MessageSquare, Layers } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers } from "lucide-react";
 
 import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const sections = [
-  { id: "hero", component: Hero, icon: Home },
+  { id: "hero", component: Hero, icon: HomeIcon },
   { id: "stack", component: Stack, icon: Layers },
   { id: "projects", component: Projects, icon: Briefcase },
   { id: "about", component: About, icon: User },
