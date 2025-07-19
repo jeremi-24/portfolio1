@@ -1,18 +1,13 @@
+
 "use client";
 
-import { useRef } from 'react';
 import Image from 'next/image';
-import { useOnScreen } from '@/hooks/use-on-screen';
-import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 
 export default function About() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isIntersecting = useOnScreen(ref);
-
   return (
-    <section id="about" ref={ref} className={cn("container px-4 md:px-6 transition-all duration-700 ease-out", isIntersecting ? 'opacity-100' : 'opacity-0')}>
+    <section id="about" className="container h-full flex items-center justify-center px-4 md:px-6">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full max-w-md mx-auto">
           <Image

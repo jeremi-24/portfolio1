@@ -1,6 +1,6 @@
+
 "use client";
 
-import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,9 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { useOnScreen } from '@/hooks/use-on-screen';
-import { cn } from '@/lib/utils';
-import { Mail, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -20,8 +18,6 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isIntersecting = useOnScreen(ref);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -39,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" ref={ref} className={cn("bg-secondary/50 transition-all duration-700 ease-out", isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+    <section id="contact" className="h-full flex items-center justify-center bg-secondary/50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Get In Touch</h2>

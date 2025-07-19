@@ -8,7 +8,7 @@ import { Menu, Code } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
+  { href: "#hero", label: "Home" },
   { href: "#stack", label: "Stack" },
   { href: "#projects", label: "Projects" },
   { href: "#about", label: "About" },
@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
         scrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
       )}
     >
@@ -38,13 +38,6 @@ export default function Header() {
           <Code className="h-6 w-6 text-accent" />
           <span>Jeremie Ekoue</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-sm font-medium hover:text-accent transition-colors">
-              {label}
-            </Link>
-          ))}
-        </nav>
         <div className="hidden md:block">
           <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
             <a href="#contact">Hire Me</a>

@@ -1,13 +1,12 @@
+
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useOnScreen } from "@/hooks/use-on-screen";
 import { cn } from "@/lib/utils";
 
 const projects = [
@@ -41,11 +40,8 @@ const projects = [
 ];
 
 export default function Projects() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isIntersecting = useOnScreen(ref);
-
   return (
-    <section id="projects" ref={ref} className={cn("bg-secondary/50 transition-all duration-700 ease-out", isIntersecting ? 'opacity-100' : 'opacity-0')}>
+    <section id="projects" className="h-full flex items-center justify-center bg-secondary/50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Projects</h2>
@@ -55,8 +51,8 @@ export default function Projects() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project, index) => (
-            <Card key={project.title} className={cn("overflow-hidden transform hover:-translate-y-2 transition-transform duration-300", isIntersecting ? 'animate-fade-in-up' : '')} style={{ animationDelay: `${index * 0.2}s`}}>
-              <CardHeader>
+            <Card key={project.title} className={cn("overflow-hidden transform hover:-translate-y-2 transition-transform duration-300")}>
+              <CardHeader className="p-0">
                 <Image
                   src={project.image}
                   alt={project.title}

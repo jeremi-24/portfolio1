@@ -10,8 +10,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background border-t">
-      <div className="container mx-auto px-4 md:px-6 py-8">
+    <footer className="bg-background/50 border-t absolute bottom-0 w-full z-0">
+      <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 font-bold text-lg font-headline">
              <Code className="h-6 w-6 text-accent" />
