@@ -32,6 +32,7 @@ const themes = [
 
 export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [currentTheme, setCurrentTheme] = useState('default');
 
   const goToNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % sections.length);
@@ -55,28 +56,54 @@ export default function HomePage() {
     root.style.setProperty('--border', `${randomHue} 10% 25%`);
     root.style.setProperty('--input', `${randomHue} 10% 25%`);
     root.setAttribute('data-theme', 'random');
+    setCurrentTheme('random');
   };
 
   const applyTheme = (themeName: string) => {
     const root = document.documentElement;
-    // Clear inline styles when switching to a predefined theme
     root.style.cssText = '';
 
     if (themeName === 'random') {
       generateRandomTheme();
     } else {
       root.setAttribute('data-theme', themeName);
+      setCurrentTheme(themeName);
     }
   };
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'default');
+    setCurrentTheme('default');
   }, [])
 
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-hidden transition-colors duration-500">
+      
+      {currentTheme === 'liquid-glass' && (
+        <div className="absolute inset-0 z-0 overflow-hidden">
+            <motion.div 
+              className="absolute bg-primary/30 rounded-full"
+              style={{ width: 400, height: 400, top: '10%', left: '20%'}}
+              animate={{
+                x: [0, 50, 0],
+                y: [0, -50, 0],
+              }}
+              transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+            />
+             <motion.div 
+              className="absolute bg-accent/30 rounded-full"
+              style={{ width: 300, height: 300, bottom: '5%', right: '15%'}}
+              animate={{
+                x: [0, -50, 0],
+                y: [0, 30, 0],
+              }}
+              transition={{ duration: 25, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+            />
+        </div>
+      )}
+
       <Header />
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col z-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -92,15 +119,15 @@ export default function HomePage() {
       </main>
       
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm">
+        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm glass">
           <ArrowLeft />
         </Button>
         {sections.map((section, index) => (
-            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
+            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full glass", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
                 <section.icon className={cn("h-5 w-5", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
-        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm">
+        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm glass">
           <ArrowRight />
         </Button>
       </div>
