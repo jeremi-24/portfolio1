@@ -2,18 +2,19 @@
 "use client";
 
 import { useEffect, useState, useContext } from "react";
+import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
-import { JavaScriptIcon, JavaIcon, NextjsIcon, SpringbootIcon, TypescriptIcon, FigmaIcon } from "@/components/icons";
+import { JavaIcon, SpringbootIcon, FigmaIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { LanguageContext, translations } from "@/context/language-context";
 
 const technologies = [
-  { name: "JavaScript", icon: JavaScriptIcon, level: 90 },
-  { name: "TypeScript", icon: TypescriptIcon, level: 85 },
-  { name: "Next.js", icon: NextjsIcon, level: 95 },
-  { name: "Java", icon: JavaIcon, level: 80 },
-  { name: "Spring Boot", icon: SpringbootIcon, level: 75 },
-  { name: "UI Design (Figma)", icon: FigmaIcon, level: 90 },
+  { name: "JavaScript", icon: "https://icon2.cleanpng.com/20180917/rgp/kisspng-javascript-logo-product-design-brand-1713939908433.webp", level: 90, type: 'image' },
+  { name: "TypeScript", icon: "https://pngate.com/wp-content/uploads/2025/05/typescript-logo-blue-square-modern-design-icon-1.png", level: 85, type: 'image' },
+  { name: "Next.js", icon: "https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png", level: 95, type: 'image' },
+  { name: "Java", icon: JavaIcon, level: 80, type: 'icon' },
+  { name: "Spring Boot", icon: SpringbootIcon, level: 75, type: 'icon' },
+  { name: "UI Design (Figma)", icon: FigmaIcon, level: 90, type: 'icon' },
 ];
 
 export default function Stack() {
@@ -54,7 +55,11 @@ export default function Stack() {
             <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm", { 'glass': false})}>
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                        <tech.icon className="h-7 w-7 text-primary" />
+                        {tech.type === 'image' ? (
+                            <Image src={tech.icon as string} alt={`${tech.name} logo`} width={28} height={28} className="h-7 w-7 object-contain" />
+                        ) : (
+                            <tech.icon className="h-7 w-7 text-primary" />
+                        )}
                         <h3 className="text-lg font-medium">{tech.name}</h3>
                     </div>
                     <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
