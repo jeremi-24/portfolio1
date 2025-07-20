@@ -23,7 +23,7 @@ const sections = [
   { id: "hero", component: Hero, icon: HomeIcon },
   { id: "experience", component: Experience, icon: Workflow },
   { id: "stack", component: Stack, icon: Layers },
-  { id: "projects", component: Projects, icon: Briefcase },
+  { id: "projects", component: Briefcase, icon: Briefcase },
   { id: "about", component: About, icon: User },
   { id: "contact", component: Contact, icon: MessageSquare },
 ];
@@ -130,7 +130,7 @@ export default function HomePage() {
       
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
         <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
-          <ArrowLeft />
+          <ArrowLeft className="h-6 w-6" />
         </Button>
         {sections.map((section, index) => (
             <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full h-12 w-12 transition-transform hover:-translate-y-1", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
@@ -138,7 +138,7 @@ export default function HomePage() {
             </Button>
         ))}
         <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
-          <ArrowRight />
+          <ArrowRight className="h-6 w-6" />
         </Button>
       </div>
 
