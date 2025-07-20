@@ -82,7 +82,7 @@ export default function Hero() {
                 data-ai-hint="man portrait"
                 priority
               />
-              <div className="absolute inset-0 border-4 border-primary rounded-full -z-10 animate-pulse" />
+              <div className="absolute -inset-2 border-4 border-primary rounded-full -z-10 animate-heartbeat" />
             </motion.div>
             <div className="text-center space-y-6">
                 <motion.h1
