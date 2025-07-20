@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Progress } from "@/components/ui/progress";
 import { JavaScriptIcon, JavaIcon, NextjsIcon, SpringbootIcon, TypescriptIcon, FigmaIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const technologies = [
   { name: "JavaScript", icon: JavaScriptIcon, level: 90 },
@@ -40,30 +39,28 @@ export default function Stack() {
 
   return (
     <section id="stack" className="container h-full flex items-center justify-center px-4 md:px-6">
-      <Card className="w-full max-w-4xl bg-card/80 glass">
-        <CardHeader className="items-center text-center space-y-4">
+      <div className="w-full max-w-4xl">
+        <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">My Arsenal</h2>
-            <p className="max-w-2xl text-muted-foreground">
+            <p className="max-w-2xl mx-auto text-muted-foreground">
                 I wield a versatile set of tools and technologies to build robust, scalable, and user-friendly web applications.
             </p>
-        </CardHeader>
-        <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {technologies.map((tech) => (
-                <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm glass")}>
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-3">
-                            <tech.icon className="h-7 w-7 text-primary" />
-                            <h3 className="text-lg font-medium">{tech.name}</h3>
-                        </div>
-                        <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {technologies.map((tech) => (
+            <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm", { 'glass': false})}>
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-3">
+                        <tech.icon className="h-7 w-7 text-primary" />
+                        <h3 className="text-lg font-medium">{tech.name}</h3>
                     </div>
-                    <Progress value={progress[tech.name] || 0} className="h-2" />
+                    <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
                 </div>
-            ))}
+                <Progress value={progress[tech.name] || 0} className="h-2" />
             </div>
-        </CardContent>
-      </Card>
+        ))}
+        </div>
+      </div>
     </section>
   );
 }
