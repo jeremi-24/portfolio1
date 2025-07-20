@@ -51,6 +51,14 @@ export type Translation = {
         liveDemo: string;
         viewDetails: string;
         projects: Project[];
+        detailPage: {
+            sourceCode: string;
+            quickProcess: string;
+            contextAndObjective: string;
+            identifiedProblem: string;
+            wireframes: string;
+            finalUI: string;
+        }
     };
     about: {
         title: string;
@@ -146,7 +154,7 @@ export const translations: { [key: string]: Translation } = {
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
-                    liveUrl: "#",
+                    liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
                     process: ["Solution", "UI", "Identité"],
                     contextAndObjective: "Il s'agit d'un concept de page d'accueil responsive conçu pour une super-application africaine tout-en-un. Adaptée aux utilisateurs sur ordinateur et mobile, la mise en page met en avant les services principaux de l'application : VTC, livraison de courses, achats en ligne, et plus encore.",
@@ -225,7 +233,15 @@ export const translations: { [key: string]: Translation } = {
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
-            ]
+            ],
+            detailPage: {
+                sourceCode: "Code Source",
+                quickProcess: "Processus Rapide",
+                contextAndObjective: "Contexte & Objectif",
+                identifiedProblem: "Problème Identifié",
+                wireframes: "Wireframes",
+                finalUI: "UI Finales",
+            }
         },
         about: {
             title: "À Propos de Moi",
@@ -319,7 +335,7 @@ export const translations: { [key: string]: Translation } = {
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
-                    liveUrl: "#",
+                    liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
                     process: ["Solution", "UI", "Identity"],
                     contextAndObjective: "This is a responsive landing page concept designed for an all-in-one African super app. Tailored for both desktop and mobile users, the layout highlights the app’s core services: ride-hailing, grocery delivery, online shopping, and more.",
@@ -398,7 +414,15 @@ export const translations: { [key: string]: Translation } = {
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
-            ]
+            ],
+            detailPage: {
+                sourceCode: "Source Code",
+                quickProcess: "Quick Process",
+                contextAndObjective: "Context & Objective",
+                identifiedProblem: "Identified Problem",
+                wireframes: "Wireframes",
+                finalUI: "Final UI",
+            }
         },
         about: {
             title: "About Me",
@@ -492,7 +516,7 @@ export const translations: { [key: string]: Translation } = {
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
-                    liveUrl: "#",
+                    liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
                     process: ["Lösung", "UI", "Identität"],
                     contextAndObjective: "Dies ist ein responsives Landing-Page-Konzept, das für eine afrikanische All-in-One-Super-App entwickelt wurde. Das Layout ist sowohl für Desktop- als auch für mobile Benutzer zugeschnitten und hebt die Kerndienste der App hervor: Ride-Hailing, Lebensmittellieferung, Online-Shopping und mehr.",
@@ -571,7 +595,15 @@ export const translations: { [key: string]: Translation } = {
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
-            ]
+            ],
+            detailPage: {
+                sourceCode: "Quellcode",
+                quickProcess: "Schneller Prozess",
+                contextAndObjective: "Kontext & Ziel",
+                identifiedProblem: "Identifiziertes Problem",
+                wireframes: "Wireframes",
+                finalUI: "Finale UI",
+            }
         },
         about: {
             title: "Über mich",

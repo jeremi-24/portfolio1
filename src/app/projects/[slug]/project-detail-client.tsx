@@ -54,7 +54,7 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                         <Link href={project.liveUrl} target="_blank">{uiT.projects.liveDemo} <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                     <Button asChild variant="secondary" size="lg">
-                        <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> Source Code</Link>
+                        <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> {uiT.projects.detailPage.sourceCode}</Link>
                     </Button>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 
                 {project.process && (
                     <>
-                        <SectionTitle>Processus Rapide</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.quickProcess}</SectionTitle>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
                             {project.process.map((step, index) => (
                                 <div key={step} className="flex items-center gap-4 md:gap-8">
@@ -82,21 +82,21 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
 
                 {project.contextAndObjective && (
                     <>
-                        <SectionTitle>Contexte & Objectif</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.contextAndObjective}</SectionTitle>
                         <p className="text-muted-foreground text-lg">{project.contextAndObjective}</p>
                     </>
                 )}
 
                 {project.problem && (
                     <>
-                        <SectionTitle>Problème Identifié</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.identifiedProblem}</SectionTitle>
                         <p className="text-muted-foreground text-lg">{project.problem}</p>
                     </>
                 )}
 
                 {project.wireframeImage && (
                     <>
-                        <SectionTitle>Wireframes</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.wireframes}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.wireframeImage}
@@ -111,7 +111,7 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 
                 {project.finalUIImage && (
                      <>
-                        <SectionTitle>UI Finales</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.finalUI}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.finalUIImage}
