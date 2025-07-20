@@ -17,10 +17,35 @@ import { cn } from "@/lib/utils";
 import Footer from "@/components/landing/footer";
 
 export default function HomePage() {
+  const [activeSection, setActiveSection] = useState("hero");
+  const sectionRefs = {
+    hero: useRef<HTMLDivElement>(null),
+    experience: useRef<HTMLDivElement>(null),
+    stack: useRef<HTMLDivElement>(null),
+    projects: useRef<HTMLDivElement>(null),
+    about: useRef<HTMLDivElement>(null),
+    contact: useRef<HTMLDivElement>(null),
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const ref = sectionRefs[sectionId as keyof typeof sectionRefs];
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'neon');
   }, [])
+
+  const navItems = [
+    { id: "hero", label: "Home", icon: HomeIcon },
+    { id: "experience", label: "Experience", icon: Workflow },
+    { id: "stack", label: "Stack", icon: Layers },
+    { id: "projects", label: "Projects", icon: Briefcase },
+    { id: "about", label: "About", icon: User },
+    { id: "contact", label: "Contact", icon: MessageSquare },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden transition-colors duration-500">
