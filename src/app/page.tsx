@@ -107,7 +107,7 @@ export default function HomePage() {
       </main>
       
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm glass">
+        <Button onClick={goToPrev} size="icon" variant="outline" className={cn("rounded-full h-12 w-12", currentTheme === 'liquid-glass' ? 'bg-card/50 backdrop-blur-sm' : 'bg-background/50 backdrop-blur-sm glass')}>
           <ArrowLeft />
         </Button>
         {sections.map((section, index) => (
@@ -115,7 +115,7 @@ export default function HomePage() {
                 <section.icon className={cn("h-5 w-5", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
-        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm glass">
+        <Button onClick={goToNext} size="icon" variant="outline" className={cn("rounded-full h-12 w-12", currentTheme === 'liquid-glass' ? 'bg-card/50 backdrop-blur-sm' : 'bg-background/50 backdrop-blur-sm glass')}>
           <ArrowRight />
         </Button>
       </div>
