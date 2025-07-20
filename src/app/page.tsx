@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers, Workflow } from "lucide-react";
 
 import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
@@ -11,6 +11,7 @@ import Stack from "@/components/landing/stack";
 import Projects from "@/components/landing/projects";
 import About from "@/components/landing/about";
 import Contact from "@/components/landing/contact";
+import Experience from "@/components/landing/experience";
 import PersonalizedGreeting from "@/components/landing/personalized-greeting";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -19,6 +20,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const sections = [
   { id: "hero", component: Hero, icon: HomeIcon },
+  { id: "experience", component: Experience, icon: Workflow },
   { id: "stack", component: Stack, icon: Layers },
   { id: "projects", component: Projects, icon: Briefcase },
   { id: "about", component: About, icon: User },
