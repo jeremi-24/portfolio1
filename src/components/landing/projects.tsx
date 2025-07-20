@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
   {
@@ -50,31 +50,35 @@ export default function Projects() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card key={project.title} className="overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <Card key={project.title} className="group overflow-hidden flex flex-col transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
               <CardHeader className="p-0">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className="rounded-t-lg object-cover w-full aspect-video"
-                  data-ai-hint={project.hint}
-                />
+                <div className="overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className="rounded-t-lg object-cover w-full aspect-video transition-transform duration-500 group-hover:scale-105"
+                    data-ai-hint={project.hint}
+                  />
+                </div>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex-grow">
                 <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
-                <div className="flex flex-wrap gap-2 mt-4">
+              </CardContent>
+              <CardFooter className="p-6 pt-0 flex flex-col items-start gap-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
                 </div>
-              </CardContent>
-              <CardFooter className="p-6 bg-secondary/30 flex justify-between">
-                <Button asChild variant="ghost">
-                  <Link href={project.liveUrl}>Live Demo <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href={project.repoUrl}>GitHub</Link>
-                </Button>
+                 <div className="flex justify-start gap-4 w-full">
+                    <Button asChild>
+                      <Link href={project.liveUrl} target="_blank">Live Demo <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                    <Button asChild variant="outline">
+                      <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> Source</Link>
+                    </Button>
+                </div>
               </CardFooter>
             </Card>
           ))}
