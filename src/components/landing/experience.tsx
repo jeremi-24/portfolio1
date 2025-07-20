@@ -6,22 +6,22 @@ import { Workflow } from "lucide-react";
 
 const experiences = [
   {
-    role: "Développeur Full-Stack & UI Designer",
-    company: "Freelance",
-    period: "Sep 2023 - Aujourd'hui",
-    description: "Conception et développement d'applications web complètes pour divers clients en utilisant Next.js, React, et Java Spring Boot. Création d'interfaces utilisateur intuitives avec Figma.",
+    role: "UI Designer / Frontend Developer",
+    company: "NS GLOBAL EXPERTISE",
+    period: "Feb 2023 - Aujourd'hui",
+    description: "Conception de maquettes pour différents produits numériques et intégrations avec l'équipe de développement.",
   },
   {
-    role: "Fondateur & Mentor",
-    company: "DWIN - Devs With INTelligence",
-    period: "Août 2023 - Aujourd'hui",
-    description: "Création et animation d'une communauté de développeurs. Organisation de sessions de mentorat, de revues de code et production de contenu éducatif.",
+    role: "Frontend Developer",
+    company: "SACE AGENCY",
+    period: "Fev 2024 - Mars 2024",
+    description: "Collaboration avec une équipe pour mettre en œuvre des interfaces intuitives.",
   },
   {
-    role: "Développeur Java & Angular",
-    company: "CAFE INFORMATIQUE & TELECOMMUNICATIONS",
-    period: "Juin 2023 - Sep 2023",
-    description: "Maintenance et développement de nouvelles fonctionnalités pour des applications bancaires. Amélioration des performances et de la sécurité des systèmes existants.",
+    role: "Fullstack Developer",
+    company: "WORLD WARRIORS",
+    period: "N/A",
+    description: "Collaboration avec des équipes multidisciplinaires pour mettre en œuvre des solutions performantes adaptées aux besoins des utilisateurs.",
   },
 ];
 
