@@ -139,6 +139,22 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "Voir les détails",
             projects: [
                 {
+                    title: "GOZEM - Landing Page",
+                    slug: "gozem-landing-page",
+                    description: "Un concept de page d'accueil responsive pour une super-application africaine tout-en-un.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "mobile app design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "#",
+                    repoUrl: "https://github.com/jeremi-24",
+                    process: ["Solution", "UI", "Identité"],
+                    contextAndObjective: "Il s'agit d'un concept de page d'accueil responsive conçu pour une super-application africaine tout-en-un. Adaptée aux utilisateurs sur ordinateur et mobile, la mise en page met en avant les services principaux de l'application : VTC, livraison de courses, achats en ligne, et plus encore.",
+                    problem: "Cette section met en évidence les services clés de la super application Gozem avec un design chaleureux et moderne et une disposition intuitive pour simplifier la mobilité et les achats quotidiens.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
+                },
+                {
                     title: "Plateforme E-commerce",
                     slug: "plateforme-ecommerce",
                     description: "Une solution e-commerce complète avec un CMS personnalisé, une intégration de passerelle de paiement et une interface utilisateur responsive.",
@@ -295,6 +311,22 @@ export const translations: { [key: string]: Translation } = {
             liveDemo: "Live Demo",
             viewDetails: "View Details",
             projects: [
+                {
+                    title: "GOZEM - Landing Page",
+                    slug: "gozem-landing-page-en",
+                    description: "A responsive landing page concept for an all-in-one African super app.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "mobile app design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "#",
+                    repoUrl: "https://github.com/jeremi-24",
+                    process: ["Solution", "UI", "Identity"],
+                    contextAndObjective: "This is a responsive landing page concept designed for an all-in-one African super app. Tailored for both desktop and mobile users, the layout highlights the app’s core services: ride-hailing, grocery delivery, online shopping, and more.",
+                    problem: "This section highlights key Gozem super app services with a warm, modern design and intuitive layout to simplify mobility and daily shopping.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
+                },
                 {
                     title: "E-commerce Platform",
                     slug: "ecommerce-platform",
@@ -453,6 +485,22 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "Details anzeigen",
             projects: [
                 {
+                    title: "GOZEM - Landing Page",
+                    slug: "gozem-landing-page-de",
+                    description: "Ein responsives Landing-Page-Konzept für eine afrikanische Super-App.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "mobile app design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "#",
+                    repoUrl: "https://github.com/jeremi-24",
+                    process: ["Lösung", "UI", "Identität"],
+                    contextAndObjective: "Dies ist ein responsives Landing-Page-Konzept, das für eine afrikanische All-in-One-Super-App entwickelt wurde. Das Layout ist sowohl für Desktop- als auch für mobile Benutzer zugeschnitten und hebt die Kerndienste der App hervor: Ride-Hailing, Lebensmittellieferung, Online-Shopping und mehr.",
+                    problem: "Dieser Abschnitt hebt die wichtigsten Dienstleistungen der Gozem-Super-App mit einem warmen, modernen Design und einem intuitiven Layout hervor, um die Mobilität und den täglichen Einkauf zu vereinfachen.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
+                },
+                {
                     title: "E-Commerce-Plattform",
                     slug: "e-commerce-plattform",
                     description: "Eine komplette E-Commerce-Lösung mit einem benutzerdefinierten CMS, Zahlungsgateway-Integration und einer responsiven Benutzeroberfläche.",
@@ -561,3 +609,5 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
