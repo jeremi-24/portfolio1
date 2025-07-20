@@ -4,9 +4,10 @@
 import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
-import { JavaIcon, SpringbootIcon, FigmaIcon } from "@/components/icons";
+import { JavaIcon, SpringbootIcon, FigmaIcon, PostgresqlIcon, DrizzleNeonIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { LanguageContext, translations } from "@/context/language-context";
+import { Database } from "lucide-react";
 
 const technologies = [
   { name: "JavaScript", icon: "https://icon2.cleanpng.com/20180917/rgp/kisspng-javascript-logo-product-design-brand-1713939908433.webp", level: 90, type: 'image' },
@@ -14,6 +15,8 @@ const technologies = [
   { name: "Next.js", icon: "https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png", level: 95, type: 'image' },
   { name: "Java", icon: JavaIcon, level: 80, type: 'icon' },
   { name: "Spring Boot", icon: SpringbootIcon, level: 75, type: 'icon' },
+  { name: "Drizzle & Neon", icon: DrizzleNeonIcon, level: 80, type: 'icon' },
+  { name: "PostgreSQL", icon: PostgresqlIcon, level: 70, type: 'icon' },
   { name: "UI Design (Figma)", icon: FigmaIcon, level: 90, type: 'icon' },
 ];
 

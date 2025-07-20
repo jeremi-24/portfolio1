@@ -39,3 +39,16 @@ export const FigmaIcon = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 8a2 2 0 100 4 2 2 0 000-4zm-4 0a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4z"/>
   </svg>
 );
+
+export const PostgresqlIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5h-2v-7H7v-2h4v9.5zm6-5.5c0 1.93-1.57 3.5-3.5 3.5S10 12.93 10 11s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5z"/>
+  </svg>
+);
+
+export const DrizzleNeonIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M12 2l7 7-7 7-7-7 7-7z"/>
+        <path d="M2.5 13.5l7 7 7-7"/>
+    </svg>
+);
