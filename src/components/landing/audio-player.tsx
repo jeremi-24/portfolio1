@@ -40,7 +40,7 @@ export default function AudioPlayer() {
         <source src="https://www.chosic.com/wp-content/uploads/2021/07/The-Jazz-Piano.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <div className="fixed bottom-5 left-5 z-50">
+      <div className="fixed top-1/2 -translate-y-1/2 left-5 z-50">
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -54,7 +54,7 @@ export default function AudioPlayer() {
                         {isPlaying ? <Music className="h-5 w-5" /> : <VolumeX className="h-5 w-5" />}
                     </Button>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="right">
                     <p>{isPlaying ? "Couper la musique" : "Lancer la musique"}</p>
                 </TooltipContent>
             </Tooltip>
