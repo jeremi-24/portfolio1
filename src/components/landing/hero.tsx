@@ -66,8 +66,25 @@ export default function Hero() {
       </div>
 
       <div className="container px-4 md:px-6 z-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left space-y-6">
+        <div className="flex flex-col items-center gap-8">
+            <motion.div 
+              className="relative w-48 h-48 md:w-64 md:h-64"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <Image
+                src="/profile.jpg"
+                alt="Jeremie Ekoue"
+                width={600}
+                height={600}
+                className="rounded-full shadow-xl object-cover aspect-square"
+                data-ai-hint="man portrait"
+                priority
+              />
+              <div className="absolute inset-0 border-4 border-primary rounded-full -z-10 animate-pulse" />
+            </motion.div>
+            <div className="text-center space-y-6">
                 <motion.h1
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter font-headline"
                     variants={sentence}
@@ -83,7 +100,7 @@ export default function Hero() {
                     })}
                 </motion.h1>
                 <motion.p 
-                    className="max-w-[700px] mx-auto md:mx-0 text-muted-foreground md:text-xl"
+                    className="max-w-[700px] mx-auto text-muted-foreground md:text-xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.5, duration: 0.5 }}
@@ -91,7 +108,7 @@ export default function Hero() {
                     {t.hero.subtitle}
                 </motion.p>
                 <motion.div 
-                    className="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+                    className="flex flex-col sm:flex-row justify-center gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.8, duration: 0.5 }}
@@ -104,22 +121,6 @@ export default function Hero() {
                     </Button>
                 </motion.div>
             </div>
-            <motion.div 
-              className="relative w-full max-w-md mx-auto"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              <Image
-                src="/profile.jpg"
-                alt="Jeremie Ekoue"
-                width={600}
-                height={600}
-                className="rounded-full shadow-xl object-cover aspect-square"
-                data-ai-hint="man portrait"
-              />
-              <div className="absolute inset-0 border-4 border-primary rounded-full -z-10 animate-pulse" />
-            </motion.div>
         </div>
       </div>
     </section>
