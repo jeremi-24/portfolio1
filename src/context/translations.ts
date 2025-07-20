@@ -32,8 +32,10 @@ export type Translation = {
         description: string;
         filters: string[];
         liveDemo: string;
+        viewDetails: string;
         projects: {
             title: string;
+            slug: string;
             description: string;
             image: string;
             hint: string;
@@ -132,9 +134,11 @@ export const translations: { [key: string]: Translation } = {
             description: "Voici quelques-uns des projets dont je suis fier. Chacun représente un défi que j'ai été ravi de relever.",
             filters: ["Tous", "Frontend", "UI Design", "Graphic Design"],
             liveDemo: "Démo Live",
+            viewDetails: "Voir les détails",
             projects: [
                 {
                     title: "Plateforme E-commerce",
+                    slug: "plateforme-ecommerce",
                     description: "Une solution e-commerce complète avec un CMS personnalisé, une intégration de passerelle de paiement et une interface utilisateur responsive.",
                     image: "https://placehold.co/600x400.png",
                     hint: "online store",
@@ -145,6 +149,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Outil de Gestion de Projet",
+                    slug: "outil-gestion-projet",
                     description: "Une plateforme collaborative pour les équipes pour gérer les tâches, suivre les progrès et communiquer efficacement, construite avec une API en temps réel.",
                     image: "https://placehold.co/600x400.png",
                     hint: "dashboard interface",
@@ -155,6 +160,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Identité de Marque",
+                    slug: "identite-de-marque",
                     description: "Package de branding complet pour une startup, incluant la conception de logo, la palette de couleurs et les supports marketing.",
                     image: "https://placehold.co/600x400.png",
                     hint: "branding design",
@@ -165,6 +171,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "UI d'Application Mobile",
+                    slug: "ui-application-mobile",
                     description: "Un design d'interface utilisateur épuré et intuitif pour une nouvelle application mobile de réseautage social.",
                     image: "https://placehold.co/600x400.png",
                     hint: "mobile app",
@@ -175,6 +182,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Site Portfolio",
+                    slug: "site-portfolio",
                     description: "Ce site personnel, conçu pour présenter mes compétences et projets, avec un design épuré et des animations fluides.",
                     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
                     hint: "developer portfolio",
@@ -185,6 +193,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Graphismes de Campagne Marketing",
+                    slug: "graphismes-campagne-marketing",
                     description: "Création d'une série de graphiques et de visuels attrayants pour une campagne de marketing numérique, augmentant l'engagement des utilisateurs.",
                     image: "https://placehold.co/600x400.png",
                     hint: "marketing graphics",
@@ -282,9 +291,11 @@ export const translations: { [key: string]: Translation } = {
             description: "Here are some of the projects I'm proud of. Each one represents a challenge I was excited to tackle.",
             filters: ["All", "Frontend", "UI Design", "Graphic Design"],
             liveDemo: "Live Demo",
+            viewDetails: "View Details",
             projects: [
                 {
                     title: "E-commerce Platform",
+                    slug: "ecommerce-platform",
                     description: "A complete e-commerce solution with a custom CMS, payment gateway integration, and a responsive user interface.",
                     image: "https://placehold.co/600x400.png",
                     hint: "online store",
@@ -295,6 +306,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Project Management Tool",
+                    slug: "project-management-tool",
                     description: "A collaborative platform for teams to manage tasks, track progress, and communicate effectively, built with a real-time API.",
                     image: "https://placehold.co/600x400.png",
                     hint: "dashboard interface",
@@ -305,6 +317,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Brand Identity",
+                    slug: "brand-identity",
                     description: "Complete branding package for a startup, including logo design, color palette, and marketing materials.",
                     image: "https://placehold.co/600x400.png",
                     hint: "branding design",
@@ -315,6 +328,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Mobile App UI",
+                    slug: "mobile-app-ui",
                     description: "A clean and intuitive user interface design for a new social networking mobile application.",
                     image: "https://placehold.co/600x400.png",
                     hint: "mobile app",
@@ -325,6 +339,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Portfolio Website",
+                    slug: "portfolio-website",
                     description: "This personal website, designed to showcase my skills and projects, with a clean design and smooth animations.",
                     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
                     hint: "developer portfolio",
@@ -335,6 +350,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Marketing Campaign Graphics",
+                    slug: "marketing-campaign-graphics",
                     description: "Created a series of engaging graphics and visuals for a digital marketing campaign, increasing user engagement.",
                     image: "https://placehold.co/600x400.png",
                     hint: "marketing graphics",
@@ -432,9 +448,11 @@ export const translations: { [key: string]: Translation } = {
             description: "Hier sind einige der Projekte, auf die ich stolz bin. Jedes stellt eine Herausforderung dar, die ich gerne angenommen habe.",
             filters: ["Alle", "Frontend", "UI Design", "Graphic Design"],
             liveDemo: "Live-Demo",
+            viewDetails: "Details anzeigen",
             projects: [
                 {
                     title: "E-Commerce-Plattform",
+                    slug: "e-commerce-plattform",
                     description: "Eine komplette E-Commerce-Lösung mit einem benutzerdefinierten CMS, Zahlungsgateway-Integration und einer responsiven Benutzeroberfläche.",
                     image: "https://placehold.co/600x400.png",
                     hint: "online store",
@@ -445,6 +463,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Projektmanagement-Tool",
+                    slug: "projektmanagement-tool",
                     description: "Eine kollaborative Plattform für Teams zur Verwaltung von Aufgaben, Verfolgung des Fortschritts und effektiven Kommunikation, erstellt mit einer Echtzeit-API.",
                     image: "https://placehold.co/600x400.png",
                     hint: "dashboard interface",
@@ -455,6 +474,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Markenidentität",
+                    slug: "markenidentitat",
                     description: "Komplettes Branding-Paket für ein Startup, einschließlich Logo-Design, Farbpalette und Marketingmaterialien.",
                     image: "https://placehold.co/600x400.png",
                     hint: "branding design",
@@ -465,6 +485,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Mobile App UI",
+                    slug: "mobile-app-ui-de",
                     description: "Ein sauberes und intuitives Benutzeroberflächen-Design für eine neue mobile Social-Networking-Anwendung.",
                     image: "https://placehold.co/600x400.png",
                     hint: "mobile app",
@@ -475,6 +496,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Portfolio-Webseite",
+                    slug: "portfolio-webseite",
                     description: "Diese persönliche Webseite, entworfen, um meine Fähigkeiten und Projekte zu präsentieren, mit einem sauberen Design und flüssigen Animationen.",
                     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
                     hint: "developer portfolio",
@@ -485,6 +507,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Marketingkampagnen-Grafiken",
+                    slug: "marketingkampagnen-grafiken",
                     description: "Erstellung einer Reihe ansprechender Grafiken und Visuals für eine digitale Marketingkampagne zur Steigerung des Benutzerengagements.",
                     image: "https://placehold.co/600x400.png",
                     hint: "marketing graphics",
