@@ -5,12 +5,9 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const clients = [
-  { name: "Client 1", logo: "https://placehold.co/150x50.png?text=GoZem" },
-  { name: "Client 2", logo: "https://placehold.co/150x50.png?text=Sace+Agency" },
-  { name: "Client 3", logo: "https://placehold.co/150x50.png?text=NS+Global" },
-  { name: "Client 4", logo: "https://placehold.co/150x50.png?text=Warriors" },
-  { name: "Client 5", logo: "https://placehold.co/150x50.png?text=Innov'UP" },
-  { name: "Client 6", logo: "https://placehold.co/150x50.png?text=Startup+Inc" },
+  { name: "GoZem", logo: "https://placehold.co/150x50.png?text=GoZem" },
+  { name: "Sace Agency", logo: "https://placehold.co/150x50.png?text=Sace+Agency" },
+  { name: "NS GLOBAL EXPERTISE", logo: "/ns.png" },
 ];
 
 export default function Clients() {
@@ -20,15 +17,9 @@ export default function Clients() {
         <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
           Trusted by leading companies
         </h3>
-        <div
-          className="relative w-full overflow-hidden"
-          style={{
-            maskImage: "linear-gradient(to right, transparent, white 20%, white 80%, transparent)",
-          }}
-        >
-          <div className="flex animate-scroll">
-            {[...clients, ...clients].map((client, index) => (
-              <div key={index} className="flex-shrink-0 mx-8" style={{ width: "150px" }}>
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+            {clients.map((client, index) => (
+              <div key={index} className="flex-shrink-0" style={{ width: "150px" }}>
                 <Image
                   src={client.logo}
                   alt={client.name}
@@ -38,7 +29,6 @@ export default function Clients() {
                 />
               </div>
             ))}
-          </div>
         </div>
       </div>
     </section>
