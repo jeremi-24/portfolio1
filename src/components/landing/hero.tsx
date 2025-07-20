@@ -4,9 +4,14 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { LanguageContext, translations } from "@/context/language-context";
 
 export default function Hero() {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
   const name = "Jeremie Ekoue";
+  
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -50,7 +55,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5 }}
           >
-            Développeur Full-Stack & UI Designer passionné, transformant des idées complexes en solutions numériques élégantes et performantes.
+            {t.hero.subtitle}
           </motion.p>
           <motion.div 
             className="flex justify-center"
@@ -59,7 +64,7 @@ export default function Hero() {
             transition={{ delay: 1.8, duration: 0.5 }}
           >
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="#projects">Découvrir mes projets</Link>
+              <Link href="#projects">{t.hero.cta}</Link>
             </Button>
           </motion.div>
         </div>

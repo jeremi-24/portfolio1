@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useContext } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers, Workflow } from "lucide-react";
 
@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { LanguageContext, translations } from "@/context/language-context";
 
 const sections = [
   { id: "hero", component: Hero, icon: HomeIcon },
@@ -36,6 +37,9 @@ const themes = [
 export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentTheme, setCurrentTheme] = useState('default');
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
 
   const goToNext = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % sections.length);
@@ -146,7 +150,7 @@ export default function HomePage() {
                         <button onClick={() => applyTheme(theme.name)} className="w-4 h-4 rounded-full border-2 border-foreground/50 transition-transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-ring" style={{ backgroundColor: theme.color }}></button>
                      </TooltipTrigger>
                      <TooltipContent side="right">
-                         <p className="capitalize">{theme.name}</p>
+                         <p className="capitalize">{t.themes[theme.name as keyof typeof t.themes]}</p>
                      </TooltipContent>
                  </Tooltip>
             ))}

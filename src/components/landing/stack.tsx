@@ -1,10 +1,11 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Progress } from "@/components/ui/progress";
 import { JavaScriptIcon, JavaIcon, NextjsIcon, SpringbootIcon, TypescriptIcon, FigmaIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { LanguageContext, translations } from "@/context/language-context";
 
 const technologies = [
   { name: "JavaScript", icon: JavaScriptIcon, level: 90 },
@@ -17,6 +18,8 @@ const technologies = [
 
 export default function Stack() {
     const [progress, setProgress] = useState<{ [key: string]: number }>({});
+    const { language } = useContext(LanguageContext);
+    const t = translations[language];
 
     useEffect(() => {
         const newProgress: { [key: string]: number } = {};
@@ -41,9 +44,9 @@ export default function Stack() {
     <section id="stack" className="container h-full flex items-center justify-center px-4 md:px-6">
       <div className="w-full max-w-4xl">
         <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">My Arsenal</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.stack.title}</h2>
             <p className="max-w-2xl mx-auto text-muted-foreground">
-                I wield a versatile set of tools and technologies to build robust, scalable, and user-friendly web applications.
+                {t.stack.description}
             </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -9,17 +9,22 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { Send, Phone, Mail, MapPin, Github, Linkedin } from 'lucide-react';
+import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { LanguageContext, translations } from '@/context/language-context';
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
-});
 
 export default function Contact() {
   const { toast } = useToast();
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
+  const formSchema = z.object({
+    name: z.string().min(2, { message: t.contact.validation.name }),
+    email: z.string().email({ message: t.contact.validation.email }),
+    message: z.string().min(10, { message: t.contact.validation.message }),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -29,8 +34,8 @@ export default function Contact() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you soon.',
+      title: t.contact.toast.title,
+      description: t.contact.toast.description,
     });
     form.reset();
   }
@@ -46,9 +51,9 @@ export default function Contact() {
       <div className="container px-4 md:px-6">
         <div className="max-w-xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">Contactez-moi</h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.contact.title}</h2>
                 <p className="max-w-2xl mx-auto text-muted-foreground">
-                    Une idée de projet ? Une question ? N'hésitez pas à me contacter. Je suis toujours ouvert à de nouvelles opportunités.
+                    {t.contact.description}
                 </p>
             </div>
             
@@ -70,9 +75,9 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                     <FormItem>
-                        <FormLabel>Nom</FormLabel>
+                        <FormLabel>{t.contact.form.name.label}</FormLabel>
                         <FormControl>
-                        <Input placeholder="Votre nom" {...field} />
+                        <Input placeholder={t.contact.form.name.placeholder} {...field} />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -85,7 +90,7 @@ export default function Contact() {
                     <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                        <Input type="email" placeholder="votre.email@exemple.com" {...field} />
+                        <Input type="email" placeholder={t.contact.form.email.placeholder} {...field} />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -98,14 +103,14 @@ export default function Contact() {
                     <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                        <Textarea placeholder="Parlez-moi de votre projet ou laissez-moi un simple bonjour !" {...field} rows={5} />
+                        <Textarea placeholder={t.contact.form.message.placeholder} {...field} rows={5} />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
                     )}
                 />
                 <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
-                    Envoyer le message <Send className="ml-2 h-4 w-4" />
+                    {t.contact.form.submit} <Send className="ml-2 h-4 w-4" />
                 </Button>
                 </form>
             </Form>

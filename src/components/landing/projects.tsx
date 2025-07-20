@@ -1,85 +1,26 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-
-const allProjects = [
-  {
-    title: "Plateforme E-commerce",
-    description: "Une solution e-commerce complète avec un CMS personnalisé, une intégration de passerelle de paiement et une interface utilisateur responsive.",
-    image: "https://placehold.co/600x400.png",
-    hint: "online store",
-    category: "Frontend",
-    tags: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-  {
-    title: "Outil de Gestion de Projet",
-    description: "Une plateforme collaborative pour les équipes pour gérer les tâches, suivre les progrès et communiquer efficacement, construite avec une API en temps réel.",
-    image: "https://placehold.co/600x400.png",
-    hint: "dashboard interface",
-    category: "Frontend",
-    tags: ["React", "Java", "WebSocket", "Figma"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-  {
-    title: "Identité de Marque",
-    description: "Package de branding complet pour une startup, incluant la conception de logo, la palette de couleurs et les supports marketing.",
-    image: "https://placehold.co/600x400.png",
-    hint: "branding design",
-    category: "Graphic Design",
-    tags: ["Figma", "Illustrator"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-  {
-    title: "UI d'Application Mobile",
-    description: "Un design d'interface utilisateur épuré et intuitif pour une nouvelle application mobile de réseautage social.",
-    image: "https://placehold.co/600x400.png",
-    hint: "mobile app",
-    category: "UI Design",
-    tags: ["Figma", "UI/UX"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-  {
-    title: "Site Portfolio",
-    description: "Ce site personnel, conçu pour présenter mes compétences et projets, avec un design épuré et des animations fluides.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
-    hint: "developer portfolio",
-    category: "Frontend",
-    tags: ["Next.js", "Tailwind CSS", "GenAI"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-  {
-    title: "Graphismes de Campagne Marketing",
-    description: "Création d'une série de graphiques et de visuels attrayants pour une campagne de marketing numérique, augmentant l'engagement des utilisateurs.",
-    image: "https://placehold.co/600x400.png",
-    hint: "marketing graphics",
-    category: "Graphic Design",
-    tags: ["Photoshop", "Figma"],
-    liveUrl: "#",
-    repoUrl: "https://github.com/jeremi-24",
-  },
-];
-
-const filters = ["Tous", "Frontend", "UI Design", "Graphic Design"];
+import { LanguageContext, translations } from "@/context/language-context";
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("Tous");
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
 
-  const filteredProjects = activeFilter === "Tous"
+  const allProjects = t.projects.projects;
+  const filters = t.projects.filters;
+  
+  const [activeFilter, setActiveFilter] = useState(filters[0]);
+
+  const filteredProjects = activeFilter === filters[0]
     ? allProjects
     : allProjects.filter(p => p.category === activeFilter);
 
@@ -87,9 +28,9 @@ export default function Projects() {
     <section id="projects" className="h-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Mes Projets</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.projects.title}</h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Voici quelques-uns des projets dont je suis fier. Chacun représente un défi que j'ai été ravi de relever.
+            {t.projects.description}
           </p>
         </div>
 
@@ -137,7 +78,7 @@ export default function Projects() {
                            <p className="text-sm text-white/90 mb-4">{project.description}</p>
                            <div className="flex justify-start gap-2 w-full">
                               <Button asChild size="sm">
-                                <Link href={project.liveUrl} target="_blank">Live Demo <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
+                                <Link href={project.liveUrl} target="_blank">{t.projects.liveDemo} <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
                               </Button>
                               <Button asChild variant="secondary" size="sm">
                                 <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> Source</Link>

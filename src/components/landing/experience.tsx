@@ -2,37 +2,23 @@
 "use client";
 
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { LanguageContext, translations } from "@/context/language-context";
 import { Workflow } from "lucide-react";
-
-const experiences = [
-  {
-    role: "UI Designer / Frontend Developer",
-    company: "NS GLOBAL EXPERTISE",
-    period: "Feb 2023 - Aujourd'hui",
-    description: "Conception de maquettes pour différents produits numériques et intégrations avec l'équipe de développement.",
-  },
-  {
-    role: "Frontend Developer",
-    company: "SACE AGENCY",
-    period: "Fev 2024 - Mars 2024",
-    description: "Collaboration avec une équipe pour mettre en œuvre des interfaces intuitives.",
-  },
-  {
-    role: "Fullstack Developer",
-    company: "WORLD WARRIORS",
-    period: "N/A",
-    description: "Collaboration avec des équipes multidisciplinaires pour mettre en œuvre des solutions performantes adaptées aux besoins des utilisateurs.",
-  },
-];
+import { useContext } from "react";
 
 export default function Experience() {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
+  const experiences = t.experience.experiences;
+
   return (
     <section id="experience" className="h-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Mon Parcours Professionnel</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.experience.title}</h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Une chronologie de mes rôles clés et de mes réalisations dans l'industrie technologique.
+            {t.experience.description}
           </p>
         </div>
         <div className="relative max-w-3xl mx-auto">
