@@ -129,15 +129,15 @@ export default function HomePage() {
       </main>
       
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
+        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
           <ArrowLeft />
         </Button>
         {sections.map((section, index) => (
-            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full transition-transform hover:-translate-y-1", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
-                <section.icon className={cn("h-5 w-5", activeIndex === index ? '' : 'text-muted-foreground')}/>
+            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full h-12 w-12 transition-transform hover:-translate-y-1", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
+                <section.icon className={cn("h-6 w-6", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
-        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-12 w-12 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
+        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-1">
           <ArrowRight />
         </Button>
       </div>
