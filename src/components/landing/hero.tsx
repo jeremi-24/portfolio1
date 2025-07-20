@@ -67,7 +67,7 @@ export default function Hero() {
       </div>
 
       <div className="container px-4 md:px-6 z-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="text-left space-y-6">
                 <motion.h1
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter font-headline"
