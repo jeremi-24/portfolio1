@@ -15,6 +15,7 @@ import PersonalizedGreeting from "@/components/landing/personalized-greeting";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/landing/footer";
+import Clients from "@/components/landing/clients";
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -53,6 +54,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 flex flex-col z-10">
         <Hero />
+        <Clients />
         <Experience />
         <Stack />
         <Projects />
