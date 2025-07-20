@@ -79,11 +79,6 @@ export type Translation = {
             message: string;
         }
     };
-    themes: {
-        neon: string;
-        'liquid-glass': string;
-        random: string;
-    };
 };
 
 export const translations: { [key: string]: Translation } = {
@@ -238,11 +233,6 @@ export const translations: { [key: string]: Translation } = {
                 message: "Le message doit contenir au moins 10 caractères.",
             }
         },
-        themes: {
-            neon: "Néon",
-            'liquid-glass': "Verre Liquide",
-            random: "Aléatoire",
-        }
     },
     en: {
         nav: {
@@ -395,11 +385,6 @@ export const translations: { [key: string]: Translation } = {
                 message: "Message must be at least 10 characters.",
             }
         },
-        themes: {
-            neon: "Neon",
-            'liquid-glass': "Liquid Glass",
-            random: "Random",
-        }
     },
     de: {
         nav: {
@@ -552,10 +537,5 @@ export const translations: { [key: string]: Translation } = {
                 message: "Die Nachricht muss mindestens 10 Zeichen lang sein.",
             }
         },
-        themes: {
-            neon: "Neon",
-            'liquid-glass': "Flüssiges Glas",
-            random: "Zufällig",
-        }
     }
 };
