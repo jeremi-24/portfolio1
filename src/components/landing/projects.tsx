@@ -55,7 +55,7 @@ const allProjects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio to showcase my skills and projects, featuring a clean design and smooth animations.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
     hint: "developer portfolio",
     category: "Frontend",
     tags: ["Next.js", "Tailwind CSS", "GenAI"],
