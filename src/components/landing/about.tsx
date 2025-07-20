@@ -6,10 +6,16 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { LanguageContext, translations } from '@/context/language-context';
+import { Github, Linkedin } from 'lucide-react';
 
 export default function About() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
+
+  const socialLinks = [
+    { name: "GitHub", icon: Github, url: "https://github.com/jeremi-24" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/jeremie-ekoue-a95873308/" },
+  ];
 
   return (
     <section id="about" className="container h-full flex items-center justify-center px-4 md:px-6">
@@ -32,9 +38,20 @@ export default function About() {
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
           </div>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href="/jeremie-ekoue-cv.pdf" target="_blank">{t.about.cvButton}</Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 items-center">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Link href="/jeremie-ekoue-cv.pdf" target="_blank">{t.about.cvButton}</Link>
+            </Button>
+            <div className="flex gap-2">
+              {socialLinks.map(({ name, icon: Icon, url }) => (
+                <Button key={name} variant="outline" size="icon" asChild>
+                  <Link href={url} target="_blank" aria-label={name}>
+                    <Icon className="h-5 w-5" />
+                  </Link>
+                </Button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
