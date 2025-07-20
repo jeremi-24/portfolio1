@@ -1,4 +1,21 @@
 
+export type Project = {
+    title: string;
+    slug: string;
+    description: string;
+    image: string;
+    hint: string;
+    category: string;
+    tags: string[];
+    liveUrl: string;
+    repoUrl: string;
+    contextAndObjective?: string;
+    problem?: string;
+    wireframeImage?: string;
+    finalUIImage?: string;
+    process?: string[];
+};
+
 export type Translation = {
     nav: {
         home: string;
@@ -33,17 +50,7 @@ export type Translation = {
         filters: string[];
         liveDemo: string;
         viewDetails: string;
-        projects: {
-            title: string;
-            slug: string;
-            description: string;
-            image: string;
-            hint: string;
-            category: string;
-            tags: string[];
-            liveUrl: string;
-            repoUrl: string;
-        }[];
+        projects: Project[];
     };
     about: {
         title: string;
@@ -174,6 +181,11 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX"],
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
+                    process: ["Problème", "Sketch", "UI"],
+                    contextAndObjective: "Créer une interface attrayante pour une nouvelle app sociale visant à connecter les gens localement. L'objectif était de concevoir une expérience fluide pour encourager les interactions.",
+                    problem: "Les applications existantes étaient jugées trop complexes et encombrées. Les utilisateurs avaient du mal à trouver des événements et à se connecter avec d'autres personnes partageant les mêmes intérêts.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
                 },
                 {
                     title: "Site Portfolio",
@@ -326,6 +338,11 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX"],
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
+                    process: ["Problem", "Sketch", "UI"],
+                    contextAndObjective: "Create an engaging interface for a new social app to connect people locally. The goal was to design a seamless experience to encourage interactions.",
+                    problem: "Existing apps were considered too complex and cluttered. Users struggled to find events and connect with like-minded people.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
                 },
                 {
                     title: "Portfolio Website",
@@ -478,6 +495,11 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX"],
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
+                    process: ["Problem", "Skizze", "UI"],
+                    contextAndObjective: "Erstellen einer ansprechenden Oberfläche für eine neue soziale App, um Menschen vor Ort zu verbinden. Ziel war es, ein nahtloses Erlebnis zu gestalten, um Interaktionen zu fördern.",
+                    problem: "Bestehende Apps wurden als zu komplex und überladen empfunden. Benutzer hatten Schwierigkeiten, Veranstaltungen zu finden und sich mit Gleichgesinnten zu vernetzen.",
+                    wireframeImage: "https://placehold.co/600x400.png",
+                    finalUIImage: "https://placehold.co/600x400.png",
                 },
                 {
                     title: "Portfolio-Webseite",

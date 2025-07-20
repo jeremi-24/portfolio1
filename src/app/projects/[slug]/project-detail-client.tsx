@@ -5,29 +5,29 @@ import { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LanguageContext, translations } from '@/context/language-context';
-import type { Translation } from '@/context/translations';
+import type { Project } from '@/context/translations';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github } from 'lucide-react';
-
-type Project = Translation['projects']['projects'][0];
+import { ArrowUpRight, Github, ChevronRight } from 'lucide-react';
 
 interface ProjectDetailClientProps {
     project: Project;
     projectLang: keyof typeof translations;
 }
 
+const SectionTitle = ({ children }: { children: React.ReactNode }) => (
+    <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary mt-12 mb-6">{children}</h2>
+);
+
 export default function ProjectDetailClient({ project, projectLang }: ProjectDetailClientProps) {
   const { language } = useContext(LanguageContext);
   
-  // Use the translations for the language in which the project was found,
-  // but allow the live UI language to dictate some labels if needed.
-  const projectT = translations[projectLang];
   const uiT = translations[language];
+  const isUIDesignProject = project.category === 'UI Design' || project.category === 'UI-Design';
 
   return (
     <div className="container max-w-4xl py-12 md:py-20">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
                 <Image
                     src={project.image}
@@ -59,6 +59,72 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 </div>
             </div>
         </div>
+
+        {isUIDesignProject && (
+            <div className="mt-16">
+                
+                {project.process && (
+                    <>
+                        <SectionTitle>Processus Rapide</SectionTitle>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+                            {project.process.map((step, index) => (
+                                <div key={step} className="flex items-center gap-4 md:gap-8">
+                                    <div className="flex flex-col items-center">
+                                        <div className="bg-primary/10 text-primary rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mb-2 border-2 border-primary/20">{index + 1}</div>
+                                        <p className="font-semibold">{step}</p>
+                                    </div>
+                                    {index < project.process.length - 1 && <ChevronRight className="h-8 w-8 text-muted-foreground hidden md:block" />}
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                )}
+
+                {project.contextAndObjective && (
+                    <>
+                        <SectionTitle>Contexte & Objectif</SectionTitle>
+                        <p className="text-muted-foreground text-lg">{project.contextAndObjective}</p>
+                    </>
+                )}
+
+                {project.problem && (
+                    <>
+                        <SectionTitle>Problème Identifié</SectionTitle>
+                        <p className="text-muted-foreground text-lg">{project.problem}</p>
+                    </>
+                )}
+
+                {project.wireframeImage && (
+                    <>
+                        <SectionTitle>Wireframes</SectionTitle>
+                        <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                            <Image
+                                src={project.wireframeImage}
+                                alt="Wireframe"
+                                fill
+                                className="object-contain p-4"
+                                data-ai-hint="wireframe sketch"
+                            />
+                        </div>
+                    </>
+                )}
+                
+                {project.finalUIImage && (
+                     <>
+                        <SectionTitle>UI Finales</SectionTitle>
+                        <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                            <Image
+                                src={project.finalUIImage}
+                                alt="Final UI"
+                                fill
+                                className="object-cover"
+                                data-ai-hint="app interface"
+                            />
+                        </div>
+                    </>
+                )}
+            </div>
+        )}
     </div>
   );
 }
