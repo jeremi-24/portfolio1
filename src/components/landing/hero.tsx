@@ -11,7 +11,6 @@ import Image from "next/image";
 export default function Hero() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
-  const name = "SALUT, JE SUIS JEREMIE EKOUE";
   
   const sentence = {
     hidden: { opacity: 1 },
@@ -75,7 +74,7 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                 >
-                    {name.split("").map((char, index) => {
+                    {t.hero.title.split("").map((char, index) => {
                     return (
                         <motion.span key={char + "-" + index} variants={letter}>
                         {char}
