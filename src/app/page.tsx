@@ -110,7 +110,7 @@ export default function HomePage() {
         </AnimatePresence>
       </main>
       
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-card/60 backdrop-blur-sm p-2 rounded-full">
+      <div className="fixed bottom-5 left-5 z-50 flex items-center gap-2 bg-card/60 backdrop-blur-sm p-2 rounded-full">
         {sections.map((section, index) => (
             <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full h-14 w-14 transition-transform hover:-translate-y-3", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
                 <section.icon className={cn("h-8 w-8", activeIndex === index ? '' : 'text-muted-foreground')}/>
