@@ -16,7 +16,7 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full max-w-md mx-auto">
           <Image
-            src="https://placehold.co/600x600.png"
+            src="/profile.png"
             alt="Jeremie Ekoue"
             width={600}
             height={600}
