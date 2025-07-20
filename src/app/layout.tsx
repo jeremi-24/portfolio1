@@ -4,9 +4,9 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Jeremie Ekoue | Developer & UI Designer",
+  title: "Jeremie Ekoue | Développeur Full-Stack & UI Designer",
   description:
-    "Portfolio of Jeremie Ekoue, a passionate Javascript, Java, Next.js, Springboot, and Typescript developer and UI designer.",
+    "Portfolio de Jeremie Ekoue, un développeur passionné spécialisé en JavaScript, Java, Next.js, Spring Boot, TypeScript et un designer UI créatif.",
 };
 
 const inter = Inter({

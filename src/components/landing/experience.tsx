@@ -6,22 +6,22 @@ import { Workflow } from "lucide-react";
 
 const experiences = [
   {
-    role: "Senior Frontend Developer",
-    company: "Tech Solutions Inc.",
-    period: "2020 - Present",
-    description: "Led the development of a new client-facing dashboard using Next.js and TypeScript. Mentored junior developers and improved code quality across the team.",
+    role: "Développeur Full-Stack & UI Designer",
+    company: "Freelance",
+    period: "Sep 2023 - Aujourd'hui",
+    description: "Conception et développement d'applications web complètes pour divers clients en utilisant Next.js, React, et Java Spring Boot. Création d'interfaces utilisateur intuitives avec Figma.",
   },
   {
-    role: "Full-Stack Developer",
-    company: "Innovate Co.",
-    period: "2018 - 2020",
-    description: "Developed and maintained web applications using React, Node.js, and Java Spring Boot. Worked closely with designers to implement pixel-perfect UIs.",
+    role: "Fondateur & Mentor",
+    company: "DWIN - Devs With INTelligence",
+    period: "Août 2023 - Aujourd'hui",
+    description: "Création et animation d'une communauté de développeurs. Organisation de sessions de mentorat, de revues de code et production de contenu éducatif.",
   },
   {
-    role: "UI/UX Design Intern",
-    company: "Creative Designs LLC",
-    period: "Summer 2017",
-    description: "Assisted in designing user interfaces for mobile and web applications. Created wireframes, mockups, and prototypes using Figma.",
+    role: "Développeur Java & Angular",
+    company: "CAFE INFORMATIQUE & TELECOMMUNICATIONS",
+    period: "Juin 2023 - Sep 2023",
+    description: "Maintenance et développement de nouvelles fonctionnalités pour des applications bancaires. Amélioration des performances et de la sécurité des systèmes existants.",
   },
 ];
 
@@ -30,9 +30,9 @@ export default function Experience() {
     <section id="experience" className="h-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">My Professional Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Mon Parcours Professionnel</h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            A timeline of my key roles and accomplishments in the tech industry.
+            Une chronologie de mes rôles clés et de mes réalisations dans l'industrie technologique.
           </p>
         </div>
         <div className="relative max-w-3xl mx-auto">

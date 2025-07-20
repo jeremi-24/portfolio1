@@ -50,7 +50,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5 }}
           >
-            Un développeur passionné 💻 & UI Designer 🎨 qui transforme des problèmes complexes en designs magnifiques et intuitifs.
+            Développeur Full-Stack & UI Designer passionné, transformant des idées complexes en solutions numériques élégantes et performantes.
           </motion.p>
           <motion.div 
             className="flex justify-center"

@@ -13,8 +13,8 @@ import { cn } from "@/lib/utils";
 
 const allProjects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with a custom CMS, payment gateway integration, and a responsive user interface.",
+    title: "Plateforme E-commerce",
+    description: "Une solution e-commerce complète avec un CMS personnalisé, une intégration de passerelle de paiement et une interface utilisateur responsive.",
     image: "https://placehold.co/600x400.png",
     hint: "online store",
     category: "Frontend",
@@ -23,8 +23,8 @@ const allProjects = [
     repoUrl: "#",
   },
   {
-    title: "Project Management Tool",
-    description: "A collaborative platform for teams to manage tasks, track progress, and communicate effectively, built with a real-time API.",
+    title: "Outil de Gestion de Projet",
+    description: "Une plateforme collaborative pour les équipes pour gérer les tâches, suivre les progrès et communiquer efficacement, construite avec une API en temps réel.",
     image: "https://placehold.co/600x400.png",
     hint: "dashboard interface",
     category: "Frontend",
@@ -33,8 +33,8 @@ const allProjects = [
     repoUrl: "#",
   },
   {
-    title: "Brand Identity Design",
-    description: "Complete branding package for a startup, including logo design, color palette, and marketing materials.",
+    title: "Identité de Marque",
+    description: "Package de branding complet pour une startup, incluant la conception de logo, la palette de couleurs et les supports marketing.",
     image: "https://placehold.co/600x400.png",
     hint: "branding design",
     category: "Graphic Design",
@@ -43,8 +43,8 @@ const allProjects = [
     repoUrl: "#",
   },
   {
-    title: "Mobile App UI",
-    description: "A sleek and intuitive user interface design for a new social networking mobile application.",
+    title: "UI d'Application Mobile",
+    description: "Un design d'interface utilisateur épuré et intuitif pour une nouvelle application mobile de réseautage social.",
     image: "https://placehold.co/600x400.png",
     hint: "mobile app",
     category: "UI Design",
@@ -53,8 +53,8 @@ const allProjects = [
     repoUrl: "#",
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio to showcase my skills and projects, featuring a clean design and smooth animations.",
+    title: "Site Portfolio",
+    description: "Ce site personnel, conçu pour présenter mes compétences et projets, avec un design épuré et des animations fluides.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
     hint: "developer portfolio",
     category: "Frontend",
@@ -63,8 +63,8 @@ const allProjects = [
     repoUrl: "#",
   },
   {
-    title: "Marketing Campaign Graphics",
-    description: "Created a series of engaging graphics and visuals for a digital marketing campaign, boosting user engagement.",
+    title: "Graphismes de Campagne Marketing",
+    description: "Création d'une série de graphiques et de visuels attrayants pour une campagne de marketing numérique, augmentant l'engagement des utilisateurs.",
     image: "https://placehold.co/600x400.png",
     hint: "marketing graphics",
     category: "Graphic Design",
@@ -87,9 +87,9 @@ export default function Projects() {
     <section id="projects" className="h-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Mes Projets</h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Here are some of the projects I'm proud of. Each one represents a challenge I was excited to tackle.
+            Voici quelques-uns des projets dont je suis fier. Chacun représente un défi que j'ai été ravi de relever.
           </p>
         </div>
 
