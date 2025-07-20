@@ -20,7 +20,7 @@ const allProjects = [
     category: "Frontend",
     tags: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
   {
     title: "Outil de Gestion de Projet",
@@ -30,7 +30,7 @@ const allProjects = [
     category: "Frontend",
     tags: ["React", "Java", "WebSocket", "Figma"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
   {
     title: "Identité de Marque",
@@ -40,7 +40,7 @@ const allProjects = [
     category: "Graphic Design",
     tags: ["Figma", "Illustrator"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
   {
     title: "UI d'Application Mobile",
@@ -50,7 +50,7 @@ const allProjects = [
     category: "UI Design",
     tags: ["Figma", "UI/UX"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
   {
     title: "Site Portfolio",
@@ -60,7 +60,7 @@ const allProjects = [
     category: "Frontend",
     tags: ["Next.js", "Tailwind CSS", "GenAI"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
   {
     title: "Graphismes de Campagne Marketing",
@@ -70,7 +70,7 @@ const allProjects = [
     category: "Graphic Design",
     tags: ["Photoshop", "Figma"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/jeremi-24",
   },
 ];
 

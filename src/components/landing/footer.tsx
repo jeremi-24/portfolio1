@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter, Code } from "lucide-react";
+import { Github, Linkedin, Code } from "lucide-react";
 
 export default function Footer() {
   const socialLinks = [
-    { name: "GitHub", icon: Github, url: "#" },
-    { name: "LinkedIn", icon: Linkedin, url: "#" },
-    { name: "Twitter", icon: Twitter, url: "#" },
+    { name: "GitHub", icon: Github, url: "https://github.com/jeremi-24" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/jeremie-ekoue-a95873308/" },
   ];
 
   return (
@@ -27,7 +26,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Jeremie Ekoue. All rights reserved.
+            &copy; {new Date().getFullYear()} Jeremie Ekoue. Tous droits réservés.
           </p>
         </div>
       </div>
