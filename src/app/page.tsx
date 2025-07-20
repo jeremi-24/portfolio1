@@ -36,7 +36,7 @@ const themes = [
 
 export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [currentTheme, setCurrentTheme] = useState('default');
+  const [currentTheme, setCurrentTheme] = useState('neon');
   const { language } = useContext(LanguageContext);
   const t = translations[language];
 
@@ -79,8 +79,7 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'default');
-    setCurrentTheme('default');
+    applyTheme('neon');
   }, [])
 
   useEffect(() => {
@@ -128,8 +127,8 @@ export default function HomePage() {
         </AnimatePresence>
       </main>
       
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-2">
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-background/50 backdrop-blur-sm p-2 rounded-full">
+        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 transition-transform hover:-translate-y-3">
           <ArrowLeft className="h-8 w-8" />
         </Button>
         {sections.map((section, index) => (
@@ -137,7 +136,7 @@ export default function HomePage() {
                 <section.icon className={cn("h-6 w-6", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
-        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-14 w-14 bg-background/50 backdrop-blur-sm transition-transform hover:-translate-y-2">
+        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-14 w-14 transition-transform hover:-translate-y-3">
           <ArrowRight className="h-8 w-8" />
         </Button>
       </div>
