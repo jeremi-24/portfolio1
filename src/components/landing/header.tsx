@@ -40,10 +40,16 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
-          <Code className="h-6 w-6 text-accent" />
-          <span>Jeremie Ekoue</span>
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
+            <Code className="h-6 w-6 text-accent" />
+            <span>Jeremie Ekoue</span>
+          </Link>
+          <div className="hidden md:flex items-center gap-4">
+              {/* This is where the nav items could go if we wanted them in the header */}
+          </div>
+        </div>
+
         <div className="hidden md:flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
