@@ -115,7 +115,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M3 3L17.5 41L24 23L41 17.5L3 3Z' fill='black'/%3E%3Crect x='22' y='22' width='24' height='13' rx='6' fill='black'/%3E%3Ctext x='34' y='32.5' font-family='sans-serif' font-size='10' fill='white' text-anchor='middle' font-weight='bold'%3EMe%3C/text%3E%3C/svg%3E") 0 0, auto;
   }
   section {
     @apply py-20 md:py-28;
