@@ -15,12 +15,13 @@ export default function About() {
     <section id="about" className="container h-full flex items-center justify-center px-4 md:px-6">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full max-w-md mx-auto">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/profile.png"
             alt="Jeremie Ekoue"
             width={600}
             height={600}
-            className="rounded-lg shadow-xl"
+            className="rounded-lg shadow-xl object-cover"
             data-ai-hint="man mugshot"
           />
           <div className="absolute -bottom-4 -right-4 w-full h-full border-4 border-accent rounded-lg -z-10" />
