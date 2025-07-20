@@ -30,7 +30,7 @@ export default function Experience() {
                     <Workflow className="h-6 w-6 text-primary" />
                 </div>
               </div>
-              <Card className={`relative lg:w-5/12 ${index % 2 === 0 ? 'lg:ml-auto lg:pl-12' : 'lg:mr-auto lg:text-right lg:pr-12'}`}>
+              <Card className={`relative lg:w-5/12 ${index % 2 === 0 ? 'lg:ml-auto lg:pl-8' : 'lg:mr-auto lg:text-right lg:pr-8'}`}>
                 <CardHeader>
                   <CardTitle className="font-headline text-xl">{exp.role}</CardTitle>
                   <CardDescription className="text-base">{exp.company} | {exp.period}</CardDescription>

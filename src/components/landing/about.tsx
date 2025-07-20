@@ -17,7 +17,7 @@ export default function About() {
         <div className="relative w-full max-w-md mx-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/profile.png"
+            src="/profile.jpg"
             alt="Jeremie Ekoue"
             width={600}
             height={600}

@@ -106,13 +106,13 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "UI Designer / Frontend Developer",
                     company: "NS GLOBAL EXPERTISE",
-                    period: "Fév 2023 - Aujourd'hui",
+                    period: "Fév 2025 - Aujourd'hui",
                     description: "Conception de maquettes pour différents produits numériques et intégrations avec l'équipe de développement.",
                 },
                 {
                     role: "Frontend Developer",
                     company: "SACE AGENCY",
-                    period: "Fév 2024 - Mars 2024",
+                    period: "Fév - Mars 2024",
                     description: "Collaboration avec une équipe pour mettre en œuvre des interfaces intuitives.",
                 },
                 {
@@ -256,13 +256,13 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "UI Designer / Frontend Developer",
                     company: "NS GLOBAL EXPERTISE",
-                    period: "Feb 2023 - Present",
+                    period: "Feb 2025 - Present",
                     description: "Designing mockups for various digital products and integrating them with the development team.",
                 },
                 {
                     role: "Frontend Developer",
                     company: "SACE AGENCY",
-                    period: "Feb 2024 - Mar 2024",
+                    period: "Feb - Mar 2024",
                     description: "Collaborated with a team to implement intuitive user interfaces.",
                 },
                 {
@@ -406,13 +406,13 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "UI-Designer / Frontend-Entwickler",
                     company: "NS GLOBAL EXPERTISE",
-                    period: "Feb 2023 - Heute",
+                    period: "Feb 2025 - Heute",
                     description: "Gestaltung von Mockups für verschiedene digitale Produkte und Integrationen mit dem Entwicklungsteam.",
                 },
                 {
                     role: "Frontend-Entwickler",
                     company: "SACE AGENCY",
-                    period: "Feb 2024 - Mär 2024",
+                    period: "Feb - Mär 2024",
                     description: "Zusammenarbeit mit einem Team zur Implementierung intuitiver Benutzeroberflächen.",
                 },
                 {
