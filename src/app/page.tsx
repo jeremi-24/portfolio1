@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/landing/footer";
 import Clients from "@/components/landing/clients";
+import AudioPlayer from "@/components/landing/audio-player";
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -63,6 +64,7 @@ export default function HomePage() {
       </main>
       
       <PersonalizedGreeting />
+      <AudioPlayer />
       <Footer />
     </div>
   );
