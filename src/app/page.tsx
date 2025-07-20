@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Home as HomeIcon, Briefcase, User, MessageSquare, Layers, Workflow } from "lucide-react";
 
@@ -37,13 +37,13 @@ export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentTheme, setCurrentTheme] = useState('default');
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % sections.length);
-  };
+  }, []);
 
-  const goToPrev = () => {
+  const goToPrev = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + sections.length) % sections.length);
-  };
+  }, []);
   
   const ActiveComponent = sections[activeIndex].component;
 
@@ -78,6 +78,22 @@ export default function HomePage() {
     document.documentElement.setAttribute('data-theme', 'default');
     setCurrentTheme('default');
   }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowRight') {
+        goToNext();
+      } else if (event.key === 'ArrowLeft') {
+        goToPrev();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [goToNext, goToPrev]);
 
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-hidden transition-colors duration-500">
