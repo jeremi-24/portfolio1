@@ -112,7 +112,7 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.5 }}
             >
               <Image
-                src="/i"
+                src="/profile.jpg"
                 alt="Jeremie Ekoue"
                 width={600}
                 height={600}
