@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function Hero() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
-  const name = "Jeremie Ekoue";
+  const name = "SALUT, JE SUIS JEREMIE EKOUE";
   
   const sentence = {
     hidden: { opacity: 1 },
