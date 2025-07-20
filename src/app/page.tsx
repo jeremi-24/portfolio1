@@ -127,18 +127,12 @@ export default function HomePage() {
         </AnimatePresence>
       </main>
       
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm p-2 rounded-full">
-        <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 transition-transform hover:-translate-y-3">
-          <ArrowLeft className="h-8 w-8" />
-        </Button>
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-card/60 backdrop-blur-sm p-2 rounded-full">
         {sections.map((section, index) => (
-            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full h-12 w-12 transition-transform hover:-translate-y-2", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
-                <section.icon className={cn("h-6 w-6", activeIndex === index ? '' : 'text-muted-foreground')}/>
+            <Button key={section.id} onClick={() => setActiveIndex(index)} size="icon" variant={activeIndex === index ? "default" : "ghost"} className={cn("rounded-full h-14 w-14 transition-transform hover:-translate-y-3", activeIndex !== index && 'hover:bg-primary/20 hover:text-primary')}>
+                <section.icon className={cn("h-8 w-8", activeIndex === index ? '' : 'text-muted-foreground')}/>
             </Button>
         ))}
-        <Button onClick={goToNext} size="icon" variant="outline" className="rounded-full h-14 w-14 transition-transform hover:-translate-y-3">
-          <ArrowRight className="h-8 w-8" />
-        </Button>
       </div>
 
       <div className="fixed left-5 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
