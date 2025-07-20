@@ -127,7 +127,7 @@ export default function HomePage() {
         </AnimatePresence>
       </main>
       
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-background/50 backdrop-blur-sm p-2 rounded-full">
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-card/80 backdrop-blur-sm p-2 rounded-full">
         <Button onClick={goToPrev} size="icon" variant="outline" className="rounded-full h-14 w-14 transition-transform hover:-translate-y-3">
           <ArrowLeft className="h-8 w-8" />
         </Button>
