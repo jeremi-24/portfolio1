@@ -82,10 +82,10 @@ export default function HomePage() {
       
       {currentTheme === 'liquid-glass' && (
         <Image
-          src="/macos-wallpaper.jpg"
+          src="https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-3840x2160-1455.jpg"
           alt="macOS wallpaper background"
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{objectFit: 'cover'}}
           className="absolute inset-0 z-0"
         />
       )}
