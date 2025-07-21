@@ -94,7 +94,7 @@ export default function Hero() {
                 transition={{ delay: 1.2, duration: 0.5 }}
             >
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                    <Link href="#projects">{t.hero.cta}</Link>
+                    <Link href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</Link>
                 </Button>
             </motion.div>
         </div>

@@ -111,7 +111,7 @@ export const translations: { [key: string]: Translation } = {
         hero: {
             title: "Développeur Full-Stack & UI Designer",
             subtitle: "Passionné par la transformation d'idées complexes en solutions numériques élégantes et performantes.",
-            cta: "Découvrir mes projets",
+            cta: "Télécharger mon CV",
         },
         experience: {
             title: "Mon Parcours Professionnel",
@@ -293,7 +293,7 @@ export const translations: { [key: string]: Translation } = {
         hero: {
             title: "Full-Stack Developer & UI Designer",
             subtitle: "Passionate about transforming complex ideas into elegant and high-performing digital solutions.",
-            cta: "Discover my projects",
+            cta: "Download My CV",
         },
         experience: {
             title: "My Professional Journey",
@@ -475,7 +475,7 @@ export const translations: { [key: string]: Translation } = {
         hero: {
             title: "Full-Stack-Entwickler & UI-Designer",
             subtitle: "Leidenschaftlich daran, komplexe Ideen in elegante und leistungsstarke digitale Lösungen umzuwandeln.",
-            cta: "Meine Projekte entdecken",
+            cta: "Meinen Lebenslauf herunterladen",
         },
         experience: {
             title: "Mein beruflicher Werdegang",
