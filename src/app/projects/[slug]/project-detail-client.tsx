@@ -25,6 +25,8 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
   const uiT = translations[language];
   const isUIDesignProject = project.category === 'UI Design' || project.category === 'UI-Design';
 
+  const hasExtraContent = project.contextAndObjective || project.problem || project.wireframeImage || project.finalUIImage || project.process;
+
   return (
     <div className="container max-w-4xl py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -60,10 +62,10 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
             </div>
         </div>
 
-        {isUIDesignProject && (
+        {hasExtraContent && (
             <div className="mt-16">
                 
-                {project.process && (
+                {isUIDesignProject && project.process && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.quickProcess}</SectionTitle>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
@@ -96,14 +98,14 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
 
                 {project.wireframeImage && (
                     <>
-                        <SectionTitle>{uiT.projects.detailPage.wireframes}</SectionTitle>
+                        <SectionTitle>{isUIDesignProject ? uiT.projects.detailPage.wireframes : uiT.projects.detailPage.feature1}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.wireframeImage}
-                                alt="Wireframe"
+                                alt="Wireframe or Feature 1"
                                 fill
                                 className="object-contain p-4"
-                                data-ai-hint="wireframe sketch"
+                                data-ai-hint="wireframe sketch app feature"
                             />
                         </div>
                     </>
@@ -111,14 +113,14 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 
                 {project.finalUIImage && (
                      <>
-                        <SectionTitle>{uiT.projects.detailPage.finalUI}</SectionTitle>
+                        <SectionTitle>{isUIDesignProject ? uiT.projects.detailPage.finalUI : uiT.projects.detailPage.feature2}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.finalUIImage}
-                                alt="Final UI"
+                                alt="Final UI or Feature 2"
                                 fill
                                 className="object-cover"
-                                data-ai-hint="app interface"
+                                data-ai-hint="app interface feature"
                             />
                         </div>
                     </>

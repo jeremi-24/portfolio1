@@ -59,6 +59,8 @@ export type Translation = {
             identifiedProblem: string;
             wireframes: string;
             finalUI: string;
+            feature1: string;
+            feature2: string;
         }
     };
     about: {
@@ -152,12 +154,14 @@ export const translations: { [key: string]: Translation } = {
                     title: "YunoDoc - Gestion Électronique de Documents (GED)",
                     slug: "yunodoc-edms",
                     description: "YunoDoc est un système de Gestion Électronique de Documents (GED) moderne conçu pour automatiser le téléversement, la classification, la recherche et le suivi des documents pour les organisations.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/yuno1.jpg",
                     hint: "document management",
                     category: "Frontend",
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    wireframeImage: "/yuno2.png",
+                    finalUIImage: "/yuno3.png",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -232,6 +236,8 @@ export const translations: { [key: string]: Translation } = {
                 identifiedProblem: "Problème Identifié",
                 wireframes: "Wireframes",
                 finalUI: "UI Finales",
+                feature1: "Page de recherche",
+                feature2: "Recherche de contenu en action",
             }
         },
         about: {
@@ -323,12 +329,14 @@ export const translations: { [key: string]: Translation } = {
                     title: "YunoDoc - Electronic Document Management Application (EDMS)",
                     slug: "yunodoc-edms",
                     description: "YunoDoc is a modern Electronic Document Management System (EDMS) designed to automate document uploading, classification, search, and tracking for organizations.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/yuno1.jpg",
                     hint: "document management",
                     category: "Frontend",
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    wireframeImage: "/yuno2.png",
+                    finalUIImage: "/yuno3.png",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -403,6 +411,8 @@ export const translations: { [key: string]: Translation } = {
                 identifiedProblem: "Identified Problem",
                 wireframes: "Wireframes",
                 finalUI: "Final UI",
+                feature1: "Search page",
+                feature2: "Content search in action",
             }
         },
         about: {
@@ -494,12 +504,14 @@ export const translations: { [key: string]: Translation } = {
                     title: "YunoDoc - Elektronisches Dokumentenmanagement (EDMS)",
                     slug: "yunodoc-edms",
                     description: "YunoDoc ist ein modernes elektronisches Dokumentenmanagementsystem (EDMS), das entwickelt wurde, um das Hochladen, Klassifizieren, Suchen und Verfolgen von Dokumenten für Organisationen zu automatisieren.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/yuno1.jpg",
                     hint: "document management",
                     category: "Frontend",
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    wireframeImage: "/yuno2.png",
+                    finalUIImage: "/yuno3.png",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -574,6 +586,8 @@ export const translations: { [key: string]: Translation } = {
                 identifiedProblem: "Identifiziertes Problem",
                 wireframes: "Wireframes",
                 finalUI: "Finale UI",
+                feature1: "Suchseite",
+                feature2: "Inhaltssuche in Aktion",
             }
         },
         about: {
