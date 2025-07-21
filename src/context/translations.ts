@@ -136,7 +136,7 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "Fullstack Developer",
                     company: "WORLD WARRIORS",
-                    period: "Juillet 2024 - Aujourd'hui",
+                    period: "Juillet 2024 - Présent",
                     description: "Collaboration avec des équipes multidisciplinaires pour mettre en œuvre des solutions performantes adaptées aux besoins des utilisateurs.",
                 },
             ]
@@ -165,8 +165,8 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Les entreprises perdent du temps et de l'argent à gérer manuellement un volume croissant de documents papier et numériques, ce qui entraîne des inefficacités, des risques de perte et des difficultés d'accès à l'information.",
                     solution: "YunoDoc automatise la gestion des documents avec un téléversement intelligent, une classification assistée par IA, une recherche de contenu puissante (OCR) et un stockage sécurisé, transformant le chaos documentaire en une ressource organisée.",
                     resultat: "Une réduction significative du temps de traitement des documents, une collaboration améliorée entre les équipes et une sécurité renforcée des informations sensibles, permettant aux organisations de se concentrer sur leur cœur de métier.",
-                    wireframeImage: "/yuno2.png",
-                    finalUIImage: "/yuno3.png",
+                    wireframeImage: "/yuno2.PNG",
+                    finalUIImage: "/yuno3.PNG",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -343,8 +343,8 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Companies waste time and money manually managing a growing volume of paper and digital documents, leading to inefficiencies, risk of loss, and difficulty accessing information.",
                     solution: "YunoDoc automates document management with smart uploading, AI-assisted classification, powerful content search (OCR), and secure storage, turning document chaos into an organized resource.",
                     resultat: "A significant reduction in document processing time, improved collaboration between teams, and enhanced security of sensitive information, allowing organizations to focus on their core business.",
-                    wireframeImage: "/yuno2.png",
-                    finalUIImage: "/yuno3.png",
+                    wireframeImage: "/yuno2.PNG",
+                    finalUIImage: "/yuno3.PNG",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -521,8 +521,8 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Unternehmen verschwenden Zeit und Geld bei der manuellen Verwaltung einer wachsenden Menge von Papier- und digitalen Dokumenten, was zu Ineffizienzen, Verlustrisiken und Schwierigkeiten beim Informationszugriff führt.",
                     solution: "YunoDoc automatisiert die Dokumentenverwaltung mit intelligentem Hochladen, KI-gestützter Klassifizierung, leistungsstarker Inhaltssuche (OCR) und sicherer Speicherung und verwandelt das Dokumentenchaos in eine organisierte Ressource.",
                     resultat: "Eine signifikante Reduzierung der Dokumentenverarbeitungszeit, verbesserte Zusammenarbeit zwischen Teams und erhöhte Sicherheit sensibler Informationen, die es Organisationen ermöglicht, sich auf ihr Kerngeschäft zu konzentrieren.",
-                    wireframeImage: "/yuno2.png",
-                    finalUIImage: "/yuno3.png",
+                    wireframeImage: "/yuno2.PNG",
+                    finalUIImage: "/yuno3.PNG",
                 },
                 {
                     title: "GOZEM - Landing Page",
