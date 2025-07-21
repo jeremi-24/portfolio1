@@ -18,7 +18,7 @@ export default function Experience() {
     offset: ["start end", "end start"]
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"]);
+  const height = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "100%"]);
 
 
   return (
@@ -34,10 +34,7 @@ export default function Experience() {
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border/40"></div>
           <motion.div 
             style={{ height }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary"
-            initial={{boxShadow: "0 0 0px hsl(var(--primary))"}}
-            animate={{boxShadow: "0 0 15px hsl(var(--primary))"}}
-            transition={{duration: 0.5, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut'}}
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary shadow-lg shadow-primary/50"
           />
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12">
