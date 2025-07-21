@@ -490,5 +490,3 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
-
-    

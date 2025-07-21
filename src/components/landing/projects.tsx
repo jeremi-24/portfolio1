@@ -1,13 +1,13 @@
 
 "use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LanguageContext, translations } from "@/context/language-context";
 
@@ -19,6 +19,10 @@ export default function Projects() {
   const filters = t.projects.filters;
   
   const [activeFilter, setActiveFilter] = useState(filters[0]);
+
+  useEffect(() => {
+    setActiveFilter(filters[0]);
+  }, [language, filters]);
 
   const filteredProjects = activeFilter === filters[0]
     ? allProjects
@@ -51,7 +55,7 @@ export default function Projects() {
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
-                key={project.title}
+                key={project.slug} // Use slug as key for consistency across languages
                 layout
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
