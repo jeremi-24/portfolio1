@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import Footer from "@/components/landing/footer";
 import Clients from "@/components/landing/clients";
 import AudioPlayer from "@/components/landing/audio-player";
+import AnimatedSection from "@/components/landing/animated-section";
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -55,12 +56,24 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 flex flex-col z-10">
         <Hero />
-        <Clients />
-        <Experience />
-        <Stack />
-        <Projects />
-        <About />
-        <Contact />
+        <AnimatedSection>
+            <Clients />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Experience />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Stack />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Projects />
+        </AnimatedSection>
+        <AnimatedSection>
+            <About />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Contact />
+        </AnimatedSection>
       </main>
       
       <PersonalizedGreeting />

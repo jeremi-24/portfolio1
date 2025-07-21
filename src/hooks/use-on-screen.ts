@@ -11,7 +11,9 @@ export function useOnScreen(ref: RefObject<HTMLElement>): boolean {
       return null;
     }
     return new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIntersecting(true);
+      }
     });
   }, []);
 
