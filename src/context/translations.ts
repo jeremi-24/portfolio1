@@ -331,7 +331,7 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "View Details",
             projects: [
                 {
-                    title: "YunoDoc - Electronic Document Management Application (EDMS)",
+                    title: "YunoDoc - Electronic Document Management (EDMS)",
                     slug: "yunodoc-edms",
                     description: "YunoDoc is a modern Electronic Document Management System (EDMS) designed to automate document uploading, classification, search, and tracking for organizations.",
                     image: "/yuno1.jpg",
@@ -425,8 +425,8 @@ export const translations: { [key: string]: Translation } = {
         },
         about: {
             title: "About Me",
-            p1: "Web developer passionate about new technologies, AI and UI design. I design modern, intuitive and efficient applications, with a constant focus on simplifying processes.",
-            p2: "Creative, rigorous and solution-oriented, I seek to contribute to projects focused on the user experience.",
+            p1: "I am a full stack developer and UI designer, passionate about creating elegant and high-performing digital solutions. I use technologies like Next.js, React, and Java Spring Boot to bring robust projects to life.",
+            p2: "Creative, rigorous, and solution-oriented, I seek to contribute to projects focused on the user experience.",
             cvButton: "Download My CV",
             education: {
                 title: "Education and Certifications",
@@ -637,5 +637,7 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
 
     
