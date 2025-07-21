@@ -24,8 +24,9 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
   
   const uiT = translations[language];
   const isUIDesignProject = project.category === 'UI Design' || project.category === 'UI-Design';
+  const isDevProject = !isUIDesignProject;
 
-  const hasExtraContent = project.contextAndObjective || project.problem || project.wireframeImage || project.finalUIImage || project.process;
+  const hasExtraContent = project.contextAndObjective || project.problem || project.solution || project.resultat || project.wireframeImage || project.finalUIImage || project.process;
 
   return (
     <div className="container max-w-4xl py-12 md:py-20">
@@ -82,27 +83,72 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     </>
                 )}
 
-                {project.contextAndObjective && (
+                {isUIDesignProject && project.contextAndObjective && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.contextAndObjective}</SectionTitle>
                         <p className="text-muted-foreground text-lg">{project.contextAndObjective}</p>
                     </>
                 )}
-
-                {project.problem && (
+                
+                {/* Structure for Dev Projects */}
+                {isDevProject && project.problem && (
                     <>
-                        <SectionTitle>{uiT.projects.detailPage.identifiedProblem}</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.problem}</SectionTitle>
+                        <p className="text-muted-foreground text-lg">{project.problem}</p>
+                    </>
+                )}
+                
+                {isDevProject && project.solution && (
+                    <>
+                        <SectionTitle>{uiT.projects.detailPage.solution}</SectionTitle>
+                        <p className="text-muted-foreground text-lg">{project.solution}</p>
+                        {project.wireframeImage && (
+                            <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                                <Image
+                                    src={project.wireframeImage}
+                                    alt="Solution illustration"
+                                    fill
+                                    className="object-contain p-4"
+                                    data-ai-hint="wireframe sketch app feature"
+                                />
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {isDevProject && project.resultat && (
+                    <>
+                        <SectionTitle>{uiT.projects.detailPage.resultat}</SectionTitle>
+                        <p className="text-muted-foreground text-lg">{project.resultat}</p>
+                        {project.finalUIImage && (
+                            <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                                <Image
+                                    src={project.finalUIImage}
+                                    alt="Result illustration"
+                                    fill
+                                    className="object-cover"
+                                    data-ai-hint="app interface feature"
+                                />
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {/* Legacy structure for UI projects to avoid breaking them */}
+                {isUIDesignProject && project.problem && (
+                    <>
+                        <SectionTitle>{uiT.projects.detailPage.problem}</SectionTitle>
                         <p className="text-muted-foreground text-lg">{project.problem}</p>
                     </>
                 )}
 
-                {project.wireframeImage && (
+                {isUIDesignProject && project.wireframeImage && (
                     <>
-                        <SectionTitle>{isUIDesignProject ? uiT.projects.detailPage.wireframes : uiT.projects.detailPage.feature1}</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.wireframes}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.wireframeImage}
-                                alt="Wireframe or Feature 1"
+                                alt="Wireframe"
                                 fill
                                 className="object-contain p-4"
                                 data-ai-hint="wireframe sketch app feature"
@@ -111,13 +157,13 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     </>
                 )}
                 
-                {project.finalUIImage && (
+                {isUIDesignProject && project.finalUIImage && (
                      <>
-                        <SectionTitle>{isUIDesignProject ? uiT.projects.detailPage.finalUI : uiT.projects.detailPage.feature2}</SectionTitle>
+                        <SectionTitle>{uiT.projects.detailPage.finalUI}</SectionTitle>
                         <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.finalUIImage}
-                                alt="Final UI or Feature 2"
+                                alt="Final UI"
                                 fill
                                 className="object-cover"
                                 data-ai-hint="app interface feature"

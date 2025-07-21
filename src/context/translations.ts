@@ -11,6 +11,8 @@ export type Project = {
     repoUrl: string;
     contextAndObjective?: string;
     problem?: string;
+    solution?: string;
+    resultat?: string;
     wireframeImage?: string;
     finalUIImage?: string;
     process?: string[];
@@ -56,11 +58,11 @@ export type Translation = {
             sourceCode: string;
             quickProcess: string;
             contextAndObjective: string;
-            identifiedProblem: string;
+            problem: string;
+            solution: string;
+            resultat: string;
             wireframes: string;
             finalUI: string;
-            feature1: string;
-            feature2: string;
         }
     };
     about: {
@@ -160,6 +162,9 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    problem: "Les entreprises perdent du temps et de l'argent à gérer manuellement un volume croissant de documents papier et numériques, ce qui entraîne des inefficacités, des risques de perte et des difficultés d'accès à l'information.",
+                    solution: "YunoDoc automatise la gestion des documents avec un téléversement intelligent, une classification assistée par IA, une recherche de contenu puissante (OCR) et un stockage sécurisé, transformant le chaos documentaire en une ressource organisée.",
+                    resultat: "Une réduction significative du temps de traitement des documents, une collaboration améliorée entre les équipes et une sécurité renforcée des informations sensibles, permettant aux organisations de se concentrer sur leur cœur de métier.",
                     wireframeImage: "/yuno2.png",
                     finalUIImage: "/yuno3.png",
                 },
@@ -233,11 +238,11 @@ export const translations: { [key: string]: Translation } = {
                 sourceCode: "Code Source",
                 quickProcess: "Processus Rapide",
                 contextAndObjective: "Contexte & Objectif",
-                identifiedProblem: "Problème Identifié",
+                problem: "Problème",
+                solution: "Solution",
+                resultat: "Résultat",
                 wireframes: "Wireframes",
                 finalUI: "UI Finales",
-                feature1: "Page de recherche",
-                feature2: "Recherche de contenu en action",
             }
         },
         about: {
@@ -335,6 +340,9 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    problem: "Companies waste time and money manually managing a growing volume of paper and digital documents, leading to inefficiencies, risk of loss, and difficulty accessing information.",
+                    solution: "YunoDoc automates document management with smart uploading, AI-assisted classification, powerful content search (OCR), and secure storage, turning document chaos into an organized resource.",
+                    resultat: "A significant reduction in document processing time, improved collaboration between teams, and enhanced security of sensitive information, allowing organizations to focus on their core business.",
                     wireframeImage: "/yuno2.png",
                     finalUIImage: "/yuno3.png",
                 },
@@ -408,11 +416,11 @@ export const translations: { [key: string]: Translation } = {
                 sourceCode: "Source Code",
                 quickProcess: "Quick Process",
                 contextAndObjective: "Context & Objective",
-                identifiedProblem: "Identified Problem",
+                problem: "Problem",
+                solution: "Solution",
+                resultat: "Result",
                 wireframes: "Wireframes",
                 finalUI: "Final UI",
-                feature1: "Search page",
-                feature2: "Content search in action",
             }
         },
         about: {
@@ -510,6 +518,9 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
                     liveUrl: "https://yunod.netlify.app",
                     repoUrl: "https://github.com/jeremi-24/ged/",
+                    problem: "Unternehmen verschwenden Zeit und Geld bei der manuellen Verwaltung einer wachsenden Menge von Papier- und digitalen Dokumenten, was zu Ineffizienzen, Verlustrisiken und Schwierigkeiten beim Informationszugriff führt.",
+                    solution: "YunoDoc automatisiert die Dokumentenverwaltung mit intelligentem Hochladen, KI-gestützter Klassifizierung, leistungsstarker Inhaltssuche (OCR) und sicherer Speicherung und verwandelt das Dokumentenchaos in eine organisierte Ressource.",
+                    resultat: "Eine signifikante Reduzierung der Dokumentenverarbeitungszeit, verbesserte Zusammenarbeit zwischen Teams und erhöhte Sicherheit sensibler Informationen, die es Organisationen ermöglicht, sich auf ihr Kerngeschäft zu konzentrieren.",
                     wireframeImage: "/yuno2.png",
                     finalUIImage: "/yuno3.png",
                 },
@@ -583,11 +594,11 @@ export const translations: { [key: string]: Translation } = {
                 sourceCode: "Quellcode",
                 quickProcess: "Schneller Prozess",
                 contextAndObjective: "Kontext & Ziel",
-                identifiedProblem: "Identifiziertes Problem",
+                problem: "Problem",
+                solution: "Lösung",
+                resultat: "Ergebnis",
                 wireframes: "Wireframes",
                 finalUI: "Finale UI",
-                feature1: "Suchseite",
-                feature2: "Inhaltssuche in Aktion",
             }
         },
         about: {
