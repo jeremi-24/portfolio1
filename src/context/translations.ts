@@ -419,8 +419,8 @@ export const translations: { [key: string]: Translation } = {
         },
         about: {
             title: "About Me",
-            p1: "I am a full-stack developer and UI designer, passionate about creating elegant and high-performing digital solutions. I use technologies like Next.js, React, and Java Spring Boot to bring robust projects to life.",
-            p2: "Founder of the 'DWIN - Devs With INTelligence' community, I enjoy sharing my knowledge and helping other developers grow. I am always open to new collaboration opportunities, whether freelance or within an innovative team.",
+            p1: "Web developer passionate about new technologies, AI and UI design. I design modern, intuitive and efficient applications, with a constant focus on simplifying processes.",
+            p2: "Creative, rigorous and solution-oriented, I seek to contribute to projects focused on the user experience.",
             cvButton: "Download My CV",
         },
         contact: {
@@ -629,5 +629,6 @@ export const translations: { [key: string]: Translation } = {
     
 
     
+
 
 
