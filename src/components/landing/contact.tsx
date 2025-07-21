@@ -21,18 +21,22 @@ export default function Contact() {
   const t = translations[language];
 
   const formSchema = z.object({
-    name: z.string().min(2, { message: t.contact.validation.name }),
     email: z.string().email({ message: t.contact.validation.email }),
     message: z.string().min(10, { message: t.contact.validation.message }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: '', email: '', message: '' },
+    defaultValues: { email: '', message: '' },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const mailtoLink = `mailto:jeremiekoue8@gmail.com?subject=Contact depuis votre portfolio&body=${encodeURIComponent(
+      `Email de l'expéditeur: ${values.email}\n\nMessage:\n${values.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+
     toast({
       title: t.contact.toast.title,
       description: t.contact.toast.description,
@@ -70,19 +74,6 @@ export default function Contact() {
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>{t.contact.form.name.label}</FormLabel>
-                        <FormControl>
-                        <Input placeholder={t.contact.form.name.placeholder} {...field} />
-                        </FormControl>
-                        <FormMessage />
-                    </FormItem>
-                    )}
-                />
                 <FormField
                     control={form.control}
                     name="email"

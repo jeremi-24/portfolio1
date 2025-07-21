@@ -71,10 +71,6 @@ export type Translation = {
         title: string;
         description: string;
         form: {
-            name: {
-                label: string;
-                placeholder: string;
-            };
             email: {
                 label: string;
                 placeholder: string;
@@ -90,7 +86,6 @@ export type Translation = {
             description: string;
         };
         validation: {
-            name: string;
             email: string;
             message: string;
         }
@@ -255,10 +250,6 @@ export const translations: { [key: string]: Translation } = {
             title: "Contactez-moi",
             description: "Une idée de projet ? Une question ? N'hésitez pas à me contacter. Je suis toujours ouvert à de nouvelles opportunités.",
             form: {
-                name: {
-                    label: "Nom",
-                    placeholder: "Votre nom",
-                },
                 email: {
                     label: "Email",
                     placeholder: "votre.email@exemple.com",
@@ -274,7 +265,6 @@ export const translations: { [key: string]: Translation } = {
                 description: "Merci de m'avoir contacté. Je vous répondrai bientôt.",
             },
             validation: {
-                name: "Le nom doit contenir au moins 2 caractères.",
                 email: "Veuillez entrer une adresse email valide.",
                 message: "Le message doit contenir au moins 10 caractères.",
             }
@@ -437,10 +427,6 @@ export const translations: { [key: string]: Translation } = {
             title: "Contact Me",
             description: "Have a project idea? A question? Feel free to contact me. I'm always open to new opportunities.",
             form: {
-                name: {
-                    label: "Name",
-                    placeholder: "Your name",
-                },
                 email: {
                     label: "Email",
                     placeholder: "your.email@example.com",
@@ -456,7 +442,6 @@ export const translations: { [key: string]: Translation } = {
                 description: "Thank you for reaching out. I will get back to you soon.",
             },
             validation: {
-                name: "Name must be at least 2 characters.",
                 email: "Please enter a valid email.",
                 message: "Message must be at least 10 characters.",
             }
@@ -619,10 +604,6 @@ export const translations: { [key: string]: Translation } = {
             title: "Kontaktieren Sie mich",
             description: "Haben Sie eine Projektidee? Eine Frage? Zögern Sie nicht, mich zu kontaktieren. Ich bin immer offen für neue Möglichkeiten.",
             form: {
-                name: {
-                    label: "Name",
-                    placeholder: "Ihr Name",
-                },
                 email: {
                     label: "Email",
                     placeholder: "ihre.email@beispiel.com",
@@ -638,7 +619,6 @@ export const translations: { [key: string]: Translation } = {
                 description: "Vielen Dank für Ihre Kontaktaufnahme. Ich werde mich bald bei Ihnen melden.",
             },
             validation: {
-                name: "Der Name muss mindestens 2 Zeichen lang sein.",
                 email: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
                 message: "Die Nachricht muss mindestens 10 Zeichen lang sein.",
             }
@@ -649,4 +629,5 @@ export const translations: { [key: string]: Translation } = {
     
 
     
+
 
