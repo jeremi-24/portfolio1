@@ -30,8 +30,8 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased`}>
         <LanguageProvider>
           {children}
+          <Toaster />
         </LanguageProvider>
-        <Toaster />
       </body>
     </html>
   );
