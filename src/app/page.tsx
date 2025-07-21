@@ -12,7 +12,6 @@ import Contact from "@/components/landing/contact";
 import Experience from "@/components/landing/experience";
 import Footer from "@/components/landing/footer";
 import Clients from "@/components/landing/clients";
-import AudioPlayer from "@/components/landing/audio-player";
 
 export default function HomePage() {
   
@@ -34,7 +33,6 @@ export default function HomePage() {
         <Contact />
       </main>
       
-      <AudioPlayer />
       <Footer />
     </div>
   );
