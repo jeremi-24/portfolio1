@@ -149,6 +149,17 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "Voir les détails",
             projects: [
                 {
+                    title: "YunoDoc - Gestion Électronique de Documents (GED)",
+                    slug: "yunodoc-edms",
+                    description: "YunoDoc est un système de Gestion Électronique de Documents (GED) moderne conçu pour automatiser le téléversement, la classification, la recherche et le suivi des documents pour les organisations.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "document management",
+                    category: "Frontend",
+                    tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
+                    liveUrl: "https://yunod.netlify.app",
+                    repoUrl: "https://github.com/jeremi-24/ged/",
+                },
+                {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "Un concept de page d'accueil responsive pour une super-application africaine tout-en-un.",
@@ -163,17 +174,6 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Cette section met en évidence les services clés de la super application Gozem avec un design chaleureux et moderne et une disposition intuitive pour simplifier la mobilité et les achats quotidiens.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
-                },
-                {
-                    title: "Plateforme E-commerce",
-                    slug: "plateforme-ecommerce",
-                    description: "Une solution e-commerce complète avec un CMS personnalisé, une intégration de passerelle de paiement et une interface utilisateur responsive.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "online store",
-                    category: "Frontend",
-                    tags: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
                 },
                 {
                     title: "Outil de Gestion de Projet",
@@ -221,17 +221,6 @@ export const translations: { [key: string]: Translation } = {
                     hint: "developer portfolio",
                     category: "Frontend",
                     tags: ["Next.js", "Tailwind CSS", "GenAI"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
-                },
-                {
-                    title: "Graphismes de Campagne Marketing",
-                    slug: "graphismes-campagne-marketing",
-                    description: "Création d'une série de graphiques et de visuels attrayants pour une campagne de marketing numérique, augmentant l'engagement des utilisateurs.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "marketing graphics",
-                    category: "Graphic Design",
-                    tags: ["Photoshop", "Figma"],
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
@@ -331,6 +320,17 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "View Details",
             projects: [
                 {
+                    title: "YunoDoc - Electronic Document Management Application (EDMS)",
+                    slug: "yunodoc-edms",
+                    description: "YunoDoc is a modern Electronic Document Management System (EDMS) designed to automate document uploading, classification, search, and tracking for organizations.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "document management",
+                    category: "Frontend",
+                    tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
+                    liveUrl: "https://yunod.netlify.app",
+                    repoUrl: "https://github.com/jeremi-24/ged/",
+                },
+                {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "A responsive landing page concept for an all-in-one African super app.",
@@ -345,17 +345,6 @@ export const translations: { [key: string]: Translation } = {
                     problem: "This section highlights key Gozem super app services with a warm, modern design and intuitive layout to simplify mobility and daily shopping.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
-                },
-                {
-                    title: "E-commerce Platform",
-                    slug: "ecommerce-platform",
-                    description: "A complete e-commerce solution with a custom CMS, payment gateway integration, and a responsive user interface.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "online store",
-                    category: "Frontend",
-                    tags: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
                 },
                 {
                     title: "Project Management Tool",
@@ -403,17 +392,6 @@ export const translations: { [key: string]: Translation } = {
                     hint: "developer portfolio",
                     category: "Frontend",
                     tags: ["Next.js", "Tailwind CSS", "GenAI"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
-                },
-                {
-                    title: "Marketing Campaign Graphics",
-                    slug: "marketing-campaign-graphics",
-                    description: "Created a series of engaging graphics and visuals for a digital marketing campaign, increasing user engagement.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "marketing graphics",
-                    category: "Graphic Design",
-                    tags: ["Photoshop", "Figma"],
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
@@ -513,6 +491,17 @@ export const translations: { [key: string]: Translation } = {
             viewDetails: "Details anzeigen",
             projects: [
                 {
+                    title: "YunoDoc - Elektronisches Dokumentenmanagement (EDMS)",
+                    slug: "yunodoc-edms",
+                    description: "YunoDoc ist ein modernes elektronisches Dokumentenmanagementsystem (EDMS), das entwickelt wurde, um das Hochladen, Klassifizieren, Suchen und Verfolgen von Dokumenten für Organisationen zu automatisieren.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "document management",
+                    category: "Frontend",
+                    tags: ["Next.js", "Drizzle ORM", "GenAI", "Firebase"],
+                    liveUrl: "https://yunod.netlify.app",
+                    repoUrl: "https://github.com/jeremi-24/ged/",
+                },
+                {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "Ein responsives Landing-Page-Konzept für eine afrikanische Super-App.",
@@ -527,17 +516,6 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Dieser Abschnitt hebt die wichtigsten Dienstleistungen der Gozem-Super-App mit einem warmen, modernen Design und einem intuitiven Layout hervor, um die Mobilität und den täglichen Einkauf zu vereinfachen.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
-                },
-                {
-                    title: "E-Commerce-Plattform",
-                    slug: "e-commerce-plattform",
-                    description: "Eine komplette E-Commerce-Lösung mit einem benutzerdefinierten CMS, Zahlungsgateway-Integration und einer responsiven Benutzeroberfläche.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "online store",
-                    category: "Frontend",
-                    tags: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
                 },
                 {
                     title: "Projektmanagement-Tool",
@@ -588,17 +566,6 @@ export const translations: { [key: string]: Translation } = {
                     liveUrl: "#",
                     repoUrl: "https://github.com/jeremi-24",
                 },
-                {
-                    title: "Marketingkampagnen-Grafiken",
-                    slug: "marketingkampagnen-grafiken",
-                    description: "Erstellung einer Reihe ansprechender Grafiken und Visuals für eine digitale Marketingkampagne zur Steigerung des Benutzerengagements.",
-                    image: "https://placehold.co/600x400.png",
-                    hint: "marketing graphics",
-                    category: "Graphic Design",
-                    tags: ["Photoshop", "Figma"],
-                    liveUrl: "#",
-                    repoUrl: "https://github.com/jeremi-24",
-                },
             ],
             detailPage: {
                 sourceCode: "Quellcode",
@@ -645,14 +612,5 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
-
-    
-
-    
-
-
-
-
-
 
     
