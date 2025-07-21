@@ -8,15 +8,15 @@ import { cn } from "@/lib/utils";
 import { LanguageContext, translations } from "@/context/language-context";
 
 const technologies = [
-  { name: "JavaScript", icon: "/js.svg", level: 90, type: 'image' },
-  { name: "TypeScript", icon: "/ts.svg", level: 85, type: 'image' },
-  { name: "React", icon: "/react.svg", level: 95, type: 'image' },
-  { name: "Next.js", icon: "/next.svg", level: 95, type: 'image' },
-  { name: "Node.js", icon: "/node.svg", level: 80, type: 'image' },
-  { name: "Firebase", icon: "/firebase.svg", level: 75, type: 'image' },
-  { name: "Java", icon: "/java.svg", level: 80, type: 'image' },
-  { name: "Spring Boot", icon: "/spring.svg", level: 75, type: 'image' },
-  { name: "UI Design (Figma)", icon: "/figma.svg", level: 90, type: 'image' },
+  { name: "JavaScript", icon: "/js.svg", level: 90, width: 28, height: 28 },
+  { name: "TypeScript", icon: "/ts.svg", level: 85, width: 28, height: 28 },
+  { name: "React", icon: "/react.svg", level: 95, width: 28, height: 28 },
+  { name: "Next.js", icon: "/next.svg", level: 95, width: 28, height: 28 },
+  { name: "Node.js", icon: "/node.svg", level: 80, width: 28, height: 28 },
+  { name: "Firebase", icon: "/firebase.svg", level: 75, width: 28, height: 28 },
+  { name: "Java", icon: "/java.svg", level: 80, width: 32, height: 32 },
+  { name: "Spring Boot", icon: "/spring.svg", level: 75, width: 32, height: 32 },
+  { name: "UI Design (Figma)", icon: "/figma.svg", level: 90, width: 28, height: 28 },
 ];
 
 export default function Stack() {
@@ -57,13 +57,7 @@ export default function Stack() {
             <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm", { 'glass': false})}>
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                        {tech.type === 'image' ? (
-                            <Image src={tech.icon as string} alt={`${tech.name} logo`} width={28} height={28} className="h-7 w-7 object-contain" />
-                        ) : (
-                            // This case is no longer used, but kept for potential future use
-                            // @ts-ignore
-                            <tech.icon className="h-7 w-7 text-primary" />
-                        )}
+                        <Image src={tech.icon} alt={`${tech.name} logo`} width={tech.width} height={tech.height} className={cn('object-contain', { 'h-7 w-7': tech.width === 28, 'h-8 w-8': tech.width === 32 })} />
                         <h3 className="text-lg font-medium">{tech.name}</h3>
                     </div>
                     <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
