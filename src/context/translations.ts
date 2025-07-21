@@ -186,7 +186,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Outil de Gestion de Projet",
-                    slug: "outil-gestion-projet",
+                    slug: "project-management-tool",
                     description: "Une plateforme collaborative pour les équipes pour gérer les tâches, suivre les progrès et communiquer efficacement, construite avec une API en temps réel.",
                     image: "https://placehold.co/600x400.png",
                     hint: "dashboard interface",
@@ -197,7 +197,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Identité de Marque",
-                    slug: "identite-de-marque",
+                    slug: "brand-identity",
                     description: "Package de branding complet pour une startup, incluant la conception de logo, la palette de couleurs et les supports marketing.",
                     image: "https://placehold.co/600x400.png",
                     hint: "branding design",
@@ -208,7 +208,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "UI d'Application Mobile",
-                    slug: "ui-application-mobile",
+                    slug: "mobile-app-ui",
                     description: "Un design d'interface utilisateur épuré et intuitif pour une nouvelle application mobile de réseautage social.",
                     image: "https://placehold.co/600x400.png",
                     hint: "mobile app",
@@ -224,7 +224,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Site Portfolio",
-                    slug: "site-portfolio",
+                    slug: "portfolio-website",
                     description: "Ce site personnel, conçu pour présenter mes compétences et projets, avec un design épuré et des animations fluides.",
                     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
                     hint: "developer portfolio",
@@ -542,7 +542,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Projektmanagement-Tool",
-                    slug: "projektmanagement-tool",
+                    slug: "project-management-tool",
                     description: "Eine kollaborative Plattform für Teams zur Verwaltung von Aufgaben, Verfolgung des Fortschritts und effektiven Kommunikation, erstellt mit einer Echtzeit-API.",
                     image: "https://placehold.co/600x400.png",
                     hint: "dashboard interface",
@@ -553,7 +553,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Markenidentität",
-                    slug: "markenidentitat",
+                    slug: "brand-identity",
                     description: "Komplettes Branding-Paket für ein Startup, einschließlich Logo-Design, Farbpalette und Marketingmaterialien.",
                     image: "https://placehold.co/600x400.png",
                     hint: "branding design",
@@ -564,7 +564,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Mobile App UI",
-                    slug: "mobile-app-ui-de",
+                    slug: "mobile-app-ui",
                     description: "Ein sauberes und intuitives Benutzeroberflächen-Design für eine neue mobile Social-Networking-Anwendung.",
                     image: "https://placehold.co/600x400.png",
                     hint: "mobile app",
@@ -580,7 +580,7 @@ export const translations: { [key: string]: Translation } = {
                 },
                 {
                     title: "Portfolio-Webseite",
-                    slug: "portfolio-webseite",
+                    slug: "portfolio-website",
                     description: "Diese persönliche Webseite, entworfen, um meine Fähigkeiten und Projekte zu präsentieren, mit einem sauberen Design und flüssigen Animationen.",
                     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMY6E3NnZnAQlhYW7VTD1Sn3w3a-CHrJdJg&s",
                     hint: "developer portfolio",
@@ -637,7 +637,5 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
-
-    
 
     
