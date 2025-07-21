@@ -248,7 +248,7 @@ export const translations: { [key: string]: Translation } = {
         about: {
             title: "À Propos de Moi",
             p1: "Je suis un développeur full stack et concepteur d'interface utilisateur, passionné par la création de solutions numériques élégantes et performantes. J'utilise des technologies comme Next.js, React et Java Spring Boot pour donner vie à des projets robustes.",
-            p2: "Fondateur de la communauté \"DWIN - Devs With INTelligence\", j'aime partager mes connaissances et aider d'autres développeurs à progresser. Je suis toujours ouvert à de nouvelles opportunités de collaboration, que ce soit en freelance ou au sein d'une équipe innovante.",
+            p2: "Créatif, rigoureux et orienté solutions, je cherche à contribuer à des projets centrés sur l'expérience utilisateur.",
             cvButton: "Télécharger mon CV",
             education: {
                 title: "Éducation et Certifications",
@@ -612,7 +612,7 @@ export const translations: { [key: string]: Translation } = {
         about: {
             title: "Über mich",
             p1: "Ich bin ein Full-Stack-Entwickler und UI-Designer, der sich leidenschaftlich für die Schaffung eleganter und leistungsstarker digitaler Lösungen einsetzt. Ich verwende Technologien wie Next.js, React und Java Spring Boot, um robuste Projekte zum Leben zu erwecken.",
-            p2: "Als Gründer der 'DWIN - Devs With INTelligence'-Community teile ich gerne mein Wissen und helfe anderen Entwicklern zu wachsen. Ich bin immer offen für neue Kooperationsmöglichkeiten, sei es als Freiberufler oder in einem innovativen Team.",
+            p2: "Kreativ, rigoros und lösungsorientiert, strebe ich danach, zu Projekten beizutragen, die auf die Benutzererfahrung ausgerichtet sind.",
             cvButton: "Meinen Lebenslauf herunterladen",
             education: {
                 title: "Ausbildung und Zertifizierungen",
@@ -653,3 +653,6 @@ export const translations: { [key: string]: Translation } = {
 
 
 
+
+
+    
