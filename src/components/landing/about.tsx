@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { LanguageContext, translations } from '@/context/language-context';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, GraduationCap } from 'lucide-react';
 
 export default function About() {
   const { language } = useContext(LanguageContext);
@@ -33,11 +33,25 @@ export default function About() {
           <div className="absolute -bottom-4 -right-4 w-full h-full border-4 border-accent rounded-lg -z-10" />
         </div>
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.about.title}</h2>
-          <div className="text-muted-foreground space-y-4 text-lg">
-            <p>{t.about.p1}</p>
-            <p>{t.about.p2}</p>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.about.title}</h2>
+            <div className="text-muted-foreground space-y-4 text-lg mt-4">
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+            </div>
           </div>
+          
+          <div className="space-y-4">
+              <h3 className="text-2xl font-bold font-headline flex items-center gap-2">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                {t.about.education.title}
+              </h3>
+              <div className="text-muted-foreground text-lg">
+                <p className="font-semibold">{t.about.education.degree}</p>
+                <p>{t.about.education.institution}</p>
+              </div>
+          </div>
+
           <div className="flex flex-wrap gap-4 items-center">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link href="/jeremie-ekoue-cv.pdf" target="_blank">{t.about.cvButton}</Link>

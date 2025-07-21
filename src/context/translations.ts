@@ -66,6 +66,11 @@ export type Translation = {
         p1: string;
         p2: string;
         cvButton: string;
+        education: {
+            title: string;
+            degree: string;
+            institution: string;
+        }
     };
     contact: {
         title: string;
@@ -127,7 +132,7 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "Fullstack Developer",
                     company: "WORLD WARRIORS",
-                    period: "N/A",
+                    period: "Juillet 2024 - Aujourd'hui",
                     description: "Collaboration avec des équipes multidisciplinaires pour mettre en œuvre des solutions performantes adaptées aux besoins des utilisateurs.",
                 },
             ]
@@ -245,6 +250,11 @@ export const translations: { [key: string]: Translation } = {
             p1: "Je suis un développeur full stack et concepteur d'interface utilisateur, passionné par la création de solutions numériques élégantes et performantes. J'utilise des technologies comme Next.js, React et Java Spring Boot pour donner vie à des projets robustes.",
             p2: "Fondateur de la communauté \"DWIN - Devs With INTelligence\", j'aime partager mes connaissances et aider d'autres développeurs à progresser. Je suis toujours ouvert à de nouvelles opportunités de collaboration, que ce soit en freelance ou au sein d'une équipe innovante.",
             cvButton: "Télécharger mon CV",
+            education: {
+                title: "Éducation et Certifications",
+                degree: "LICENCE EN GÉNIE LOGICIEL (2024)",
+                institution: "INSTITUT POLYTECHNIQUE DEFITECH, TOGO"
+            }
         },
         contact: {
             title: "Contactez-moi",
@@ -304,7 +314,7 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "Fullstack Developer",
                     company: "WORLD WARRIORS",
-                    period: "N/A",
+                    period: "July 2024 - Present",
                     description: "Collaborated with multidisciplinary teams to implement high-performance solutions tailored to user needs.",
                 },
             ]
@@ -422,6 +432,11 @@ export const translations: { [key: string]: Translation } = {
             p1: "Web developer passionate about new technologies, AI and UI design. I design modern, intuitive and efficient applications, with a constant focus on simplifying processes.",
             p2: "Creative, rigorous and solution-oriented, I seek to contribute to projects focused on the user experience.",
             cvButton: "Download My CV",
+            education: {
+                title: "Education and Certifications",
+                degree: "2024: BACHELOR’S DEGREE IN SOFTWARE ENGINEERING",
+                institution: "DEFITECH POLYTECHNICAL INSTITUTE, TOGO"
+            }
         },
         contact: {
             title: "Contact Me",
@@ -481,7 +496,7 @@ export const translations: { [key: string]: Translation } = {
                 {
                     role: "Fullstack-Entwickler",
                     company: "WORLD WARRIORS",
-                    period: "N/A",
+                    period: "Juli 2024 - Heute",
                     description: "Zusammenarbeit mit multidisziplinären Teams zur Implementierung leistungsstarker, auf die Bedürfnisse der Benutzer zugeschnittener Lösungen.",
                 },
             ]
@@ -599,6 +614,11 @@ export const translations: { [key: string]: Translation } = {
             p1: "Ich bin ein Full-Stack-Entwickler und UI-Designer, der sich leidenschaftlich für die Schaffung eleganter und leistungsstarker digitaler Lösungen einsetzt. Ich verwende Technologien wie Next.js, React und Java Spring Boot, um robuste Projekte zum Leben zu erwecken.",
             p2: "Als Gründer der 'DWIN - Devs With INTelligence'-Community teile ich gerne mein Wissen und helfe anderen Entwicklern zu wachsen. Ich bin immer offen für neue Kooperationsmöglichkeiten, sei es als Freiberufler oder in einem innovativen Team.",
             cvButton: "Meinen Lebenslauf herunterladen",
+            education: {
+                title: "Ausbildung und Zertifizierungen",
+                degree: "2024: BACHELOR IN SOFTWARE-ENGINEERING",
+                institution: "DEFITECH POLYTECHNISCHES INSTITUT, TOGO"
+            }
         },
         contact: {
             title: "Kontaktieren Sie mich",
@@ -629,6 +649,7 @@ export const translations: { [key: string]: Translation } = {
     
 
     
+
 
 
 
