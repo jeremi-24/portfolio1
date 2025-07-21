@@ -13,9 +13,13 @@ export function useOnScreen(ref: RefObject<HTMLElement>): boolean {
     return new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIntersecting(true);
+        // Disconnect after intersecting once
+        if (ref.current) {
+          this.unobserve(ref.current);
+        }
       }
     });
-  }, []);
+  }, [ref]);
 
   useEffect(() => {
     if (observer && ref.current) {
