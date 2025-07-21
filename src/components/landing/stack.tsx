@@ -4,7 +4,6 @@
 import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
-import { JavaIcon, SpringbootIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { LanguageContext, translations } from "@/context/language-context";
 
@@ -15,8 +14,8 @@ const technologies = [
   { name: "Next.js", icon: "/next.svg", level: 95, type: 'image' },
   { name: "Node.js", icon: "/node.svg", level: 80, type: 'image' },
   { name: "Firebase", icon: "/firebase.svg", level: 75, type: 'image' },
-  { name: "Java", icon: JavaIcon, level: 80, type: 'icon' },
-  { name: "Spring Boot", icon: SpringbootIcon, level: 75, type: 'icon' },
+  { name: "Java", icon: "/java.svg", level: 80, type: 'image' },
+  { name: "Spring Boot", icon: "/spring.svg", level: 75, type: 'image' },
   { name: "UI Design (Figma)", icon: "/figma.svg", level: 90, type: 'image' },
 ];
 
@@ -61,6 +60,8 @@ export default function Stack() {
                         {tech.type === 'image' ? (
                             <Image src={tech.icon as string} alt={`${tech.name} logo`} width={28} height={28} className="h-7 w-7 object-contain" />
                         ) : (
+                            // This case is no longer used, but kept for potential future use
+                            // @ts-ignore
                             <tech.icon className="h-7 w-7 text-primary" />
                         )}
                         <h3 className="text-lg font-medium">{tech.name}</h3>
