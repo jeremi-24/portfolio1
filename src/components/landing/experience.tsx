@@ -4,13 +4,22 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { LanguageContext, translations } from "@/context/language-context";
 import { Workflow } from "lucide-react";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Experience() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
-
   const experiences = t.experience.experiences;
+  
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"]
+  });
+
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
 
   return (
     <section id="experience" className="h-full flex items-center justify-center">
@@ -21,8 +30,12 @@ export default function Experience() {
             {t.experience.description}
           </p>
         </div>
-        <div className="relative max-w-3xl mx-auto">
+        <div ref={targetRef} className="relative max-w-3xl mx-auto">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border"></div>
+          <motion.div 
+            style={{ height }}
+            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-primary"
+          />
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12">
               <div className="flex items-center">
