@@ -56,9 +56,11 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     <Button asChild size="lg">
                         <Link href={project.liveUrl} target="_blank">{uiT.projects.liveDemo} <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
-                    <Button asChild variant="secondary" size="lg">
-                        <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> {uiT.projects.detailPage.sourceCode}</Link>
-                    </Button>
+                    {!isUIDesignProject && (
+                        <Button asChild variant="secondary" size="lg">
+                            <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> {uiT.projects.detailPage.sourceCode}</Link>
+                        </Button>
+                    )}
                 </div>
             </div>
         </div>
@@ -90,7 +92,6 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     </>
                 )}
                 
-                {/* Structure for Dev Projects */}
                 {isDevProject && project.problem && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.problem}</SectionTitle>
@@ -134,7 +135,6 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     </>
                 )}
 
-                {/* Legacy structure for UI projects to avoid breaking them */}
                 {isUIDesignProject && project.problem && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.problem}</SectionTitle>
