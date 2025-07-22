@@ -188,14 +188,16 @@ export const translations: { [key: string]: Translation } = {
                     title: "Page d'accueil BKSolution",
                     slug: "bksolution-landing-page",
                     description: "Ce projet de page d'accueil pour BKS (Buyor King Solution) est conçu pour être clair et engageant, guidant l'utilisateur à travers les principaux services.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/bks.svg",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Il clarifie les offres de services spécifiques, offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
-                    solution: "Il optimise également les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise."
+                    problem: "L'enjeu était de clarifier les offres de services spécifiques, en offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
+                    solution: "La solution optimise les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise.",
+                    finalUIImage: "/bks.svg",
+                    wireframeImage: "/bks2.svg",
                 }
             ],
             detailPage: {
@@ -330,14 +332,16 @@ export const translations: { [key: string]: Translation } = {
                     title: "BKSolution landing page",
                     slug: "bksolution-landing-page",
                     description: "This BKS (Buyor King Solution) landing page project is designed to be clear and engaging, guiding the user through the main services.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/bks.svg",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "It clarifies specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
-                    solution: "It also optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth."
+                    problem: "The challenge was to clarify specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
+                    solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
+                    finalUIImage: "/bks.svg",
+                    wireframeImage: "/bks2.svg",
                 }
             ],
             detailPage: {
@@ -472,14 +476,16 @@ export const translations: { [key: string]: Translation } = {
                     title: "BKSolution Landingpage",
                     slug: "bksolution-landing-page",
                     description: "Dieses Landingpage-Projekt für BKS (Buyor King Solution) ist klar und ansprechend gestaltet und führt den Benutzer durch die Hauptdienstleistungen.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/bks.svg",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Es verdeutlicht spezifische Serviceangebote und bietet eine gezielte Plattform, um interessierte Besucher in potenzielle Kunden zu verwandeln.",
-                    solution: "Es optimiert auch Marketingkampagnen, indem es Konversionen verfolgt und die User Journey zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum fördert."
+                    problem: "Die Herausforderung bestand darin, spezifische Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
+                    solution: "Die Lösung optimiert Marketingkampagnen durch die Verfolgung von Konversionen und die Vereinfachung der User Journey zu einer gewünschten Aktion, wodurch das gesamte Geschäftswachstum gefördert wird.",
+                    finalUIImage: "/bks.svg",
+                    wireframeImage: "/bks2.svg",
                 }
             ],
             detailPage: {
