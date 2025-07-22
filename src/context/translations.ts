@@ -183,6 +183,19 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Cette section met en évidence les services clés de la super application Gozem avec un design chaleureux et moderne et une disposition intuitive pour simplifier la mobilité et les achats quotidiens.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
+                },
+                 {
+                    title: "Page d'accueil BKSolution",
+                    slug: "bksolution-landing-page",
+                    description: "Ce projet de page d'accueil pour BKS (Buyor King Solution) est conçu pour être clair et engageant, guidant l'utilisateur à travers les principaux services.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "landing page design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "Il clarifie les offres de services spécifiques, offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
+                    solution: "Il optimise également les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise."
                 }
             ],
             detailPage: {
@@ -312,6 +325,19 @@ export const translations: { [key: string]: Translation } = {
                     problem: "This section highlights key Gozem super app services with a warm, modern design and intuitive layout to simplify mobility and daily shopping.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
+                },
+                {
+                    title: "BKSolution landing page",
+                    slug: "bksolution-landing-page",
+                    description: "This BKS (Buyor King Solution) landing page project is designed to be clear and engaging, guiding the user through the main services.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "landing page design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "It clarifies specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
+                    solution: "It also optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth."
                 }
             ],
             detailPage: {
@@ -441,6 +467,19 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Dieser Abschnitt hebt die wichtigsten Dienstleistungen der Gozem-Super-App mit einem warmen, modernen Design und einem intuitiven Layout hervor, um die Mobilität und den täglichen Einkauf zu vereinfachen.",
                     wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
                     finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
+                },
+                {
+                    title: "BKSolution Landingpage",
+                    slug: "bksolution-landing-page",
+                    description: "Dieses Landingpage-Projekt für BKS (Buyor King Solution) ist klar und ansprechend gestaltet und führt den Benutzer durch die Hauptdienstleistungen.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "landing page design",
+                    category: "UI Design",
+                    tags: ["Figma", "UI/UX", "Landing Page"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "Es verdeutlicht spezifische Serviceangebote und bietet eine gezielte Plattform, um interessierte Besucher in potenzielle Kunden zu verwandeln.",
+                    solution: "Es optimiert auch Marketingkampagnen, indem es Konversionen verfolgt und die User Journey zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum fördert."
                 }
             ],
             detailPage: {
