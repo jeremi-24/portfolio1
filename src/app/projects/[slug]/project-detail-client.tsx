@@ -160,12 +160,13 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 {isUIDesignProject && project.finalUIImage && (
                      <>
                         <SectionTitle>{uiT.projects.detailPage.finalUI}</SectionTitle>
-                        <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                        <div className="max-h-[600px] overflow-y-auto rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.finalUIImage}
                                 alt="Final UI"
-                                fill
-                                className="object-cover"
+                                width={800}
+                                height={1200}
+                                className="w-full h-auto"
                                 data-ai-hint="app interface feature"
                             />
                         </div>
