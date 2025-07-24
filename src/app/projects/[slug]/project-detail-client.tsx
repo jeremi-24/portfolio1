@@ -145,12 +145,13 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 {isUIDesignProject && project.wireframeImage && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.wireframes}</SectionTitle>
-                        <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg mt-4 border">
+                         <div className="max-h-[600px] overflow-y-auto rounded-lg shadow-lg mt-4 border">
                             <Image
                                 src={project.wireframeImage}
                                 alt="Wireframe"
-                                fill
-                                className="object-contain p-4"
+                                width={800}
+                                height={1200}
+                                className="w-full h-auto p-4 object-contain"
                                 data-ai-hint="wireframe sketch app feature"
                             />
                         </div>
