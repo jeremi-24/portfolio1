@@ -76,6 +76,7 @@ export type Translation = {
             title: string;
             degree: string;
             institution: string;
+            autodidacte: string;
         }
     };
     contact: {
@@ -237,7 +238,8 @@ export const translations: { [key: string]: Translation } = {
             education: {
                 title: "Éducation et Certifications",
                 degree: "LICENCE EN GÉNIE LOGICIEL (2024)",
-                institution: "INSTITUT POLYTECHNIQUE DEFITECH, TOGO"
+                institution: "INSTITUT POLYTECHNIQUE DEFITECH, TOGO",
+                autodidacte: "Designer UI/UX autodidacte (Figma, flux utilisateur, prototypage)"
             }
         },
         contact: {
@@ -397,7 +399,8 @@ export const translations: { [key: string]: Translation } = {
             education: {
                 title: "Education and Certifications",
                 degree: "2024: BACHELOR’S DEGREE IN SOFTWARE ENGINEERING",
-                institution: "DEFITECH POLYTECHNICAL INSTITUTE, TOGO"
+                institution: "DEFITECH POLYTECHNICAL INSTITUTE, TOGO",
+                autodidacte: "Self-taught UI/UX Designer (Figma, user flows, prototyping)"
             }
         },
         contact: {
@@ -557,7 +560,8 @@ export const translations: { [key: string]: Translation } = {
             education: {
                 title: "Ausbildung und Zertifizierungen",
                 degree: "2024: BACHELOR IN SOFTWARE-ENGINEERING",
-                institution: "DEFITECH POLYTECHNISCHES INSTITUT, TOGO"
+                institution: "DEFITECH POLYTECHNISCHES INSTITUT, TOGO",
+                autodidacte: "Autodidaktischer UI/UX-Designer (Figma, User Flows, Prototyping)"
             }
         },
         contact: {

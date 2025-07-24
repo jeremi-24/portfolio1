@@ -49,6 +49,7 @@ export default function About() {
               <div className="text-muted-foreground text-lg">
                 <p className="font-semibold">{t.about.education.degree}</p>
                 <p>{t.about.education.institution}</p>
+                 <p className="italic">{t.about.education.autodidacte}</p>
               </div>
           </div>
 
