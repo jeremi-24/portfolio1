@@ -191,7 +191,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "Page d'accueil BKSolution",
                     slug: "bksolution-landing-page",
                     description: "Ce projet de page d'accueil pour BKS (Buyor King Solution) est conçu pour être clair et engageant, guidant l'utilisateur à travers les principaux services.",
-                    image: "/bks1.svg",
+                    image: "/bks1.png",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
@@ -352,7 +352,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "BKSolution landing page",
                     slug: "bksolution-landing-page",
                     description: "This BKS (Buyor King Solution) landing page project is designed to be clear and engaging, guiding the user through the main services.",
-                    image: "/bks1.svg",
+                    image: "/bks1.png",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
@@ -513,7 +513,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "BKSolution Landingpage",
                     slug: "bksolution-landing-page",
                     description: "Dieses Landingpage-Projekt für BKS (Buyor King Solution) ist klar und ansprechend gestaltet und führt den Benutzer durch die Hauptdienstleistungen.",
-                    image: "/bks1.svg",
+                    image: "/bks1.png",
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
@@ -589,5 +589,7 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
 
     
