@@ -15,6 +15,7 @@ export type Project = {
     resultat?: string;
     wireframeImage?: string;
     finalUIImage?: string;
+    mockupImage?: string;
     process?: string[];
 };
 
@@ -63,6 +64,7 @@ export type Translation = {
             resultat: string;
             wireframes: string;
             finalUI: string;
+            mockup: string;
         }
     };
     about: {
@@ -196,8 +198,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "L'enjeu était de clarifier les offres de services spécifiques, en offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
                     solution: "La solution optimise les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise.",
-                    finalUIImage: "bks1.svg",
-                    wireframeImage: "bks2.svg",
+                    finalUIImage: "/bks1.svg",
+                    wireframeImage: "/bks2.svg",
                 },
                 {
                     title: "Tableau de Bord Fintech - Aperçu des Données Financières",
@@ -211,8 +213,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Les utilisateurs ont besoin d'une interface centralisée et facile à comprendre pour suivre la performance financière en un coup d'œil, remplaçant ainsi les sources de données dispersées.",
                     solution: "Le tableau de bord consolide toutes les données financières clés dans une interface visuellement intuitive, avec des graphiques interactifs et des tableaux détaillés, pour permettre une prise de décision rapide et éclairée.",
-                    finalUIImage: "/fin2.png",
-                    wireframeImage: "/fin3.png",
+                    finalUIImage: "/fin3.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -224,6 +226,7 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Résultat",
                 wireframes: "Wireframes",
                 finalUI: "UI Finales",
+                mockup: "Mockup"
             }
         },
         about: {
@@ -353,15 +356,15 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "clarifies specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
-                    solution: "It also optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
-                    finalUIImage: "bks1.svg",
-                    wireframeImage: "bks2.svg",
+                    problem: "The challenge was to clarify the specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
+                    solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
+                    finalUIImage: "/bks1.svg",
+                    wireframeImage: "/bks2.svg",
                 },
                 {
                     title: "Fintech Dashboard Overview - Key Financial Insights",
                     slug: "fintech-dashboard",
-                    description: "This active dashboard page provides a complete view of essential financial data. It presents key metrics (revenue, expenses, net profit), an intuitive bar chart for monthly expense analysis, a detailed transaction tracking table, and a pie chart breaking down revenue sources.",
+                    description: "This active dashboard page provides a complete view of essential financial data. It presents key metrics (revenue, expenses, net profit), an intuitive bar chart for monthly expense analysis, a detailed transaction tracking table, and a pie chart breaking down revenue sources. Flat design and a bit of skeuomorphism for the card.",
                     image: "/fin1.png",
                     hint: "fintech dashboard",
                     category: "UI Design",
@@ -370,8 +373,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Users need a centralized, easy-to-understand interface to monitor financial performance at a glance, replacing scattered data sources.",
                     solution: "The dashboard consolidates all key financial data into a visually intuitive interface, with interactive charts and detailed tables, to enable quick and informed decision-making.",
-                    finalUIImage: "/fin2.png",
-                    wireframeImage: "/fin3.png",
+                    finalUIImage: "/fin3.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -383,6 +386,7 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Result",
                 wireframes: "Wireframes",
                 finalUI: "Final UI",
+                mockup: "Mockup"
             }
         },
         about: {
@@ -443,7 +447,7 @@ export const translations: { [key: string]: Translation } = {
                     role: "UI-Designer / Frontend-Entwickler",
                     company: "NS GLOBAL EXPERTISE",
                     period: "Feb 2025 - Heute",
-                    description: "Entwurf von responsiven UI-Mockups für Immobilienkunden und Erstellung von SaaS-Produktprototypen zur Verbesserung der Benutzererfahrung.",
+                    description: "Entwerfen von responsiven UI-Mockups für Immobilienkunden und Erstellen von SaaS-Produktprototypen zur Verbesserung des Benutzererlebnisses.",
                 },
                 {
                     role: "Frontend-Entwickler",
@@ -512,15 +516,15 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "verdeutlicht spezifische Serviceangebote und bietet eine gezielte Plattform, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
-                    solution: "Es optimiert auch Marketingkampagnen, indem es Konversionen verfolgt und den Benutzerpfad zu einer gewünschten Aktion vereinfacht, wodurch das gesamte Geschäftswachstum gefördert wird.",
-                    finalUIImage: "bks1.svg",
-                    wireframeImage: "bks2.svg",
+                    problem: "Die Herausforderung bestand darin, die spezifischen Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
+                    solution: "Die Lösung optimiert Marketingkampagnen, indem sie Konversionen verfolgt und den Benutzerweg zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum steigert.",
+                    finalUIImage: "/bks1.svg",
+                    wireframeImage: "/bks2.svg",
                 },
                 {
                     title: "Fintech-Dashboard - Übersicht der Finanzkennzahlen",
                     slug: "fintech-dashboard",
-                    description: "Diese aktive Dashboard-Seite bietet einen vollständigen Überblick über wesentliche Finanzdaten. Sie präsentiert Schlüsselkennzahlen (Umsatz, Ausgaben, Reingewinn), ein intuitives Balkendiagramm zur monatlichen Ausgabenanalyse, eine detaillierte Transaktionsverfolgungstabelle und ein Kuchendiagramm zur Aufschlüsselung der Einnahmequellen.",
+                    description: "Diese aktive Dashboard-Seite bietet einen vollständigen Überblick über wesentliche Finanzdaten. Sie präsentiert Schlüsselkennzahlen (Umsatz, Ausgaben, Reingewinn), ein intuitives Balkendiagramm zur monatlichen Ausgabenanalyse, eine detaillierte Transaktionsverfolgungstabelle und ein Kuchendiagramm zur Aufschlüsselung der Einnahmequellen. Flat-Design und ein bisschen Skeuomorphismus für die Karte.",
                     image: "/fin1.png",
                     hint: "fintech dashboard",
                     category: "UI Design",
@@ -529,8 +533,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Benutzer benötigen eine zentralisierte, leicht verständliche Oberfläche, um die finanzielle Leistung auf einen Blick zu überwachen und verstreute Datenquellen zu ersetzen.",
                     solution: "Das Dashboard konsolidiert alle wichtigen Finanzdaten in einer visuell intuitiven Oberfläche mit interaktiven Diagrammen und detaillierten Tabellen, um schnelle und fundierte Entscheidungen zu ermöglichen.",
-                    finalUIImage: "/fin2.png",
-                    wireframeImage: "/fin3.png",
+                    finalUIImage: "/fin3.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -542,6 +546,7 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Ergebnis",
                 wireframes: "Wireframes",
                 finalUI: "Finale UI",
+                mockup: "Mockup"
             }
         },
         about: {

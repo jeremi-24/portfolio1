@@ -26,7 +26,7 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
   const isUIDesignProject = project.category === 'UI Design' || project.category === 'UI-Design';
   const isDevProject = !isUIDesignProject;
 
-  const hasExtraContent = project.contextAndObjective || project.problem || project.solution || project.resultat || project.wireframeImage || project.finalUIImage || project.process;
+  const hasExtraContent = project.contextAndObjective || project.problem || project.solution || project.resultat || project.wireframeImage || project.finalUIImage || project.process || project.mockupImage;
 
   return (
     <div className="container max-w-4xl py-12 md:py-20">
@@ -56,7 +56,7 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     <Button asChild size="lg">
                         <Link href={project.liveUrl} target="_blank">{uiT.projects.liveDemo} <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
-                    {!isUIDesignProject && (
+                    {isDevProject && (
                         <Button asChild variant="secondary" size="lg">
                             <Link href={project.repoUrl} target="_blank"><Github className="mr-2 h-4 w-4"/> {uiT.projects.detailPage.sourceCode}</Link>
                         </Button>
@@ -142,7 +142,23 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                     </>
                 )}
 
-                {isUIDesignProject && project.wireframeImage && (
+                {isUIDesignProject && project.mockupImage && (
+                    <>
+                        <SectionTitle>{uiT.projects.detailPage.mockup}</SectionTitle>
+                         <div className="max-h-[600px] overflow-y-auto rounded-lg shadow-lg mt-4 border">
+                            <Image
+                                src={project.mockupImage}
+                                alt="Mockup"
+                                width={800}
+                                height={1200}
+                                className="w-full h-auto p-4 object-contain"
+                                data-ai-hint="mockup app feature"
+                            />
+                        </div>
+                    </>
+                )}
+
+                {isUIDesignProject && !project.mockupImage && project.wireframeImage && (
                     <>
                         <SectionTitle>{uiT.projects.detailPage.wireframes}</SectionTitle>
                          <div className="max-h-[600px] overflow-y-auto rounded-lg shadow-lg mt-4 border">
