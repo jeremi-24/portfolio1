@@ -8,25 +8,28 @@ import { LanguageContext, translations } from '@/context/language-context';
 import type { Project } from '@/context/translations';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, Github, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 interface ProjectDetailClientProps {
     project: Project;
     projectLang: keyof typeof translations;
+    previousProject: Project | null;
+    nextProject: Project | null;
 }
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
     <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary mt-12 mb-6">{children}</h2>
 );
 
-export default function ProjectDetailClient({ project, projectLang }: ProjectDetailClientProps) {
+export default function ProjectDetailClient({ project, projectLang, previousProject, nextProject }: ProjectDetailClientProps) {
   const { language } = useContext(LanguageContext);
   
   const uiT = translations[language];
   const isUIDesignProject = project.category === 'UI Design' || project.category === 'UI-Design';
   const isDevProject = !isUIDesignProject;
 
-  const hasExtraContent = project.contextAndObjective || project.problem || project.solution || project.resultat || project.wireframeImage || project.finalUIImage || project.process || project.mockupImage;
+  const hasExtraContent = project.contextAndObjective || project.problem || project.solution || project.resultat || project.wireframeImage || project.finalUIImage || project.mockupImage || project.process;
 
   return (
     <div className="container max-w-4xl py-12 md:py-20">
@@ -191,6 +194,28 @@ export default function ProjectDetailClient({ project, projectLang }: ProjectDet
                 )}
             </div>
         )}
+
+        <Separator className="my-16" />
+
+        <div className="flex justify-between items-center">
+            {previousProject ? (
+                <Button variant="outline" asChild>
+                    <Link href={`/projects/${previousProject.slug}`}>
+                        <ArrowLeft className="mr-2 h-4 w-4" />
+                        Previous Project
+                    </Link>
+                </Button>
+            ) : <div />}
+            
+            {nextProject ? (
+                <Button variant="outline" asChild>
+                    <Link href={`/projects/${nextProject.slug}`}>
+                        Next Project
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+            ) : <div />}
+        </div>
     </div>
   );
 }

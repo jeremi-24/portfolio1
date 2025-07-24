@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { translations } from '@/context/translations';
 import ProjectDetailClient from './project-detail-client';
+import type { Project } from '@/context/translations';
 
 // This function is needed for Next.js to know which dynamic routes to pre-render at build time.
 export async function generateStaticParams() {
@@ -14,12 +15,23 @@ export async function generateStaticParams() {
     return Array.from(slugs).map(slug => ({ slug }));
 }
 
-function findProjectBySlug(slug: string) {
+function findProjectData(slug: string) {
     for (const lang of Object.keys(translations)) {
         const key = lang as keyof typeof translations;
-        const foundProject = translations[key].projects.projects.find(p => p.slug === slug);
-        if (foundProject) {
-            return { project: foundProject, projectLang: key };
+        const projectList = translations[key].projects.projects;
+        const projectIndex = projectList.findIndex(p => p.slug === slug);
+
+        if (projectIndex !== -1) {
+            const project = projectList[projectIndex];
+            const previousProject = projectIndex > 0 ? projectList[projectIndex - 1] : null;
+            const nextProject = projectIndex < projectList.length - 1 ? projectList[projectIndex + 1] : null;
+            
+            return { 
+                project, 
+                projectLang: key,
+                previousProject,
+                nextProject
+            };
         }
     }
     return null;
@@ -27,13 +39,13 @@ function findProjectBySlug(slug: string) {
 
 
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const result = findProjectBySlug(params.slug);
+  const result = findProjectData(params.slug);
 
   if (!result) {
     notFound();
   }
 
-  const { project, projectLang } = result;
+  const { project, projectLang, previousProject, nextProject } = result;
 
-  return <ProjectDetailClient project={project} projectLang={projectLang} />;
+  return <ProjectDetailClient project={project} projectLang={projectLang} previousProject={previousProject} nextProject={nextProject} />;
 }

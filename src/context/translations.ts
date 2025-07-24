@@ -194,12 +194,12 @@ export const translations: { [key: string]: Translation } = {
                     hint: "landing page design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
-                    liveUrl: "https://github.com/jeremi-24",
+                    liveUrl: "https://bks.sotenatogo.com/",
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "L'enjeu était de clarifier les offres de services spécifiques, en offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
                     solution: "La solution optimise les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise.",
-                    finalUIImage: "/bks1.svg",
-                    wireframeImage: "/bks2.svg",
+                    finalUIImage: "/bks2.png",
+                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Tableau de Bord Fintech - Aperçu des Données Financières",
@@ -214,7 +214,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Les utilisateurs ont besoin d'une interface centralisée et facile à comprendre pour suivre la performance financière en un coup d'œil, remplaçant ainsi les sources de données dispersées.",
                     solution: "Le tableau de bord consolide toutes les données financières clés dans une interface visuellement intuitive, avec des graphiques interactifs et des tableaux détaillés, pour permettre une prise de décision rapide et éclairée.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
+                   mockupImage: "/fin1.png",
                 }
             ],
             detailPage: {
@@ -358,8 +358,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "The challenge was to clarify the specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
                     solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
-                    finalUIImage: "/bks1.svg",
-                    wireframeImage: "/bks2.svg",
+                    finalUIImage: "/bks2.png",
+                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Fintech Dashboard Overview - Key Financial Insights",
@@ -374,7 +374,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Users need a centralized, easy-to-understand interface to monitor financial performance at a glance, replacing scattered data sources.",
                     solution: "The dashboard consolidates all key financial data into a visually intuitive interface, with interactive charts and detailed tables, to enable quick and informed decision-making.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
+                   mockupImage: "/fin1.png",
                 }
             ],
             detailPage: {
@@ -518,8 +518,8 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Die Herausforderung bestand darin, die spezifischen Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
                     solution: "Die Lösung optimiert Marketingkampagnen, indem sie Konversionen verfolgt und den Benutzerweg zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum steigert.",
-                    finalUIImage: "/bks1.svg",
-                    wireframeImage: "/bks2.svg",
+                    finalUIImage: "/bks2.png",
+                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Fintech-Dashboard - Übersicht der Finanzkennzahlen",
@@ -534,7 +534,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Benutzer benötigen eine zentralisierte, leicht verständliche Oberfläche, um die finanzielle Leistung auf einen Blick zu überwachen und verstreute Datenquellen zu ersetzen.",
                     solution: "Das Dashboard konsolidiert alle wichtigen Finanzdaten in einer visuell intuitiven Oberfläche mit interaktiven Diagrammen und detaillierten Tabellen, um schnelle und fundierte Entscheidungen zu ermöglichen.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
+                   mockupImage: "/fin1.png",
                 }
             ],
             detailPage: {
