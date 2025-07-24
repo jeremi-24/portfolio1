@@ -125,7 +125,7 @@ export const translations: { [key: string]: Translation } = {
                     role: "UI Designer / Frontend Developer",
                     company: "NS GLOBAL EXPERTISE",
                     period: "Fév 2025 - Aujourd'hui",
-                    description: "Conception de maquettes pour différents produits numériques et intégrations avec l'équipe de développement.",
+                    description: "Conception de maquettes UI responsives pour des clients immobiliers et création de prototypes de produits SaaS pour améliorer l'expérience utilisateur.",
                 },
                 {
                     role: "Frontend Developer",
@@ -269,7 +269,7 @@ export const translations: { [key: string]: Translation } = {
                     role: "UI Designer / Frontend Developer",
                     company: "NS GLOBAL EXPERTISE",
                     period: "Feb 2025 - Present",
-                    description: "Designing mockups for various digital products and integrating them with the development team.",
+                    description: "Designing responsive UI mockups for real estate clients and creating SaaS product prototypes to enhance user experience.",
                 },
                 {
                     role: "Frontend Developer",
@@ -338,8 +338,8 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "The challenge was to clarify specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
-                    solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
+                    problem: "clarifies specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
+                    solution: "It also optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
                     finalUIImage: "/bks.svg",
                     wireframeImage: "/bks2.svg",
                 }
@@ -413,7 +413,7 @@ export const translations: { [key: string]: Translation } = {
                     role: "UI-Designer / Frontend-Entwickler",
                     company: "NS GLOBAL EXPERTISE",
                     period: "Feb 2025 - Heute",
-                    description: "Gestaltung von Mockups für verschiedene digitale Produkte und Integrationen mit dem Entwicklungsteam.",
+                    description: "Gestaltung von responsiven UI-Mockups für Immobilienkunden und Erstellung von SaaS-Produktprototypen zur Verbesserung der Benutzererfahrung.",
                 },
                 {
                     role: "Frontend-Entwickler",
@@ -482,8 +482,8 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Die Herausforderung bestand darin, spezifische Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
-                    solution: "Die Lösung optimiert Marketingkampagnen durch die Verfolgung von Konversionen und die Vereinfachung der User Journey zu einer gewünschten Aktion, wodurch das gesamte Geschäftswachstum gefördert wird.",
+                    problem: "verdeutlicht spezifische Serviceangebote und bietet eine gezielte Plattform, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
+                    solution: "Es optimiert auch Marketingkampagnen, indem es Konversionen verfolgt und den Benutzerpfad zu einer gewünschten Aktion vereinfacht, wodurch das gesamte Geschäftswachstum gefördert wird.",
                     finalUIImage: "/bks.svg",
                     wireframeImage: "/bks2.svg",
                 }
