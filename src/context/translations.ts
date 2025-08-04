@@ -172,6 +172,20 @@ export const translations: { [key: string]: Translation } = {
                     finalUIImage: "/yuno3.PNG",
                 },
                 {
+                    title: "Page d'accueil de Stockify",
+                    slug: "stockify-landing-page",
+                    description: "Une page d'accueil animée et interactive pour une application fictive de trading d'actions, conçue pour mettre en valeur des animations frontend avancées.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "investment app",
+                    category: "Frontend",
+                    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "Les applications fintech modernes doivent capter immédiatement l'attention des utilisateurs. Une page d'accueil statique peut échouer à communiquer la nature dynamique du produit.",
+                    solution: "En utilisant Framer Motion, j'ai créé des transitions fluides, des micro-interactions et des animations qui réagissent au défilement pour guider l'utilisateur et donner vie à la page, créant une première impression mémorable.",
+                    resultat: "Une expérience utilisateur engageante qui non seulement a l'air professionnelle, mais améliore également la compréhension du produit par l'utilisateur en mettant en évidence les fonctionnalités clés de manière dynamique.",
+                },
+                {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "Un concept de page d'accueil responsive pour une super-application africaine tout-en-un.",
@@ -331,6 +345,20 @@ export const translations: { [key: string]: Translation } = {
                     resultat: "A significant reduction in document processing time, improved collaboration between teams, and enhanced security of sensitive information, allowing organizations to focus on their core business.",
                     wireframeImage: "/yuno2.PNG",
                     finalUIImage: "/yuno3.PNG",
+                },
+                 {
+                    title: "Stockify Landing Page",
+                    slug: "stockify-landing-page",
+                    description: "An animated and interactive landing page for a fictional stock trading app, designed to showcase advanced frontend animations.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "investment app",
+                    category: "Frontend",
+                    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "Modern fintech apps need to capture user attention immediately. A static landing page can fail to communicate the dynamic nature of the product.",
+                    solution: "Using Framer Motion, I created fluid transitions, micro-interactions, and scroll-based animations to guide the user and bring the page to life, creating a memorable first impression.",
+                    resultat: "An engaging user experience that not only looks professional but also enhances user comprehension of the product by dynamically highlighting key features.",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -493,6 +521,20 @@ export const translations: { [key: string]: Translation } = {
                     wireframeImage: "/yuno2.PNG",
                     finalUIImage: "/yuno3.PNG",
                 },
+                 {
+                    title: "Stockify Landing Page",
+                    slug: "stockify-landing-page",
+                    description: "Eine animierte und interaktive Landing Page für eine fiktive Aktienhandels-App, die fortschrittliche Frontend-Animationen demonstrieren soll.",
+                    image: "https://placehold.co/600x400.png",
+                    hint: "investment app",
+                    category: "Frontend",
+                    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
+                    liveUrl: "https://github.com/jeremi-24",
+                    repoUrl: "https://github.com/jeremi-24",
+                    problem: "Moderne Fintech-Apps müssen die Aufmerksamkeit der Nutzer sofort fesseln. Eine statische Landing Page kann die dynamische Natur des Produkts oft nicht vermitteln.",
+                    solution: "Mit Framer Motion habe ich flüssige Übergänge, Mikro-Interaktionen und scrollbasierte Animationen erstellt, um den Benutzer zu führen und die Seite zum Leben zu erwecken und einen unvergesslichen ersten Eindruck zu schaffen.",
+                    resultat: "Eine ansprechende Benutzererfahrung, die nicht nur professionell aussieht, sondern auch das Produktverständnis des Benutzers durch die dynamische Hervorhebung von Schlüsselfunktionen verbessert.",
+                },
                 {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
@@ -589,6 +631,8 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
 
     
 
