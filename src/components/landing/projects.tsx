@@ -2,52 +2,12 @@
 "use client";
 
 import { useContext } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LanguageContext, translations } from "@/context/language-context";
-import type { Project } from "@/context/translations";
-
-const ProjectCard = ({ project, viewDetailsText }: { project: Project, viewDetailsText: string }) => (
-    <motion.div
-      key={project.slug}
-      layout
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      transition={{ duration: 0.3 }}
-    >
-      <Link href={`/projects/${project.slug}`} className="block group">
-        <Card className="overflow-hidden rounded-lg relative h-80">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={600}
-            height={400}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            data-ai-hint={project.hint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-          
-          <div className="relative h-full flex flex-col justify-end p-6 text-white">
-              <h3 className="text-2xl font-bold font-headline">{project.title}</h3>
-              <div className="flex flex-wrap gap-2 mt-2">
-                  {project.tags.map(tag => <Badge key={tag} variant="secondary" className="bg-white/20 text-white border-none">{tag}</Badge>)}
-              </div>
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-y-0 translate-y-4">
-                   <span className="text-sm font-semibold inline-flex items-center">
-                      {viewDetailsText}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                   </span>
-              </div>
-          </div>
-        </Card>
-      </Link>
-    </motion.div>
-);
+import { ProjectCard } from "../project-card";
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
   const { language } = useContext(LanguageContext);
@@ -55,8 +15,8 @@ export default function Projects() {
 
   const allProjects = t.projects.projects;
   
-  const devProjects = allProjects.filter(p => p.category === 'Frontend' || p.category === 'Backend');
-  const designProjects = allProjects.filter(p => p.category === 'UI Design' || p.category === 'Graphic Design');
+  const devProjects = allProjects.filter(p => p.category === 'Frontend' || p.category === 'Backend').slice(0, 3);
+  const designProjects = allProjects.filter(p => p.category === 'UI Design' || p.category === 'Graphic Design').slice(0, 3);
 
   const groupTitleClasses = "text-2xl md:text-3xl font-bold font-headline text-center mb-8 pt-12";
 
@@ -83,6 +43,14 @@ export default function Projects() {
                           ))}
                        </AnimatePresence>
                     </motion.div>
+                    <div className="text-center mt-8">
+                      <Button asChild variant="outline">
+                        <Link href="/dev">
+                          {language === 'fr' ? 'Voir tous les projets de développement' : 'View All Dev Projects'}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
                 </div>
             )}
             
@@ -98,6 +66,14 @@ export default function Projects() {
                           ))}
                        </AnimatePresence>
                     </motion.div>
+                    <div className="text-center mt-8">
+                      <Button asChild variant="outline">
+                        <Link href="/uiux">
+                          {language === 'fr' ? 'Voir tous les projets de design' : 'View All Design Projects'}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
                 </div>
             )}
         </div>

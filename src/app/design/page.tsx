@@ -41,7 +41,7 @@ function UiUxProjects() {
 }
 
 
-export default function UiUxHomePage() {
+export default function DesignHomePage() {
   
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'neon');
