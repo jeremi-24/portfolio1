@@ -34,16 +34,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative w-full h-screen text-center flex items-center justify-center">
       <div className="absolute inset-0 z-0">
-        <motion.div 
-            className="absolute top-[-10%] right-[30%] h-[500px] w-[500px] rounded-full bg-primary/30 blur-3xl"
-            animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.05, 1] }}
-            transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
-        />
-        <motion.div 
-            className="absolute bottom-[-10%] left-[10%] h-[400px] w-[600px] rounded-full bg-accent/30 blur-3xl"
-            animate={{ x: [0, -40, 0], y: [0, 20, 0], scale: [1, 1.1, 1] }}
-            transition={{ duration: 25, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
-        />
+        
       </div>
 
       <div className="container px-4 md:px-6 z-10">
