@@ -1,8 +1,6 @@
 
 "use client";
 
-import { useEffect } from "react";
-
 import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
 import Stack from "@/components/landing/stack";
@@ -15,10 +13,6 @@ import Clients from "@/components/landing/clients";
 
 export default function HomePage() {
   
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'neon');
-  }, [])
-
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden transition-colors duration-500">
       

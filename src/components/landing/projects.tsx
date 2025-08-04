@@ -68,7 +68,7 @@ export default function Projects() {
                     </motion.div>
                     <div className="text-center mt-8">
                       <Button asChild variant="outline">
-                        <Link href="/uiux">
+                        <Link href="/design">
                           {language === 'fr' ? 'Voir tous les projets de design' : 'View All Design Projects'}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
