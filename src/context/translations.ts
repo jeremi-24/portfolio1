@@ -174,16 +174,16 @@ export const translations: { [key: string]: Translation } = {
                 {
                     title: "Page d'accueil de Stockify",
                     slug: "stockify-landing-page",
-                    description: "Une page d'accueil animée et interactive pour une application fictive de trading d'actions, conçue pour mettre en valeur des animations frontend avancées.",
+                    description: "Une page d'accueil animée et interactive pour une application de gestion d'inventaire, conçue pour démontrer des compétences en animation frontend.",
                     image: "https://placehold.co/600x400.png",
-                    hint: "investment app",
+                    hint: "inventory management app",
                     category: "Frontend",
                     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Les applications fintech modernes doivent capter immédiatement l'attention des utilisateurs. Une page d'accueil statique peut échouer à communiquer la nature dynamique du produit.",
-                    solution: "En utilisant Framer Motion, j'ai créé des transitions fluides, des micro-interactions et des animations qui réagissent au défilement pour guider l'utilisateur et donner vie à la page, créant une première impression mémorable.",
-                    resultat: "Une expérience utilisateur engageante qui non seulement a l'air professionnelle, mais améliore également la compréhension du produit par l'utilisateur en mettant en évidence les fonctionnalités clés de manière dynamique.",
+                    problem: "Les applications de gestion manquent souvent de dynamisme. Une page d'accueil statique ne parvient pas à communiquer l'efficacité et la simplicité du produit.",
+                    solution: "En utilisant Framer Motion, j'ai créé des transitions fluides et des micro-interactions qui guident l'utilisateur, animent la page et mettent en avant les avantages de la centralisation des stocks.",
+                    resultat: "Une expérience utilisateur engageante qui met en valeur la puissance de l'application de manière dynamique, rendant la proposition de valeur claire et mémorable.",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -229,7 +229,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Les utilisateurs ont besoin d'une interface centralisée et facile à comprendre pour suivre la performance financière en un coup d'œil, remplaçant ainsi les sources de données dispersées.",
                     solution: "Le tableau de bord consolide toutes les données financières clés dans une interface visuellement intuitive, avec des graphiques interactifs et des tableaux détaillés, pour permettre une prise de décision rapide et éclairée.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin1.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -349,16 +349,16 @@ export const translations: { [key: string]: Translation } = {
                  {
                     title: "Stockify Landing Page",
                     slug: "stockify-landing-page",
-                    description: "An animated and interactive landing page for a fictional stock trading app, designed to showcase advanced frontend animations.",
+                    description: "An animated and interactive landing page for an inventory management app, designed to showcase advanced frontend animation skills.",
                     image: "https://placehold.co/600x400.png",
-                    hint: "investment app",
+                    hint: "inventory management app",
                     category: "Frontend",
                     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Modern fintech apps need to capture user attention immediately. A static landing page can fail to communicate the dynamic nature of the product.",
-                    solution: "Using Framer Motion, I created fluid transitions, micro-interactions, and scroll-based animations to guide the user and bring the page to life, creating a memorable first impression.",
-                    resultat: "An engaging user experience that not only looks professional but also enhances user comprehension of the product by dynamically highlighting key features.",
+                    problem: "Management applications often lack dynamism. A static landing page fails to communicate the product's efficiency and simplicity.",
+                    solution: "Using Framer Motion, I created fluid transitions and micro-interactions that guide the user, bring the page to life, and highlight the benefits of centralized inventory.",
+                    resultat: "An engaging user experience that dynamically showcases the application's power, making the value proposition clear and memorable.",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -404,7 +404,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Users need a centralized, easy-to-understand interface to monitor financial performance at a glance, replacing scattered data sources.",
                     solution: "The dashboard consolidates all key financial data into a visually intuitive interface, with interactive charts and detailed tables, to enable quick and informed decision-making.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin1.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -524,16 +524,16 @@ export const translations: { [key: string]: Translation } = {
                  {
                     title: "Stockify Landing Page",
                     slug: "stockify-landing-page",
-                    description: "Eine animierte und interaktive Landing Page für eine fiktive Aktienhandels-App, die fortschrittliche Frontend-Animationen demonstrieren soll.",
+                    description: "Eine animierte und interaktive Landingpage für eine App zur Bestandsverwaltung, die fortgeschrittene Frontend-Animationsfähigkeiten demonstrieren soll.",
                     image: "https://placehold.co/600x400.png",
-                    hint: "investment app",
+                    hint: "inventory management app",
                     category: "Frontend",
                     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
                     liveUrl: "https://github.com/jeremi-24",
                     repoUrl: "https://github.com/jeremi-24",
-                    problem: "Moderne Fintech-Apps müssen die Aufmerksamkeit der Nutzer sofort fesseln. Eine statische Landing Page kann die dynamische Natur des Produkts oft nicht vermitteln.",
-                    solution: "Mit Framer Motion habe ich flüssige Übergänge, Mikro-Interaktionen und scrollbasierte Animationen erstellt, um den Benutzer zu führen und die Seite zum Leben zu erwecken und einen unvergesslichen ersten Eindruck zu schaffen.",
-                    resultat: "Eine ansprechende Benutzererfahrung, die nicht nur professionell aussieht, sondern auch das Produktverständnis des Benutzers durch die dynamische Hervorhebung von Schlüsselfunktionen verbessert.",
+                    problem: "Management-Anwendungen mangelt es oft an Dynamik. Eine statische Landingpage kann die Effizienz und Einfachheit des Produkts nicht vermitteln.",
+                    solution: "Mit Framer Motion habe ich fließende Übergänge und Mikrointeraktionen geschaffen, die den Benutzer führen, die Seite zum Leben erwecken und die Vorteile einer zentralisierten Bestandsverwaltung hervorheben.",
+                    resultat: "Eine ansprechende Benutzererfahrung, die die Leistungsfähigkeit der Anwendung dynamisch präsentiert und das Wertversprechen klar und unvergesslich macht.",
                 },
                 {
                     title: "GOZEM - Landing Page",
@@ -579,7 +579,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Benutzer benötigen eine zentralisierte, leicht verständliche Oberfläche, um die finanzielle Leistung auf einen Blick zu überwachen und verstreute Datenquellen zu ersetzen.",
                     solution: "Das Dashboard konsolidiert alle wichtigen Finanzdaten in einer visuell intuitiven Oberfläche mit interaktiven Diagrammen und detaillierten Tabellen, um schnelle und fundierte Entscheidungen zu ermöglichen.",
                     finalUIImage: "/fin3.png",
-                   mockupImage: "/fin1.png",
+                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -631,6 +631,8 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
 
     
 
