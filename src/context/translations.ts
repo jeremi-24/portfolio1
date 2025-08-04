@@ -159,7 +159,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "Megatramback - Gestion de Stock",
                     slug: "megatramback-stock-management",
                     description: "Un système de gestion de stock backend avec gestion de boîtes et scanner de codes-barres, construit avec Java Spring Boot.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/back.svg",
                     hint: "backend code database",
                     category: "Backend",
                     tags: ["Java", "Spring Boot", "Backend"],
@@ -167,7 +167,7 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24/megatramback",
                     problem: "Les entreprises ont besoin d'un système robuste pour suivre les stocks, gérer les emplacements de boîtes et intégrer des scanners de codes-barres pour accélérer les opérations.",
                     solution: "Une API RESTful construite avec Spring Boot qui fournit des points de terminaison pour toutes les opérations CRUD sur les stocks, ainsi que la logique pour la gestion des boîtes et l'intégration de scanners.",
-                    resultat: "Un backend performant et sécurisé qui peut être connecté à n'importe quelle application frontend ou mobile, offrant une gestion de stock fiable et en temps réel.",
+                    resultat: "Un backend performant et sécurisé qui can être connecté à n'importe quelle application frontend ou mobile, offrant une gestion de stock fiable et en temps réel.",
                 },
                 {
                     title: "YunoDoc - Gestion Électronique de Documents (GED)",
@@ -209,11 +209,8 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
-                    process: ["Solution", "UI", "Identité"],
                     contextAndObjective: "Il s'agit d'un concept de page d'accueil responsive conçu pour une super-application africaine tout-en-un. Adaptée aux utilisateurs sur ordinateur et mobile, la mise en page met en avant les services principaux de l'application : VTC, livraison de courses, achats en ligne, et plus encore.",
                     problem: "Cette section met en évidence les services clés de la super application Gozem avec un design chaleureux et moderne et une disposition intuitive pour simplifier la mobilité et les achats quotidiens.",
-                    wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
-                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
                 },
                  {
                     title: "Page d'accueil BKSolution",
@@ -227,13 +224,11 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "L'enjeu était de clarifier les offres de services spécifiques, en offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
                     solution: "La solution optimise les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise.",
-                    finalUIImage: "/bks2.png",
-                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Tableau de Bord Fintech - Aperçu des Données Financières",
                     slug: "fintech-dashboard",
-                    description: "Cette page de tableau de bord actif fournit une vue complète des données financières essentielles. Elle présente des indicateurs clés (revenus, dépenses, bénéfice net), un graphique à barres intuitif pour l'analyse mensuelle des dépenses, un tableau de suivi détaillé des transactions et un diagramme circulaire pour la répartition des sources de revenus. Du flat design et un peu de skeuomorphism pour la carte",
+                    description: "Cette page de tableau de bord actif fournit une vue complète des données financières essentielles. Elle présente des indicateurs clés (revenus, dépenses, bénéfice net), un graphique à barres intuitif pour l'analyse mensuelle des dépenses, un tableau de suivi détaillé des transactions et un diagramme circulaire pour la répartition des sources de revenus.",
                     image: "/fin1.png",
                     hint: "fintech dashboard",
                     category: "UI Design",
@@ -242,8 +237,6 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Les utilisateurs ont besoin d'une interface centralisée et facile à comprendre pour suivre la performance financière en un coup d'œil, remplaçant ainsi les sources de données dispersées.",
                     solution: "Le tableau de bord consolide toutes les données financières clés dans une interface visuellement intuitive, avec des graphiques interactifs et des tableaux détaillés, pour permettre une prise de décision rapide et éclairée.",
-                    finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -348,7 +341,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "Megatramback - Stock Management",
                     slug: "megatramback-stock-management",
                     description: "A backend stock management system with box management and barcode scanner integration, built with Java Spring Boot.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/back.svg",
                     hint: "backend code database",
                     category: "Backend",
                     tags: ["Java", "Spring Boot", "Backend"],
@@ -398,11 +391,8 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
-                    process: ["Solution", "UI", "Identity"],
                     contextAndObjective: "This is a responsive landing page concept designed for an all-in-one African super app. Tailored for both desktop and mobile users, the layout highlights the app’s core services: ride-hailing, grocery delivery, online shopping, and more.",
                     problem: "This section highlights key Gozem super app services with a warm, modern design and intuitive layout to simplify mobility and daily shopping.",
-                    wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
-                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
                 },
                 {
                     title: "BKSolution landing page",
@@ -416,13 +406,11 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "The challenge was to clarify the specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
                     solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
-                    finalUIImage: "/bks2.png",
-                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Fintech Dashboard Overview - Key Financial Insights",
                     slug: "fintech-dashboard",
-                    description: "This active dashboard page provides a complete view of essential financial data. It presents key metrics (revenue, expenses, net profit), an intuitive bar chart for monthly expense analysis, a detailed transaction tracking table, and a pie chart breaking down revenue sources. Flat design and a bit of skeuomorphism for the card.",
+                    description: "This active dashboard page provides a complete view of essential financial data. It presents key metrics (revenue, expenses, net profit), an intuitive bar chart for monthly expense analysis, a detailed transaction tracking table, and a pie chart breaking down revenue sources.",
                     image: "/fin1.png",
                     hint: "fintech dashboard",
                     category: "UI Design",
@@ -431,8 +419,6 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Users need a centralized, easy-to-understand interface to monitor financial performance at a glance, replacing scattered data sources.",
                     solution: "The dashboard consolidates all key financial data into a visually intuitive interface, with interactive charts and detailed tables, to enable quick and informed decision-making.",
-                    finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -537,7 +523,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "Megatramback - Lagerverwaltung",
                     slug: "megatramback-stock-management",
                     description: "Ein Backend-Lagerverwaltungssystem mit Box-Management und Barcode-Scanner-Integration, erstellt mit Java Spring Boot.",
-                    image: "https://placehold.co/600x400.png",
+                    image: "/back.svg",
                     hint: "backend code database",
                     category: "Backend",
                     tags: ["Java", "Spring Boot", "Backend"],
@@ -571,7 +557,7 @@ export const translations: { [key: string]: Translation } = {
                     hint: "inventory management app",
                     category: "Frontend",
                     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-                    liveUrl: "https://github.com/jeremi-24",
+                    liveUrl: "https://stockiify.netlify.app/",
                     repoUrl: "https://github.com/jeremi-24/stockify",
                     problem: "Management-Anwendungen mangelt es oft an Dynamik. Eine statische Landingpage kann die Effizienz und Einfachheit des Produkts nicht vermitteln.",
                     solution: "Mit Framer Motion habe ich fließende Übergänge und Mikrointeraktionen geschaffen, die den Benutzer führen, die Seite zum Leben erwecken und die Vorteile einer zentralisierten Bestandsverwaltung hervorheben.",
@@ -587,11 +573,8 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.behance.net/gallery/203494745/GOZEM-Landing-Page-Concept",
                     repoUrl: "https://github.com/jeremi-24",
-                    process: ["Lösung", "UI", "Identität"],
                     contextAndObjective: "Dies ist ein responsives Landing-Page-Konzept, das für eine afrikanische All-in-One-Super-App entwickelt wurde. Das Layout ist sowohl für Desktop- als auch für mobile Benutzer zugeschnitten und hebt die Kerndienste der App hervor: Ride-Hailing, Lebensmittellieferung, Online-Shopping und mehr.",
                     problem: "Dieser Abschnitt hebt die wichtigsten Dienstleistungen der Gozem-Super-App mit einem warmen, modernen Design und einem intuitiven Layout hervor, um die Mobilität und den täglichen Einkauf zu vereinfachen.",
-                    wireframeImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6b62ff224345581.680948ebb2b05.png",
-                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e76a6c224345581.680948ebb3cb6.png",
                 },
                 {
                     title: "BKSolution Landingpage",
@@ -605,13 +588,11 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Die Herausforderung bestand darin, die spezifischen Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
                     solution: "Die Lösung optimiert Marketingkampagnen, indem sie Konversionen verfolgt und den Benutzerweg zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum steigert.",
-                    finalUIImage: "/bks2.png",
-                    wireframeImage: "/bks3.png",
                 },
                 {
                     title: "Fintech-Dashboard - Übersicht der Finanzkennzahlen",
                     slug: "fintech-dashboard",
-                    description: "Diese aktive Dashboard-Seite bietet einen vollständigen Überblick über wesentliche Finanzdaten. Sie präsentiert Schlüsselkennzahlen (Umsatz, Ausgaben, Reingewinn), ein intuitives Balkendiagramm zur monatlichen Ausgabenanalyse, eine detaillierte Transaktionsverfolgungstabelle und ein Kuchendiagramm zur Aufschlüsselung der Einnahmequellen. Flat-Design und ein bisschen Skeuomorphismus für die Karte.",
+                    description: "Diese aktive Dashboard-Seite bietet einen vollständigen Überblick über wesentliche Finanzdaten. Sie präsentiert Schlüsselkennzahlen (Umsatz, Ausgaben, Reingewinn), ein intuitives Balkendiagramm zur monatlichen Ausgabenanalyse, eine detaillierte Transaktionsverfolgungstabelle und ein Kuchendiagramm zur Aufschlüsselung der Einnahmequellen.",
                     image: "/fin1.png",
                     hint: "fintech dashboard",
                     category: "UI Design",
@@ -620,8 +601,6 @@ export const translations: { [key: string]: Translation } = {
                     repoUrl: "https://github.com/jeremi-24",
                     problem: "Benutzer benötigen eine zentralisierte, leicht verständliche Oberfläche, um die finanzielle Leistung auf einen Blick zu überwachen und verstreute Datenquellen zu ersetzen.",
                     solution: "Das Dashboard konsolidiert alle wichtigen Finanzdaten in einer visuell intuitiven Oberfläche mit interaktiven Diagrammen und detaillierten Tabellen, um schnelle und fundierte Entscheidungen zu ermöglichen.",
-                    finalUIImage: "/fin3.png",
-                   mockupImage: "/fin2.png",
                 }
             ],
             detailPage: {
@@ -673,11 +652,3 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
-
-    
-
-    
-
-    
-
-    
