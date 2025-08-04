@@ -54,7 +54,7 @@ export default function Stack() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {technologies.map((tech) => (
-            <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm", { 'glass': false})}>
+            <div key={tech.name} className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm")}>
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
                         <Image src={tech.icon} alt={`${tech.name} logo`} width={tech.width} height={tech.height} className={cn('object-contain', { 'h-7 w-7': tech.width === 28, 'h-8 w-8': tech.width === 32 })} />
