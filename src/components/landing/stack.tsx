@@ -60,9 +60,9 @@ export default function Stack() {
                         <Image src={tech.icon} alt={`${tech.name} logo`} width={tech.width} height={tech.height} className={cn('object-contain', { 'h-7 w-7': tech.width === 28, 'h-8 w-8': tech.width === 32 })} />
                         <h3 className="text-lg font-medium">{tech.name}</h3>
                     </div>
-                    <span className="font-semibold text-primary">{progress[tech.name] || 0}%</span>
+                    <span className="font-semibold" style={{ color: 'hsl(var(--primary))' }}>{progress[tech.name] || 0}%</span>
                 </div>
-                <Progress value={progress[tech.name] || 0} className="h-2" />
+                <Progress value={progress[tech.name] || 0} className="h-2 [&>div]:bg-[--color-yellow]" style={{ '--color-yellow': '#FDBE11' } as React.CSSProperties} />
             </div>
         ))}
         </div>
