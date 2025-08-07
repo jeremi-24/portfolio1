@@ -37,7 +37,14 @@ export default function Experience() {
             className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary shadow-lg shadow-primary/50"
           />
           {experiences.map((exp, index) => (
-            <div key={index} className="relative mb-12">
+            <motion.div 
+              key={index} 
+              className="relative mb-12"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className="flex items-center">
                 <div className="z-10 bg-background p-2 rounded-full border-2 border-primary absolute left-1/2 -translate-x-1/2">
                     <Workflow className="h-6 w-6 text-primary" />
@@ -52,7 +59,7 @@ export default function Experience() {
                   <p>{exp.description}</p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
