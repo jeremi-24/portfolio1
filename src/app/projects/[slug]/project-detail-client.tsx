@@ -202,7 +202,7 @@ export default function ProjectDetailClient({ project, projectLang, previousProj
                 <Button variant="outline" asChild>
                     <Link href={`/projects/${previousProject.slug}`}>
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        Previous Project
+                        {uiT.projects.detailPage.previousProject}
                     </Link>
                 </Button>
             ) : <div />}
@@ -210,7 +210,7 @@ export default function ProjectDetailClient({ project, projectLang, previousProj
             {nextProject ? (
                 <Button variant="outline" asChild>
                     <Link href={`/projects/${nextProject.slug}`}>
-                        Next Project
+                        {uiT.projects.detailPage.nextProject}
                         <ChevronRight className="ml-2 h-4 w-4" />
                     </Link>
                 </Button>

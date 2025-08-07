@@ -65,6 +65,8 @@ export type Translation = {
             wireframes: string;
             finalUI: string;
             mockup: string;
+            previousProject: string;
+            nextProject: string;
         }
     };
     about: {
@@ -276,7 +278,9 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Résultat",
                 wireframes: "Wireframes",
                 finalUI: "UI Finales",
-                mockup: "Mockup"
+                mockup: "Mockup",
+                previousProject: "Projet Précédent",
+                nextProject: "Projet Suivant"
             }
         },
         about: {
@@ -486,7 +490,9 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Result",
                 wireframes: "Wireframes",
                 finalUI: "Final UI",
-                mockup: "Mockup"
+                mockup: "Mockup",
+                previousProject: "Previous Project",
+                nextProject: "Next Project"
             }
         },
         about: {
@@ -696,7 +702,9 @@ export const translations: { [key: string]: Translation } = {
                 resultat: "Ergebnis",
                 wireframes: "Wireframes",
                 finalUI: "Finale UI",
-                mockup: "Mockup"
+                mockup: "Mockup",
+                previousProject: "Vorheriges Projekt",
+                nextProject: "Nächstes Projekt"
             }
         },
         about: {
