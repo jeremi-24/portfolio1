@@ -78,16 +78,6 @@ export default function Hero() {
                     {t.hero.subtitle}
                 </motion.p>
             </div>
-            <motion.div
-                className="flex flex-wrap justify-center gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2, duration: 0.5 }}
-            >
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                    <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</a>
-                </Button>
-            </motion.div>
         </div>
       </div>
     </section>
