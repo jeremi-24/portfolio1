@@ -55,7 +55,7 @@ export default function About() {
 
           <div className="flex flex-wrap gap-4 items-center">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/jeremie-ekoue-cv.pdf" target="_blank">{t.about.cvButton}</Link>
+              <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.about.cvButton}</a>
             </Button>
             <div className="flex gap-2">
               {socialLinks.map(({ name, icon: Icon, url }) => (

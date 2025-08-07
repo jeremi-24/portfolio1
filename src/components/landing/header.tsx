@@ -65,7 +65,7 @@ export default function Header() {
           </DropdownMenu>
 
           <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
-            <a href="#contact">{t.nav.hireMe}</a>
+            <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</a>
           </Button>
         </div>
         <div className="md:hidden">
@@ -105,7 +105,7 @@ export default function Header() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 <Button asChild>
-                  <a href="#contact">{t.nav.hireMe}</a>
+                  <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</a>
                 </Button>
               </div>
             </SheetContent>
