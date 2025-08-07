@@ -159,7 +159,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "CLASSIK ADMIN",
                     slug: "classik-admin",
                     description: "Une application web intuitive pour la gestion des résultats scolaires, conçue pour simplifier la saisie, le traitement et l'analyse des notes des élèves.",
-                    image: "/classik-admin.png",
+                    image: "/classik1.png",
                     hint: "dashboard admin school",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Web App"],
@@ -169,6 +169,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "Dans beaucoup d’écoles, la gestion des notes et des bulletins se fait encore manuellement ou avec des outils peu ergonomiques. Cela entraîne des erreurs, une perte de temps, et une difficulté à centraliser les informations des élèves selon leur niveau.",
                     solution: "Interface segmentée par cycle scolaire. Saisie des notes simplifiée. Automatisation des calculs. Visualisation des résultats. Exportation & génération de bulletins. Design fonctionnel, épuré, centré sur la lisibilité et l’efficacité. Structure modulaire et cohérente.",
                     resultat: "Ce projet démontre ma capacité à structurer une application complexe, pensée pour des usages professionnels (secrétariat, gestion administrative scolaire), avec un design centré utilisateur et une forte attention à l’organisation des données.",
+                    finalUIImage: "/classik2.png"
                 },
                 {
                     title: "Megatramback - Gestion de Stock",
@@ -368,7 +369,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "CLASSIK ADMIN",
                     slug: "classik-admin",
                     description: "An intuitive web application for managing school results, designed to simplify entering, processing, and analyzing student grades.",
-                    image: "/classik-admin.png",
+                    image: "/classik1.png",
                     hint: "dashboard admin school",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Web App"],
@@ -378,6 +379,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "In many schools, managing grades and report cards is still done manually or with user-unfriendly tools. This leads to errors, wasted time, and difficulty centralizing student information by level.",
                     solution: "Segmented interface by school cycle. Simplified grade entry. Automated calculations. Results visualization. Export and generation of report cards. Functional, clean design focused on readability and efficiency. Modular and consistent interface structure.",
                     resultat: "This project demonstrates my ability to structure a complex application, designed for professional use (secretarial, school administrative management), with a user-centered design and strong attention to data organization.",
+                    finalUIImage: "/classik2.png"
                 },
                 {
                     title: "Megatramback - Stock Management",
@@ -577,7 +579,7 @@ export const translations: { [key: string]: Translation } = {
                     title: "CLASSIK ADMIN",
                     slug: "classik-admin",
                     description: "Eine intuitive Webanwendung zur Verwaltung von Schulergebnissen, die die Eingabe, Verarbeitung und Analyse von Schülerzensuren vereinfacht.",
-                    image: "/classik-admin.png",
+                    image: "/classik1.png",
                     hint: "dashboard admin school",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Web App"],
@@ -587,6 +589,7 @@ export const translations: { [key: string]: Translation } = {
                     problem: "In vielen Schulen wird die Verwaltung von Noten und Zeugnissen immer noch manuell oder mit benutzerunfreundlichen Werkzeugen durchgeführt. Dies führt zu Fehlern, Zeitverschwendung und Schwierigkeiten bei der Zentralisierung von Schülerinformationen nach Klassenstufe.",
                     solution: "Segmentierte Benutzeroberfläche nach Schulzyklus. Vereinfachte Noteneingabe. Automatisierte Berechnungen. Ergebnisvisualisierung. Export und Erstellung von Zeugnissen. Funktionales, sauberes Design mit Fokus auf Lesbarkeit und Effizienz. Modulare und konsistente Schnittstellenstruktur.",
                     resultat: "Dieses Projekt zeigt meine Fähigkeit, eine komplexe Anwendung zu strukturieren, die für den professionellen Einsatz (Sekretariat, Schulverwaltung) konzipiert ist, mit einem benutzerzentrierten Design und einem starken Fokus auf die Datenorganisation.",
+                    finalUIImage: "/classik2.png"
                 },
                 {
                     title: "Megatramback - Lagerverwaltung",
@@ -733,3 +736,5 @@ export const translations: { [key: string]: Translation } = {
         },
     }
 };
+
+    
