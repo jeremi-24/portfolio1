@@ -23,17 +23,17 @@ function UiUxProjects() {
     <section id="projects" className="h-full flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                {language === 'fr' ? 'Projets de Design' : 'Design Projects'}
-            </h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground">
-                {language === 'fr' ? 'Voici une sélection de mes projets de design, UI/UX et graphisme.' : 'Here is a selection of my design projects, including UI/UX and graphic design.'}
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">
+            {language === 'fr' ? 'Projets de Design' : 'Design Projects'}
+          </h2>
+          <p className="max-w-2xl mx-auto text-muted-foreground">
+            {language === 'fr' ? 'Voici une sélection de mes projets de design, UI/UX et graphisme.' : 'Here is a selection of my design projects, including UI/UX and graphic design.'}
+          </p>
         </div>
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {designProjects.map((project) => (
-                <ProjectCard key={project.slug} project={project} viewDetailsText={t.projects.viewDetails} />
-            ))}
+        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {designProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} viewDetailsText={t.projects.viewDetails} />
+          ))}
         </motion.div>
       </div>
     </section>
@@ -42,10 +42,10 @@ function UiUxProjects() {
 
 
 export default function DesignHomePage() {
-  
+
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden transition-colors duration-500">
-      
+
       <Header />
       <main className="flex-1 flex flex-col z-10">
         <Hero />
@@ -56,7 +56,7 @@ export default function DesignHomePage() {
         <About />
         <Contact />
       </main>
-      
+
       <Footer />
     </div>
   );

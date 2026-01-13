@@ -12,10 +12,11 @@ import Footer from "@/components/landing/footer";
 import Clients from "@/components/landing/clients";
 
 export default function HomePage() {
-  
+
   return (
-    <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden transition-colors duration-500">
-      
+    <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden selection:bg-primary/30 antialiased">
+      <div className="noise" />
+
       <Header />
       <main className="flex-1 flex flex-col z-10">
         <Hero />
@@ -26,7 +27,7 @@ export default function HomePage() {
         <About />
         <Contact />
       </main>
-      
+
       <Footer />
     </div>
   );

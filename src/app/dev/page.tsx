@@ -30,7 +30,7 @@ function DevProjects() {
             {language === 'fr' ? 'Voici une sélection de mes projets de développement web, frontend et backend.' : 'Here is a selection of my web development projects, both frontend and backend.'}
           </p>
         </div>
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {devProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} viewDetailsText={t.projects.viewDetails} />
           ))}
@@ -42,10 +42,10 @@ function DevProjects() {
 
 
 export default function DevHomePage() {
-  
+
   return (
     <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden transition-colors duration-500">
-      
+
       <Header />
       <main className="flex-1 flex flex-col z-10">
         <Hero />
@@ -56,7 +56,7 @@ export default function DevHomePage() {
         <About />
         <Contact />
       </main>
-      
+
       <Footer />
     </div>
   );

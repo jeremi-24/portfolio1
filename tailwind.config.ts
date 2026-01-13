@@ -1,5 +1,5 @@
 
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -18,8 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-inter)', 'sans-serif'],
-        headline: ['var(--font-space-grotesk)', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -86,25 +86,35 @@ export default {
           },
         },
         'fade-in-up': {
-          'from': { opacity: '0', transform: 'translateY(10px)' },
+          'from': { opacity: '0', transform: 'translateY(20px)' },
           'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'reveal': {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         'heartbeat': {
           '0%, 100%': { transform: 'scale(1)', opacity: '0.2' },
-          '50%': { transform: 'scale(1.1)', opacity: '0.7' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.5' },
         },
         'scroll': {
           'to': {
             transform: 'translateX(-50%)',
           },
         },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
-        'heartbeat': 'heartbeat 2s ease-in-out infinite',
-        'scroll': 'scroll 30s linear infinite',
+        'fade-in-up': 'fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'reveal': 'reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'heartbeat': 'heartbeat 3s ease-in-out infinite',
+        'scroll': 'scroll 40s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
     },
   },

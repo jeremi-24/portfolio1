@@ -17,25 +17,35 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background/50 border-t w-full">
-      <div className="container mx-auto px-4 md:px-6 py-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 font-bold text-lg font-headline">
-             <Code className="h-6 w-6 text-accent" />
-             <span>Jeremie Ekoue</span>
+    <footer className="py-12 border-t border-white/5">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <Link href="#home" className="font-bold text-2xl font-headline tracking-tighter">
+              JE<span className="text-primary">.</span>
+            </Link>
+            <p className="text-sm text-muted-foreground font-medium">
+              &copy; {new Date().getFullYear()} Jeremie Ekoue.
+            </p>
           </div>
-          <div className="flex gap-2">
+
+          <nav className="flex items-center gap-8">
             {socialLinks.map(({ name, icon: Icon, url }) => (
-              <Button key={name} variant="ghost" size="icon" asChild>
-                <Link href={url} target="_blank" aria-label={name}>
-                  <Icon className="h-5 w-5" />
-                </Link>
-              </Button>
+              <Link
+                key={name}
+                href={url}
+                target="_blank"
+                className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+                aria-label={name}
+              >
+                {name}
+              </Link>
             ))}
+          </nav>
+
+          <div className="text-sm text-muted-foreground font-medium">
+            Built with <span className="text-primary">Next.js</span> & <span className="text-primary">Tailwind</span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Jeremie Ekoue. {t.about.p2.includes("innovative team") ? 'All rights reserved.' : 'Tous droits réservés.'}
-          </p>
         </div>
       </div>
     </footer>

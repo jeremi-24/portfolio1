@@ -118,8 +118,8 @@ export const translations: { [key: string]: Translation } = {
             hireMe: "Engagez-moi",
         },
         hero: {
-            title: "Développeur Full-Stack & UI Designer",
-            subtitle: "Passionné par la transformation d'idées complexes en solutions numériques élégantes et performantes.",
+            title: "Full-Stack & UI Designer",
+            subtitle: "Créateur de solutions numériques modernes et performantes.",
             cta: "Télécharger mon CV",
         },
         experience: {
@@ -221,28 +221,37 @@ export const translations: { [key: string]: Translation } = {
                     title: "MonCarnet - Suivi de santé quotidien",
                     slug: "moncarnet-health-monitoring",
                     description: "Projet personnel de design UX/UI mobile conçu pour améliorer le suivi de santé quotidien des utilisateurs. Inspiré par des applications comme Medisafe et CareClinic, l'objectif était de concevoir une interface claire, humaine et accessible.",
-                    image: "/carnet2.png",
+                    image: "/carnet.png",
                     hint: "health app interface",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Design Mobile"],
                     liveUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     repoUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     contextAndObjective: "Projet personnel de design UX/UI mobile pour améliorer le suivi de santé quotidien. L'objectif était de créer une interface claire, humaine et accessible inspirée par des applications de premier plan.",
+                    problem: "Les utilisateurs ont souvent du mal à suivre leurs indicateurs de santé de manière régulière à cause d'interfaces complexes et peu engageantes.",
+                    solution: "Une interface minimaliste mettant l'accent sur la simplicité d'utilisation, avec des rappels intelligents et une visualisation claire des progrès.",
+                    resultat: "Un concept de design mobile complet, salué pour sa clarté et sa facilité de navigation, facilitant une meilleure gestion personnelle de la santé.",
+                    process: ["Recherche", "Wireframing", "Prototypage", "Tests"],
+                    mockupImage: "/carnet2.png"
                 },
                 {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "Un concept de page d'accueil responsive pour une super-application africaine tout-en-un.",
-                    image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png",
+                    image: "/gozem.png",
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     contextAndObjective: "Il s'agit d'un concept de page d'accueil responsive conçu pour une super-application africaine tout-en-un. Adaptée aux utilisateurs sur ordinateur et mobile, la mise en page met en avant les services principaux de l'application : VTC, livraison de courses, achats en ligne, et plus encore.",
-                    problem: "Cette section met en évidence les services clés de la super application Gozem avec un design chaleureux et moderne et une disposition intuitive pour simplifier la mobilité et les achats quotidiens.",
+                    problem: "L'enjeu était de condenser une multitude de services (transport, livraison, paiement) dans une interface unique sans surcharger l'utilisateur.",
+                    solution: "Utilisation d'une grille de services iconique et de sections thématiques claires, permettant une navigation rapide entre les différents besoins.",
+                    resultat: "Une landing page moderne et attrayante qui renforce l'identité de marque de Gozem tout en maximisant la conversion.",
+                    process: ["Analyse", "UI Design", "Visual Design"],
+                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png"
                 },
-                 {
+                {
                     title: "Page d'accueil BKSolution",
                     slug: "bksolution-landing-page",
                     description: "Ce projet de page d'accueil pour BKS (Buyor King Solution) est conçu pour être clair et engageant, guidant l'utilisateur à travers les principaux services.",
@@ -252,8 +261,12 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
-                    problem: "L'enjeu était de clarifier les offres de services spécifiques, en offrant une plateforme ciblée pour convertir les visiteurs intéressés en clients potentiels.",
-                    solution: "La solution optimise les campagnes marketing en suivant les conversions et en simplifiant le parcours utilisateur vers une action souhaitée, améliorant ainsi la croissance globale de l'entreprise.",
+                    contextAndObjective: "Conception d'une page de destination pour BKSolution, visant à présenter de manière concise et professionnelle leurs services d'accompagnement digital.",
+                    problem: "Manque de clarté dans la communication des services, entraînant un taux de rebond élevé sur l'ancienne version.",
+                    solution: "Mise en place d'une structure narrative 'AIDA' (Attention, Intérêt, Désir, Action) avec des appels à l'action stratégiques.",
+                    resultat: "Un design épuré qui inspire confiance et facilite la prise de contact pour les clients B2B.",
+                    process: ["Stratégie", "Copywriting", "Web Design"],
+                    mockupImage: "/bks1.png"
                 },
                 {
                     title: "Tableau de Bord Fintech - Aperçu des Données Financières",
@@ -330,8 +343,8 @@ export const translations: { [key: string]: Translation } = {
             hireMe: "Hire Me",
         },
         hero: {
-            title: "Full-Stack Developer & UI Designer",
-            subtitle: "Passionate about transforming complex ideas into elegant and high-performing digital solutions.",
+            title: "Full-Stack & UI Designer",
+            subtitle: "Creating modern and high-performing digital solutions.",
             cta: "Download My CV",
         },
         experience: {
@@ -415,7 +428,7 @@ export const translations: { [key: string]: Translation } = {
                     wireframeImage: "/yuno2.PNG",
                     finalUIImage: "/yuno3.PNG",
                 },
-                 {
+                {
                     title: "Stockify Landing Page",
                     slug: "stockify-landing-page",
                     description: "An animated and interactive landing page for an inventory management app, designed to showcase my advanced frontend animation skills.",
@@ -433,26 +446,35 @@ export const translations: { [key: string]: Translation } = {
                     title: "MonCarnet - daily health monitoring",
                     slug: "moncarnet-health-monitoring",
                     description: "Personal mobile UX/UI design project designed to improve users' daily health monitoring. Inspired by apps like Medisafe and CareClinic, the goal was to design a clear, human-friendly, and accessible interface.",
-                    image: "/carnet2.png",
+                    image: "/carnet.png",
                     hint: "health app interface",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Mobile Design"],
                     liveUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     repoUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     contextAndObjective: "Personal mobile UX/UI design project to improve daily health monitoring. The objective was to design a clear, human-friendly, and accessible interface inspired by leading apps.",
+                    problem: "Users often struggle to stay consistent with health tracking due to cluttered and uninspiring interfaces.",
+                    solution: "A minimalist interface focusing on ease of use, with smart reminders and clear progress visualizations.",
+                    resultat: "A complete mobile design concept praised for its clarity and ease of navigation, fostering better personal health awareness.",
+                    process: ["Research", "Wireframing", "Prototyping", "Testing"],
+                    mockupImage: "/carnet2.png"
                 },
                 {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "A responsive landing page concept for an all-in-one African super app.",
-                    image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png",
+                    image: "/gozem.png",
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     contextAndObjective: "This is a responsive landing page concept designed for an all-in-one African super app. Tailored for both desktop and mobile users, the layout highlights the app’s core services: ride-hailing, grocery delivery, online shopping, and more.",
-                    problem: "This section highlights key Gozem super app services with a warm, modern design and intuitive layout to simplify mobility and daily shopping.",
+                    problem: "The challenge was to condense multiple services into a single UI without overwhelming the user.",
+                    solution: "Implemented an iconic service grid and clear thematic sections for quick navigation.",
+                    resultat: "A modern and engaging landing page that strengthens Gozem's brand identity while maximizing conversion.",
+                    process: ["Analysis", "UI Design", "Visual Design"],
+                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png"
                 },
                 {
                     title: "BKSolution landing page",
@@ -464,8 +486,12 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
-                    problem: "The challenge was to clarify the specific service offerings, providing a focused platform to convert interested visitors into potential customers.",
-                    solution: "The solution optimizes marketing campaigns by tracking conversions and simplifying the user journey towards a desired action, enhancing overall business growth.",
+                    contextAndObjective: "Designing a landing page for BKSolution to concisely and professionally showcase their digital support services.",
+                    problem: "Lack of clarity in service communication, leading to high bounce rates in previous versions.",
+                    solution: "Used the 'AIDA' structure with strategic CTAs to guide the user towards contact.",
+                    resultat: "A clean design that inspires trust and simplifies lead generation for B2B clients.",
+                    process: ["Strategy", "Copywriting", "Web Design"],
+                    mockupImage: "/bks1.png"
                 },
                 {
                     title: "Fintech Dashboard Overview - Key Financial Insights",
@@ -542,8 +568,8 @@ export const translations: { [key: string]: Translation } = {
             hireMe: "Beauftragen",
         },
         hero: {
-            title: "Full-Stack-Entwickler & UI-Designer",
-            subtitle: "Leidenschaftlich daran, komplexe Ideen in elegante und leistungsstarke digitale Lösungen umzuwandeln.",
+            title: "Full-Stack & UI Designer",
+            subtitle: "Erstellung moderner und leistungsstarker digitaler Lösungen.",
             cta: "Meinen Lebenslauf herunterladen",
         },
         experience: {
@@ -627,7 +653,7 @@ export const translations: { [key: string]: Translation } = {
                     wireframeImage: "/yuno2.PNG",
                     finalUIImage: "/yuno3.PNG",
                 },
-                 {
+                {
                     title: "Stockify Landing Page",
                     slug: "stockify-landing-page",
                     description: "Eine animierte und interaktive Landingpage für eine App zur Bestandsverwaltung, die fortgeschrittene Frontend-Animationsfähigkeiten demonstrieren soll.",
@@ -645,26 +671,35 @@ export const translations: { [key: string]: Translation } = {
                     title: "MonCarnet - Tägliche Gesundheitsüberwachung",
                     slug: "moncarnet-health-monitoring",
                     description: "Persönliches mobiles UX/UI-Designprojekt zur Verbesserung der täglichen Gesundheitsüberwachung der Benutzer. Inspiriert von Apps wie Medisafe und CareClinic war das Ziel, eine klare, benutzerfreundliche und zugängliche Oberfläche zu gestalten.",
-                    image: "/carnet2.png",
+                    image: "/carnet.png",
                     hint: "health app interface",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Mobile Design"],
                     liveUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     repoUrl: "https://www.figma.com/design/UJra7UGjKLQFtkJYlULyW7/Mon-carnet?node-id=0-1&t=nAbwNkMzi5WtEWUa-1",
                     contextAndObjective: "Persönliches mobiles UX/UI-Designprojekt zur Verbesserung der täglichen Gesundheitsüberwachung. Ziel war es, eine klare, benutzerfreundliche und zugängliche Oberfläche zu gestalten, die von führenden Apps inspiriert ist.",
+                    problem: "Benutzer haben oft Schwierigkeiten, ihre Gesundheitsdaten regelmäßig zu verfolgen – meist aufgrund überladener Oberflächen.",
+                    solution: "Eine minimalistische Benutzeroberfläche mit Fokus auf Benutzerfreundlichkeit, intelligenten Erinnerungen und klaren Fortschrittsvisualisierungen.",
+                    resultat: "Ein umfassendes mobiles Designkonzept, das für seine Klarheit und einfache Navigation gelobt wurde.",
+                    process: ["Recherche", "Wireframing", "Prototyping", "Testing"],
+                    mockupImage: "/carnet2.png"
                 },
                 {
                     title: "GOZEM - Landing Page",
                     slug: "gozem-landing-page",
                     description: "Ein responsives Landing-Page-Konzept für eine afrikanische Super-App.",
-                    image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png",
+                    image: "/gozem.png",
                     hint: "mobile app design",
                     category: "UI Design",
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-952&t=nBdVnw8DyPHsrdUJ-0",
                     contextAndObjective: "Dies ist ein responsives Landing-Page-Konzept, das für eine afrikanische All-in-One-Super-App entwickelt wurde. Das Layout ist sowohl für Desktop- als auch für mobile Benutzer zugeschnitten und hebt die Kerndienste der App hervor: Ride-Hailing, Lebensmittellieferung, Online-Shopping und mehr.",
-                    problem: "Dieser Abschnitt hebt die wichtigsten Dienstleistungen der Gozem-Super-App mit einem warmen, modernen Design und einem intuitiven Layout hervor, um die Mobilität und den täglichen Einkauf zu vereinfachen.",
+                    problem: "Die Herausforderung bestand darin, eine Vielzahl von Diensten in einer einzigen Benutzeroberfläche zu bündeln, ohne den Benutzer zu überfordern.",
+                    solution: "Implementierung eines ikonischen Service-Gitters und klarer thematischer Abschnitte für eine schnelle Navigation.",
+                    resultat: "Eine moderne Landingpage, die die Markenidentität von Gozem stärkt und die Konversion maximiert.",
+                    process: ["Analyse", "UI Design", "Visuelles Design"],
+                    finalUIImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/e237e7224345581.6809449403252.png"
                 },
                 {
                     title: "BKSolution Landingpage",
@@ -676,8 +711,12 @@ export const translations: { [key: string]: Translation } = {
                     tags: ["Figma", "UI/UX", "Landing Page"],
                     liveUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
                     repoUrl: "https://www.figma.com/design/qbcezIAKusPgK9ZAf5eJgy/GOZEM---BKS?node-id=216-951&t=atTzTrUIyjv8mDlz-0",
-                    problem: "Die Herausforderung bestand darin, die spezifischen Serviceangebote zu verdeutlichen und eine gezielte Plattform bereitzustellen, um interessierte Besucher in potenzielle Kunden umzuwandeln.",
-                    solution: "Die Lösung optimiert Marketingkampagnen, indem sie Konversionen verfolgt und den Benutzerweg zu einer gewünschten Aktion vereinfacht, was das gesamte Geschäftswachstum steigert.",
+                    contextAndObjective: "Design einer Landingpage für BKSolution, um deren digitale Dienstleistungen professionell und prägnant zu präsentieren.",
+                    problem: "Unklare Kommunikation der Dienste führte in früheren Versionen zu hohen Absprungraten.",
+                    solution: "Einsatz der 'AIDA'-Struktur mit strategischen CTAs, um den Benutzer zur Kontaktaufnahme zu führen.",
+                    resultat: "Ein sauberes Design, das Vertrauen schafft und die Lead-Generierung für B2B-Kunden vereinfacht.",
+                    process: ["Strategie", "Copywriting", "Web Design"],
+                    mockupImage: "/bks1.png"
                 },
                 {
                     title: "Fintech-Dashboard - Übersicht der Finanzkennzahlen",
@@ -745,4 +784,4 @@ export const translations: { [key: string]: Translation } = {
     }
 };
 
-    
+

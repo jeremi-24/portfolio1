@@ -34,7 +34,7 @@ export default function Contact() {
     const mailtoLink = `mailto:jeremiekoue8@gmail.com?subject=Contact depuis votre portfolio&body=${encodeURIComponent(
       `Email de l'expéditeur: ${values.email}\n\nMessage:\n${values.message}`
     )}`;
-    
+
     window.location.href = mailtoLink;
 
     toast({
@@ -45,66 +45,88 @@ export default function Contact() {
   }
 
   const contactDetails = [
-      { icon: Phone, text: "+228 79 79 79 40 / 70 06 01 66", href: "tel:+22879797940" },
-      { icon: Mail, text: "jeremiekoue8@gmail.com", href: "mailto:jeremiekoue8@gmail.com" },
-      { icon: MapPin, text: "Résidence du Bénin, 258 Av. Akeï, Tokoin-wuiti , Lomé", href: "#" },
+    { icon: Phone, text: "+228 79 79 79 40 / 70 06 01 66", href: "tel:+22879797940" },
+    { icon: Mail, text: "jeremiekoue8@gmail.com", href: "mailto:jeremiekoue8@gmail.com" },
+    { icon: MapPin, text: "Résidence du Bénin, 258 Av. Akeï, Tokoin-wuiti , Lomé", href: "#" },
   ]
 
   return (
-    <section id="contact" className="h-full flex items-center justify-center">
+    <section id="contact" className="relative py-32 overflow-hidden bg-secondary/20">
       <div className="container px-4 md:px-6">
-        <div className="max-w-xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.contact.title}</h2>
-                <p className="max-w-2xl mx-auto text-muted-foreground">
-                    {t.contact.description}
-                </p>
-            </div>
-            
-            <div className="mb-12 space-y-4">
-                {contactDetails.map((detail, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                        <detail.icon className="h-5 w-5 text-accent" />
-                        <Link href={detail.href} target="_blank" className="hover:underline">
-                          <span>{detail.text}</span>
-                        </Link>
-                    </div>
-                ))}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-5xl md:text-7xl font-bold font-headline tracking-tighter text-gradient leading-tight">
+                {t.contact.title}
+              </h2>
+              <p className="text-lg text-muted-foreground font-medium max-w-lg">
+                {t.contact.description}
+              </p>
             </div>
 
+            <div className="space-y-6">
+              {contactDetails.map((detail, index) => (
+                <Link
+                  key={index}
+                  href={detail.href}
+                  target="_blank"
+                  className="group flex items-center gap-6 p-6 rounded-[1.5rem] border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-white/5"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <detail.icon className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm font-bold tracking-tight">{detail.text}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="glass p-8 md:p-12 rounded-[3rem] shadow-2xl border-white/10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
+
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                        <Input type="email" placeholder={t.contact.form.email.placeholder} {...field} />
-                        </FormControl>
-                        <FormMessage />
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2">
+                      <FormLabel className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder={t.contact.form.email.placeholder}
+                          className="h-14 px-6 rounded-2xl bg-white/5 border-white/10 focus:border-primary/50 transition-all"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
                     </FormItem>
-                    )}
+                  )}
                 />
                 <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                        <Textarea placeholder={t.contact.form.message.placeholder} {...field} rows={5} />
-                        </FormControl>
-                        <FormMessage />
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2">
+                      <FormLabel className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder={t.contact.form.message.placeholder}
+                          className="px-6 py-4 rounded-2xl bg-white/5 border-white/10 focus:border-primary/50 transition-all min-h-[160px]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
                     </FormItem>
-                    )}
+                  )}
                 />
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
-                    {t.contact.form.submit} <Send className="ml-2 h-4 w-4" />
+                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 rounded-full h-14 text-base font-bold shadow-xl shadow-primary/20 group">
+                  {t.contact.form.submit}
+                  <Send className="ml-2 h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </Button>
-                </form>
+              </form>
             </Form>
+          </div>
         </div>
       </div>
     </section>

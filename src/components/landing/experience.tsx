@@ -11,7 +11,7 @@ export default function Experience() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
   const experiences = t.experience.experiences;
-  
+
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -22,45 +22,42 @@ export default function Experience() {
 
 
   return (
-    <section id="experience" className="h-full flex items-center justify-center">
+    <section id="experience" className="relative py-32 bg-secondary/30">
       <div className="container px-4 md:px-6">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.experience.title}</h2>
-          <p className="max-w-2xl mx-auto text-muted-foreground">
-            {t.experience.description}
-          </p>
-        </div>
-        <div ref={targetRef} className="relative max-w-3xl mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border/40"></div>
-          <motion.div 
-            style={{ height }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary shadow-lg shadow-primary/50"
-          />
-          {experiences.map((exp, index) => (
-            <motion.div 
-              key={index} 
-              className="relative mb-12"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="flex items-center">
-                <div className="z-10 bg-background p-2 rounded-full border-2 border-primary absolute left-1/2 -translate-x-1/2">
-                    <Workflow className="h-6 w-6 text-primary" />
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-4 lg:sticky lg:top-32">
+            <h2 className="text-5xl md:text-6xl font-bold font-headline tracking-tighter text-gradient leading-tight">
+              {t.experience.title}
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
+              {t.experience.description}
+            </p>
+          </div>
+
+          <div className="lg:col-span-8 space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                className="group relative pl-8 border-l border-white/10"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="absolute left-[-5px] top-0 w-2 h-2 rounded-full bg-primary shadow-lg shadow-primary/50 group-hover:scale-150 transition-transform" />
+                <div className="space-y-4">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <h3 className="text-2xl font-bold font-headline">{exp.role}</h3>
+                    <span className="text-sm font-bold text-primary uppercase tracking-widest">{exp.period}</span>
+                  </div>
+                  <div className="text-lg font-semibold text-foreground/80">{exp.company}</div>
+                  <p className="text-muted-foreground leading-relaxed max-w-2xl italic">
+                    {exp.description}
+                  </p>
                 </div>
-              </div>
-              <Card className={`relative lg:w-5/12 ${index % 2 === 0 ? 'lg:ml-auto lg:pl-8' : 'lg:mr-auto lg:text-right lg:pr-8'}`}>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">{exp.role}</CardTitle>
-                  <CardDescription className="text-base">{exp.company} | {exp.period}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{exp.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

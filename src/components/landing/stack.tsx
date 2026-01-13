@@ -21,27 +21,27 @@ const technologies = [
 ];
 
 export default function Stack() {
-    const [progress, setProgress] = useState<{ [key: string]: number }>({});
-    const { language } = useContext(LanguageContext);
-    const t = translations[language];
+  const [progress, setProgress] = useState<{ [key: string]: number }>({});
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
 
-    useEffect(() => {
-        const newProgress: { [key: string]: number } = {};
-        technologies.forEach(tech => {
-            newProgress[tech.name] = 0;
-        });
+  useEffect(() => {
+    const newProgress: { [key: string]: number } = {};
+    technologies.forEach(tech => {
+      newProgress[tech.name] = 0;
+    });
 
-        const timers = technologies.map(tech => {
-            return setTimeout(() => {
-                setProgress(prev => ({...prev, [tech.name]: tech.level}))
-            }, 200)
-        })
+    const timers = technologies.map(tech => {
+      return setTimeout(() => {
+        setProgress(prev => ({ ...prev, [tech.name]: tech.level }))
+      }, 200)
+    })
 
-        return () => {
-            timers.forEach(clearTimeout)
-        }
+    return () => {
+      timers.forEach(clearTimeout)
+    }
 
-    }, []);
+  }, []);
 
   const fadeInAnimationVariants = {
     initial: {
@@ -58,37 +58,41 @@ export default function Stack() {
   };
 
   return (
-    <section id="stack" className="container h-full flex items-center justify-center px-4 md:px-6">
-      <div className="w-full max-w-4xl">
-        <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">{t.stack.title}</h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground">
-                {t.stack.description}
-            </p>
+    <section id="stack" className="relative py-32 overflow-hidden">
+      <div className="container px-4 md:px-6">
+        <div className="text-center space-y-4 mb-20">
+          <h2 className="text-5xl md:text-7xl font-bold font-headline tracking-tighter text-gradient leading-tight">
+            {t.stack.title}
+          </h2>
+          <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
+            {t.stack.description}
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {technologies.map((tech, index) => (
-            <motion.div 
-              key={tech.name} 
-              className={cn("flex flex-col gap-3 p-6 rounded-lg bg-card text-card-foreground shadow-sm")}
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-8">
+          {technologies.map((tech, index) => (
+            <motion.div
+              key={tech.name}
+              className="glass group p-8 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:border-primary/50 transition-all duration-500 hover:scale-105"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-                <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-3">
-                        <Image src={tech.icon} alt={`${tech.name} logo`} width={tech.width} height={tech.height} className={cn('object-contain', { 'h-7 w-7': tech.width === 28, 'h-8 w-8': tech.width === 32 })} />
-                        <h3 className="text-lg font-medium">{tech.name}</h3>
-                    </div>
-                    <span className="font-semibold" style={{ color: 'hsl(var(--primary))' }}>{progress[tech.name] || 0}%</span>
-                </div>
-                <Progress value={progress[tech.name] || 0} className="h-2 [&>div]:bg-primary" />
+              <div className="relative w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                <Image
+                  src={tech.icon}
+                  alt={tech.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
+                {tech.name}
+              </span>
+              <div className="w-12 h-[1px] bg-white/10 group-hover:bg-primary/50 transition-colors" />
             </motion.div>
-        ))}
+          ))}
         </div>
       </div>
     </section>

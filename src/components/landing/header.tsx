@@ -35,81 +35,73 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-4xl",
+        scrolled ? "top-4" : "top-6"
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-6">
-          <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
-            <Code className="h-6 w-6 text-accent" />
-            <span>Jeremie Ekoue</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-4">
-              {/* This is where the nav items could go if we wanted them in the header */}
-          </div>
-        </div>
+      <div className="glass rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-primary/10 border-white/20">
+        <Link href="#home" className="font-bold text-xl font-headline tracking-tighter hover:opacity-80 transition-opacity">
+          JE<span className="text-primary">.</span>
+        </Link>
 
-        <div className="hidden md:flex items-center gap-4">
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.map(({ href, label }) => (
+            <Link key={href} href={href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Globe className="h-5 w-5" />
+              <Button variant="ghost" size="sm" className="hidden sm:flex items-center gap-2 rounded-full px-4 hover:bg-white/10 text-xs font-semibold">
+                <Globe className="h-4 w-4" />
+                {language.toUpperCase()}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem onClick={() => setLanguage('fr')}>Français</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage('de')}>Deutsch</DropdownMenuItem>
+            <DropdownMenuContent align="end" className="glass border-white/10">
+              <DropdownMenuItem className="focus:bg-primary/20" onClick={() => setLanguage('fr')}>Français</DropdownMenuItem>
+              <DropdownMenuItem className="focus:bg-primary/20" onClick={() => setLanguage('en')}>English</DropdownMenuItem>
+              <DropdownMenuItem className="focus:bg-primary/20" onClick={() => setLanguage('de')}>Deutsch</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
-            <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</a>
+          <Button asChild size="sm" className="hidden sm:flex bg-primary hover:bg-primary/90 rounded-full px-6 text-xs font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+            <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.nav.hireMe}</a>
           </Button>
-        </div>
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Menu</SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col gap-6 p-6">
-                <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
-                  <Code className="h-6 w-6 text-accent" />
-                  <span>Jeremie Ekoue</span>
-                </Link>
-                <nav className="flex flex-col gap-4">
+
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="top" className="glass border-b-white/10 h-screen flex flex-col items-center justify-center gap-8 border-none">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col items-center gap-8">
                   {navLinks.map(({ href, label }) => (
-                    <Link key={href} href={href} className="text-base font-medium hover:text-accent transition-colors">
+                    <Link key={href} href={href} className="text-3xl font-bold font-headline hover:text-primary transition-colors">
                       {label}
                     </Link>
                   ))}
                 </nav>
-                 <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="outline">
-                        <Globe className="mr-2 h-5 w-5" />
-                        {language.toUpperCase()}
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                      <DropdownMenuItem onClick={() => setLanguage('fr')}>Français</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLanguage('de')}>Deutsch</DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                <Button asChild>
-                  <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.hero.cta}</a>
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+                <div className="flex flex-col items-center gap-4 mt-8">
+                  <div className="flex gap-4">
+                    <Button variant="outline" className="rounded-full px-6" onClick={() => setLanguage('fr')}>FR</Button>
+                    <Button variant="outline" className="rounded-full px-6" onClick={() => setLanguage('en')}>EN</Button>
+                    <Button variant="outline" className="rounded-full px-6" onClick={() => setLanguage('de')}>DE</Button>
+                  </div>
+                  <Button asChild size="lg" className="rounded-full px-12 mt-4 bg-primary text-lg">
+                    <a href="/jeremie-ekoue-cv.pdf" target="_blank">{t.nav.hireMe}</a>
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
